@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>注音符號轉漢字</title>
+      <link href="/posts/bopomofo2hanzi/"/>
+      <url>/posts/bopomofo2hanzi/</url>
+      
+        <content type="html"><![CDATA[<h1>bopomofo2hanzi 注音符號輸入法轉漢字</h1><h2 id="資料集">資料集</h2><p>使用「<a href="https://github.com/zake7749/Gossiping-Chinese-Corpus">PTT 中文語料</a>」進行訓練與計算。</p><h2 id="預處理">預處理</h2><p>針對每個句子進行以下動作。<br><img src="/img/bopomofo2hanzi/dataset_preprocess_method.png" alt=""></p><blockquote><p>阿拉伯數字轉漢字之實現參考了 <a href="https://github.com/xiaoyvning/number2hanzi">xiaoyvning/number2hanzi</a> 中的語法，提高可轉換的位數最大上限以及翻譯為繁體中文後以相同原理改寫成 Python 檔案。</p></blockquote><p>使用 <a href="https://github.com/mozillazg/python-pinyin">pypinyin</a> 將漢字轉為注音，注音透過對照轉為英數字元。</p><h2 id="訓練、微調、計算">訓練、微調、計算</h2><h3 id="訓練">訓練</h3><p>GRU、BiGRU、LSTM、Transformer</p><h3 id="微調">微調</h3><p><a href="https://huggingface.co/google/mt5-small">google/mT5-small</a></p><h3 id="計算">計算</h3><p>維特比演算法搭配隱式馬可夫模型。<br>觀測值：錯誤字元​<br>起始機率：漢字作為句子開頭的機率​<br>轉移機率：漢字連接另一個漢字的機率​<br>發射機率：錯誤字元對應到漢字的機率​<br>隱含狀態：可翻譯的漢字</p><h2 id="成果">成果</h2><table><thead><tr><th style="text-align:left">方法 / 項目</th><th style="text-align:left">準確率</th><th style="text-align:left">Loss</th><th style="text-align:left">BLEU4</th></tr></thead><tbody><tr><td style="text-align:left">GRU</td><td style="text-align:left">0.8797</td><td style="text-align:left">0.5242</td><td style="text-align:left">65.27</td></tr><tr><td style="text-align:left">BiGRU</td><td style="text-align:left">0.8581</td><td style="text-align:left">0.6118</td><td style="text-align:left">56.39</td></tr><tr><td style="text-align:left">LSTM</td><td style="text-align:left">0.9553</td><td style="text-align:left">0.1555</td><td style="text-align:left">78.56</td></tr><tr><td style="text-align:left">4注意力頭Transformer</td><td style="text-align:left">0.9577</td><td style="text-align:left">0.2080</td><td style="text-align:left">79.56</td></tr><tr><td style="text-align:left">8注意力頭Transformer</td><td style="text-align:left">0.9557</td><td style="text-align:left">0.2150</td><td style="text-align:left">79.25</td></tr><tr><td style="text-align:left">12注意力頭 Transformer</td><td style="text-align:left">0.9552</td><td style="text-align:left">0.2178</td><td style="text-align:left">79.04</td></tr><tr><td style="text-align:left">16注意力頭Transformer</td><td style="text-align:left">0.9492</td><td style="text-align:left">0.2381</td><td style="text-align:left">77.80</td></tr><tr><td style="text-align:left">mT5</td><td style="text-align:left">0.6076</td><td style="text-align:left">0.0700</td><td style="text-align:left">83.17</td></tr><tr><td style="text-align:left">維特比演算法</td><td style="text-align:left">0.9448</td><td style="text-align:left">N/A</td><td style="text-align:left">88.30</td></tr><tr><td style="text-align:left">Google輸入工具</td><td style="text-align:left">0.9337</td><td style="text-align:left">N/A</td><td style="text-align:left">87.17</td></tr></tbody></table><h2 id="應用">應用</h2><p>開源於 <a href="https://github.com/gallen881/bopomofo2hanzi">GitHub</a>，可自行架設 Discord Bot 進行即時翻譯。同時也架設<a href="https://gallen881.github.io/bopomofo2hanzi/">線上翻譯器</a>，可於線上進行翻譯。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 機器學習 </tag>
+            
+            <tag> Viterbi Algorithm </tag>
+            
+            <tag> Discord Bot </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>和泉ゆい使用說明</title>
       <link href="/posts/yui_docs/"/>
       <url>/posts/yui_docs/</url>
@@ -14,9 +37,9 @@
       
         <tags>
             
-            <tag> Docs </tag>
-            
             <tag> Discord Bot </tag>
+            
+            <tag> Docs </tag>
             
         </tags>
       
@@ -56,9 +79,9 @@
       
         <tags>
             
-            <tag> butterfly </tag>
-            
             <tag> hexo </tag>
+            
+            <tag> butterfly </tag>
             
             <tag> note </tag>
             
