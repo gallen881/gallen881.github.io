@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>昆蟲死在螢幕裡怎麼辦？</title>
+      <link href="/posts/insects_in_monitor/"/>
+      <url>/posts/insects_in_monitor/</url>
+      
+        <content type="html"><![CDATA[<p>今天發現在我的螢幕裡有一隻螞蟻，已經不會動了，也沒有自己爬出去的可能性。自己實測一些方法後記錄在這邊。</p><p><img src="/img/insects_in_monitor/ant_in_monitor.jpg" alt=""></p><h2 id="在開始前">在開始前</h2><p>可以在瀏覽器中輸入 <code>about:blank</code> 顯示白畫面，可以更清楚的看見昆蟲。</p><h2 id="方法實測">方法實測</h2><h3 id="拍打螢幕邊框">拍打螢幕邊框</h3><p>直接使用此方法有點效果，但螞蟻屍體只移動了一點。</p><h3 id="拍打螢幕">拍打螢幕</h3><p>此方法效果比拍打邊框好，但需要承擔螢幕被打壞的風險。</p><h3 id="震動螢幕">震動螢幕</h3><p>這裡看到一個影片使用電動牙刷的震動將其震出，因家中沒有電動牙刷而使用 Joy-Con 震動螢幕。效果不佳，螞蟻完全沒有移動。</p><iframe width="560" height="315" src="https://www.youtube.com/embed/N0dH4c4t5Tw?si=Ibh_rgXwpvh61xha" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><h3 id="使用吸盤">使用吸盤</h3><p>用吸盤吸住螢幕並且向外拉增加中間縫隙，同時拍打螢幕邊緣。此方法極有效，螞蟻掉出視線範圍。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>注音符號轉漢字</title>
       <link href="/posts/bopomofo2hanzi/"/>
       <url>/posts/bopomofo2hanzi/</url>
