@@ -8,7 +8,7 @@
       <link href="/posts/vim_smile/"/>
       <url>/posts/vim_smile/</url>
       
-        <content type="html"><![CDATA[<p>常常寫程式的話應該會知道 Vim，有許多工程師都愛用這個文字編輯器。寫程式寫累的話，不如試試以下彩蛋！！</p><ol><li><p>打開終端機<br><img src="/img/vim_smile/terminal.png" alt="終端機"></p></li><li><p>輸入 <code>vim</code> 在終端機中開啟 Vim</p></li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim</span><br></pre></td></tr></table></figure><p><img src="/img/vim_smile/enter_vim.png" alt="輸入vim"></p><ol start="3"><li>輸入 <code>:smile</code></li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:smile</span><br></pre></td></tr></table></figure><p><img src="/img/vim_smile/enter_smile.png" alt="enter_:smile"></p><ol start="4"><li>發現笑臉！！<br><img src="/img/vim_smile/vim_smile.png" alt="vim_smile"></li></ol>]]></content>
+        <content type="html"><![CDATA[<p>常常寫程式的話應該會知道 Vim，有許多工程師都愛用這個文字編輯器。寫程式寫累的話，不如試試以下彩蛋！！</p><ol><li><p>打開終端機<br><img src="/img/vim_smile/terminal.png" alt="終端機"></p></li><li><p>輸入 <code>vim</code> 在終端機中開啟 Vim</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim</span><br></pre></td></tr></table></figure><p><img src="/img/vim_smile/enter_vim.png" alt="輸入vim"></p></li><li><p>輸入 <code>:smile</code></p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:smile</span><br></pre></td></tr></table></figure><p><img src="/img/vim_smile/enter_smile.png" alt="enter_:smile"></p></li><li><p>發現笑臉！！<br><img src="/img/vim_smile/vim_smile.png" alt="vim_smile"></p></li></ol>]]></content>
       
       
       
@@ -113,11 +113,11 @@
       
         <tags>
             
+            <tag> Discord Bot </tag>
+            
             <tag> 機器學習 </tag>
             
             <tag> Viterbi Algorithm </tag>
-            
-            <tag> Discord Bot </tag>
             
         </tags>
       
@@ -136,9 +136,9 @@
       
         <tags>
             
-            <tag> Discord Bot </tag>
-            
             <tag> Docs </tag>
+            
+            <tag> Discord Bot </tag>
             
         </tags>
       
@@ -178,9 +178,9 @@
       
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> butterfly </tag>
+            
+            <tag> hexo </tag>
             
             <tag> note </tag>
             
