@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>Vim 微笑彩蛋</title>
+      <link href="/posts/vim_smile/"/>
+      <url>/posts/vim_smile/</url>
+      
+        <content type="html"><![CDATA[<p>常常寫程式的話應該會知道 Vim，有許多工程師都愛用這個文字編輯器。寫程式寫累的話，不如試試以下彩蛋！！</p><ol><li><p>打開終端機<br><img src="/img/vim_smile/terminal.png" alt="終端機"></p></li><li><p>輸入 <code>vim</code> 在終端機中開啟 Vim</p></li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim</span><br></pre></td></tr></table></figure><p><img src="/img/vim_smile/enter_vim.png" alt="輸入vim"></p><ol start="3"><li>輸入 <code>:smile</code></li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:smile</span><br></pre></td></tr></table></figure><p><img src="/img/vim_smile/enter_smile.png" alt="enter_:smile"></p><ol start="4"><li>發現笑臉！！<br><img src="/img/vim_smile/vim_smile.png" alt="vim_smile"></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Vim </tag>
+            
+            <tag> 冷知識 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>諮商心理師經驗分享筆記</title>
       <link href="/posts/counseling_psychologist/"/>
       <url>/posts/counseling_psychologist/</url>
@@ -70,6 +91,12 @@
         <content type="html"><![CDATA[<p>今天發現在我的螢幕裡有一隻螞蟻，已經不會動了，也沒有自己爬出去的可能性。自己實測一些方法後記錄在這邊。</p><p><img src="/img/insects_in_monitor/ant_in_monitor.jpg" alt=""></p><h2 id="在開始前">在開始前</h2><p>可以在瀏覽器中輸入 <code>about:blank</code> 顯示白畫面，可以更清楚的看見昆蟲。</p><h2 id="方法實測">方法實測</h2><h3 id="拍打螢幕邊框">拍打螢幕邊框</h3><p>直接使用此方法有點效果，但螞蟻屍體只移動了一點。</p><h3 id="拍打螢幕">拍打螢幕</h3><p>此方法效果比拍打邊框好，但需要承擔螢幕被打壞的風險。</p><h3 id="震動螢幕">震動螢幕</h3><p>這裡看到一個影片使用電動牙刷的震動將其震出，因家中沒有電動牙刷而使用 Joy-Con 震動螢幕。效果不佳，螞蟻完全沒有移動。</p><iframe width="560" height="315" src="https://www.youtube.com/embed/N0dH4c4t5Tw?si=Ibh_rgXwpvh61xha" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><h3 id="使用吸盤">使用吸盤</h3><p>用吸盤吸住螢幕並且向外拉增加中間縫隙，同時拍打螢幕邊緣。此方法極有效，螞蟻掉出視線範圍。</p>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> 冷知識 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -151,9 +178,9 @@
       
         <tags>
             
-            <tag> butterfly </tag>
-            
             <tag> hexo </tag>
+            
+            <tag> butterfly </tag>
             
             <tag> note </tag>
             
