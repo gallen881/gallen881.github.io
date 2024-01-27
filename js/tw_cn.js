@@ -1,10 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const translate = GLOBAL_CONFIG.translate
+  const { defaultEncoding, translateDelay, msgToTraditionalChinese, msgToSimplifiedChinese } = GLOBAL_CONFIG.translate
   const snackbarData = GLOBAL_CONFIG.Snackbar
-  const defaultEncoding = translate.defaultEncoding // 網站默認語言，1: 繁體中文, 2: 簡體中文
-  const translateDelay = translate.translateDelay // 延遲時間,若不在前, 要設定延遲翻譯時間, 如100表示100ms,默認為0
-  const msgToTraditionalChinese = translate.msgToTraditionalChinese // 此處可以更改為你想要顯示的文字
-  const msgToSimplifiedChinese = translate.msgToSimplifiedChinese // 同上，但兩處均不建議更改
   let currentEncoding = defaultEncoding
   const targetEncodingCookie = 'translate-chn-cht'
   let targetEncoding =
@@ -12,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
       ? defaultEncoding
       : Number(saveToLocal.get('translate-chn-cht'))
   let translateButtonObject
-  const isSnackbar = GLOBAL_CONFIG.Snackbar !== undefined
+  const isSnackbar = snackbarData !== undefined
 
   function setLang () {
     document.documentElement.lang = targetEncoding === 1 ? 'zh-TW' : 'zh-CN'
@@ -25,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
       return Traditionalized(txt)
     } else return txt
   }
+
   function translateBody (fobj) {
     let objs
     if (typeof fobj === 'object') objs = fobj.childNodes
@@ -58,12 +55,12 @@ document.addEventListener('DOMContentLoaded', function () {
     if (targetEncoding === 1) {
       currentEncoding = 1
       targetEncoding = 2
-      translateButtonObject.innerHTML = msgToTraditionalChinese
+      translateButtonObject.textContent = msgToTraditionalChinese
       isSnackbar && btf.snackbarShow(snackbarData.cht_to_chs)
     } else if (targetEncoding === 2) {
       currentEncoding = 2
       targetEncoding = 1
-      translateButtonObject.innerHTML = msgToSimplifiedChinese
+      translateButtonObject.textContent = msgToSimplifiedChinese
       isSnackbar && btf.snackbarShow(snackbarData.chs_to_cht)
     }
     saveToLocal.set(targetEncodingCookie, targetEncoding, 2)
@@ -104,16 +101,22 @@ document.addEventListener('DOMContentLoaded', function () {
     translateButtonObject = document.getElementById('translateLink')
     if (translateButtonObject) {
       if (currentEncoding !== targetEncoding) {
-        translateButtonObject.innerHTML =
+        translateButtonObject.textContent =
           targetEncoding === 1
             ? msgToSimplifiedChinese
             : msgToTraditionalChinese
         setLang()
         setTimeout(translateBody, translateDelay)
       }
-      translateButtonObject.addEventListener('click', translatePage, false)
     }
   }
+
+  window.translateFn = {
+    translatePage,
+    Traditionalized,
+    Simplized
+  }
+
   translateInitialization()
   document.addEventListener('pjax:complete', translateInitialization)
 })
