@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://gallen881.github.io/posts/ukko_P310A_and_PD2DC_adapter_unbox/</loc>
+    
+    <lastmod>2024-03-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://gallen881.github.io/link/index.html</loc>
     
     <lastmod>2024-03-03</lastmod>
@@ -244,14 +253,28 @@
   </url>
   
   <url>
-    <loc>https://gallen881.github.io/tags/Vim/</loc>
+    <loc>https://gallen881.github.io/tags/%E8%BC%B8%E5%85%A5%E6%B3%95/</loc>
     <lastmod>2024-03-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://gallen881.github.io/tags/%E8%BC%B8%E5%85%A5%E6%B3%95/</loc>
+    <loc>https://gallen881.github.io/tags/UKKO/</loc>
+    <lastmod>2024-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://gallen881.github.io/tags/PD/</loc>
+    <lastmod>2024-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://gallen881.github.io/tags/Vim/</loc>
     <lastmod>2024-03-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
