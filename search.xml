@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>探究純水中加入不同量的有色液體對 RGB 顏色的影響</title>
+      <link href="/posts/rye_juice_rgb/"/>
+      <url>/posts/rye_juice_rgb/</url>
+      
+        <content type="html"><![CDATA[<h1>假設</h1><p>水中加入有色液體的量與白光穿透顏色呈比例關係。</p><h1>變因</h1><ul><li>操作變因：加入液體的量</li><li>應變變因：白光穿透厚的顏色</li></ul><h1>實驗器具、材料</h1><ul><li>透明水箱</li><li>50ml 燒杯</li><li>10ml 量筒</li><li>攪拌棒</li><li>鋁罐裝黑麥汁</li><li>LED 白光手電筒</li><li>手機(相機)</li></ul><h1>實驗步驟</h1><ol><li>量取水 100 毫升，並倒入透明水箱。</li><li>以量筒取 10 毫升黑麥汁兩次，並倒入透明水箱且攪拌均勻。<br><img src="/img/rye_juice_rgb/20240320_110259.jpg" alt="10ml 黑麥汁"></li><li>調整相機參數<table><thead><tr><th>ISO</th><th>S</th><th>f/</th><th>焦距</th><th>EV</th><th>WB</th></tr></thead><tbody><tr><td>640</td><td>1/5000</td><td>1.78</td><td>4.05mm</td><td>+0.0</td><td>5000K</td></tr></tbody></table></li><li>以手電筒白光照射於水箱一側，手機鏡頭至於另一側。<br><img src="/img/rye_juice_rgb/20240320_114446.jpg" alt="設備擺設"></li><li>拍照紀錄</li><li>重複步驟 2 至 5 兩次</li><li>清理水箱</li><li>重複步驟 1 至 7 兩次</li></ol><h1>實驗結果</h1><p>純水：</p><blockquote><p>R：193<br>G：228<br>B：251</p></blockquote><h2 id="變化折線圖">變化折線圖</h2><p><img src="/img/rye_juice_rgb/1st.png" alt="第一次加入黑麥汁後水顏色變化折線圖"><br><img src="/img/rye_juice_rgb/2nd.png" alt="第二次加入黑麥汁後水顏色變化折線圖"><br><img src="/img/rye_juice_rgb/3rd.png" alt="第三次加入黑麥汁後水顏色變化折線圖"><br><img src="/img/rye_juice_rgb/average.png" alt="加入黑麥汁後水顏色平均變化折線圖"></p><h2 id="原始圖檔">原始圖檔</h2><div class="gallery-container" data-type="data" data-button="">      <div class="gallery-data">[{"url":"/img/rye_juice_rgb/images/water_only.jpg","alt":"純水原始照片"},{"url":"/img/rye_juice_rgb/images/1st_20ml.jpg","alt":"第一次實驗加入 20 毫升黑麥汁原始照片"},{"url":"/img/rye_juice_rgb/images/1st_40ml.jpg","alt":"第一次實驗加入 40 毫升黑麥汁原始照片"},{"url":"/img/rye_juice_rgb/images/1st_60ml.jpg","alt":"第一次實驗加入 60 毫升黑麥汁原始照片"},{"url":"/img/rye_juice_rgb/images/2nd_20ml.jpg","alt":"第二次實驗加入 20 毫升黑麥汁原始照片"},{"url":"/img/rye_juice_rgb/images/2nd_40ml.jpg","alt":"第二次實驗加入 40 毫升黑麥汁原始照片"},{"url":"/img/rye_juice_rgb/images/2nd_60ml.jpg","alt":"第二次實驗加入 60 毫升黑麥汁原始照片"},{"url":"/img/rye_juice_rgb/images/3rd_20ml.jpg","alt":"第三次實驗加入 20 毫升黑麥汁原始照片"},{"url":"/img/rye_juice_rgb/images/3rd_40ml.jpg","alt":"第三次實驗加入 40 毫升黑麥汁原始照片"},{"url":"/img/rye_juice_rgb/images/3rd_60ml.jpg","alt":"第三次實驗加入 60 毫升黑麥汁原始照片"}]</div>      <div class="gallery-items">      </div>    </div><h2 id="色階圖">色階圖</h2><p><img src="/img/rye_juice_rgb/figures/water_only.png" alt="純水色階圖"></p><div class="gallery-container" data-type="data" data-button="">      <div class="gallery-data">[{"url":"/img/rye_juice_rgb/figures/1st_20ml.png","alt":"第一次實驗加入 20 毫升黑麥汁色階圖"},{"url":"/img/rye_juice_rgb/figures/1st_40ml.png","alt":"第一次實驗加入 40 毫升黑麥汁色階圖"},{"url":"/img/rye_juice_rgb/figures/1st_60ml.png","alt":"第一次實驗加入 60 毫升黑麥汁色階圖"},{"url":"/img/rye_juice_rgb/figures/2nd_20ml.png","alt":"第二次實驗加入 20 毫升黑麥汁色階圖"},{"url":"/img/rye_juice_rgb/figures/2nd_40ml.png","alt":"第二次實驗加入 40 毫升黑麥汁色階圖"},{"url":"/img/rye_juice_rgb/figures/2nd_60ml.png","alt":"第二次實驗加入 60 毫升黑麥汁色階圖"},{"url":"/img/rye_juice_rgb/figures/3rd_20ml.png","alt":"第三次實驗加入 20 毫升黑麥汁色階圖"},{"url":"/img/rye_juice_rgb/figures/3rd_40ml.png","alt":"第三次實驗加入 40 毫升黑麥汁色階圖"},{"url":"/img/rye_juice_rgb/figures/3rd_60ml.png","alt":"第三次實驗加入 60 毫升黑麥汁色階圖"}]</div>      <div class="gallery-items">      </div>    </div><h1>結果討論</h1><ol><li><p>純水的 RGB 數值落差大</p><p>目前認為的主要原因有兩個：</p><ol><li>LED 光譜<br>上網查詢發現 LED 白光光譜不是均勻的，其中藍色特別強。推測實驗使用之手電筒也是如此。<a href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99">[1]</a><br><img src="/img/rye_juice_rgb/led.png" alt="LED 光譜"></li><li>瑞利散射<br>當入射光的波長比碰到的微粒還要大很多時，就會產生瑞利散射。散射強度與波長的四次方成反比，也就是說波長越短，越容易散射<a href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99">[2]</a>。推測白光通過透明水箱時，波長較短的藍光因水箱壁中的微小雜質而產生散射，導致水箱整體看起來偏藍。</li></ol></li><li><p>加入黑麥汁後 R 數值上升<br>推測是水中多了雜質後，影響了散射而產生的結果。</p></li><li><p>黑麥汁的量與 RGB 數值的關係<br>從實驗結果來看無法看出其中具有明顯的比例關係，可能的原因有以下幾點：</p><ol><li>水箱的散射干擾<br>需更換為更透明乾淨的水箱進行實驗。</li><li>LED 白光光譜不均勻<br>須改用光譜較平均的光源進行實驗。</li><li>實驗數據較少<br>需重複實驗更多次以了解整體走向。</li><li>假設錯誤</li></ol></li></ol><h1>結論</h1><p>本次實驗的數據不足以驗證假設，須重新設計實驗或更改假設。</p><h1>參考資料</h1><p>[1]台表检测。（2018）。常见白色led灯光谱范围介绍。取自 <a href="http://www.tsmtlab.com/news.detail.php?id=112">http://www.tsmtlab.com/news.detail.php?id=112</a><br>[2]張瑞棋。（2015）。天空為什麼是藍色的？瑞利誕辰｜科學史上的今天：11/12。取自 <a href="https://pansci.asia/archives/129071">https://pansci.asia/archives/129071</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 探究與實作 </tag>
+            
+            <tag> 黑麥汁 </tag>
+            
+            <tag> RGB </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>重乳奶茶的價錢問題</title>
       <link href="/posts/milk_tea_unbox/"/>
       <url>/posts/milk_tea_unbox/</url>
@@ -142,6 +165,8 @@
             
             <tag> 過氧化氫酶 </tag>
             
+            <tag> 探究與實作 </tag>
+            
         </tags>
       
     </entry>
@@ -160,6 +185,8 @@
         <tags>
             
             <tag> 過氧化氫酶 </tag>
+            
+            <tag> 探究與實作 </tag>
             
         </tags>
       
