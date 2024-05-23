@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Jellyfin 播放影片花屏、嚴重卡頓</title>
+      <link href="/posts/jellyfin_flickering/"/>
+      <url>/posts/jellyfin_flickering/</url>
+      
+        <content type="html"><![CDATA[<h1>問題發生</h1><p>前些日子想和 ianwang 一起用 Jellyfin 的同步功能一起看影片時，發現對方的 Macbook 播放影片時嚴重卡頓、甚至出現花屏，完全無法觀看。<br><img src="/img/jellyfin_flickering/screen_flickering.png" alt="Jellyfin 播放影片時花屏"></p><h1>發現問題</h1><p>但是我的 Windows 10 筆記型電腦全沒問題，我們認為問題出現在影片的解碼上。於是在網路搜尋一陣子後在 Jellyfin 的<a href="https://jellyfin.org/docs/general/administration/hardware-acceleration/">官網</a>發現這麼一段話：</p><div class="note green icon-padding flat"><i class="note-icon fa-regular fa-lightbulb"></i><p>TIP<br>The hardware decoding of H.264 / AVC 10-bit (High 10 profile) video is not supported by any Intel, NVIDIA and AMD GPU. Jellyfin will always fallback to software decoding for it. Consider upgrading such video to H.265 / HEVC 10-bit (Main 10 profile).</p></div>  <p>意思是大部分的 GPU 都無法對 H.264 / AVC 10-bit (High 10 profile) 的影片硬體解碼。我去 Jellyfin 上找到媒體資訊後發現，這影片正好就是 H.264 high 10。 :O<br><img src="/img/jellyfin_flickering/high_10.png" alt="影片的媒體資訊"></p><blockquote><p>媒體資訊可以在影片附近的三個點點找到</p></blockquote><h1>解決問題</h1><p>其實我對硬體解碼那些也不是很了解，不過調整以下設定解決了我的問題。</p><ol><li>在桌面版 Jellyfin 點選右上角 <i class="fa-solid fa-user"></i> 圖示進入帳號設定<br><img src="/img/jellyfin_flickering/settings.png" alt="設定"></li><li>選擇用戶端設定並找到 <code>Force_transcode_hi10p</code> 選項<br><img src="/img/jellyfin_flickering/hi10p.png" alt="Force_transcode_hi10pt"></li><li>勾選 <code>Force_transcode_hi10p</code> 選項</li><li>播放影片測試</li></ol><p>我們依照以上步驟解決了問題，不過不保證所有裝置皆適用。</p><p>ψ(｀∇´)ψ</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Jellyfin </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>命運石之門聖地巡禮——秋葉神社</title>
       <link href="/posts/akibajinja/"/>
       <url>/posts/akibajinja/</url>
@@ -325,9 +344,9 @@
       
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> butterfly </tag>
+            
+            <tag> hexo </tag>
             
             <tag> note </tag>
             
