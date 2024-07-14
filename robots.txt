@@ -1,0 +1,5 @@
+# hexo robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://gallen881.github.io/sitemap.xml
