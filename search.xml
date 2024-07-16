@@ -4,6 +4,93 @@
   
     
     <entry>
+      <title>Visual Studio Code 無法使用 &lt;bits/stdc++.h&gt;</title>
+      <link href="/posts/stdc++-h_in_vscode/"/>
+      <url>/posts/stdc++-h_in_vscode/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言">前言</h1><p>如果想要在 Visual Studio Code 上編輯 C++ 的話，可以參考上一篇文章：<a href="/posts/cpp_in_vscode">在 Visual Studio Code 建置 C++ 編輯環境</a>。讓你快樂地在 VScode 上編輯 CPP 文件。</p><p>但是，<br>這個快樂不會持續很久，你會突然發現，你不能用快樂的萬用標頭檔 &lt;bits/stdc++.h&gt;。😥<br><img src="/img/stdc++-h_in_vscode/error.png" alt="引入錯誤"></p><h1 id="解決方法">解決方法</h1><p>如果有看上一篇 C++ 環境的安裝，就會有 MinGW 與套件 C/C++。而 &lt;bits/stdc++.h&gt; 在安裝 MinGW 的時候就會被放在 MinGW 的資料夾裡。<br><code>MinGW\lib\gcc\mingw32\6.3.0\include\c++\mingw32</code><br>所以只要讓 VScode 自己來這個路徑找就好了！！</p><ol><li><p>打開 Visual Studio Code</p></li><li><p>點擊左下角的齒輪後，點設定。<br><img src="/img/stdc++-h_in_vscode/setting_btn.png" alt="點選設定"></p></li><li><p>搜尋 <code>includepath</code> 後選擇 <code>C_Cpp › Default: Include Path</code> 下的新增路徑。<br><img src="/img/stdc++-h_in_vscode/setting.png" alt="點擊紅框框之按鈕"></p></li><li><p>輸入自己的路徑，並按下確定。</p> <div class="note info flat"><p>請依照自己的情況修改路徑！！<br>e.g.</p><ul><li>D:\MinGW\lib\gcc\mingw32\6.3.0\include\c++\mingw32</li><li>C:\MinGW\lib\gcc\mingw32\6.3.0\include\c++\mingw32</li></ul></div><p><img src="/img/stdc++-h_in_vscode/enter_path.png" alt="輸入路徑"></p></li><li><p>回到檔案查看，可以發現錯誤已經被消除！！<br><img src="/img/stdc++-h_in_vscode/fixed.png" alt="hello, world"></p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教學 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+            <tag> VScode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>在 Visual Studio Code 建置 C++ 編輯環境</title>
+      <link href="/posts/cpp_in_vscode/"/>
+      <url>/posts/cpp_in_vscode/</url>
+      
+        <content type="html"><![CDATA[<h1 id="為什麼是-VScode？">為什麼是 VScode？</h1><p>為什麼要用 Visual Studio Code 寫 C++ 呢？或許你會覺得裝 Code::Blocks 就好了，何必多此一舉？確實，我也覺得 Code::Blocks 寫 C++ 很好用。但是我就是喜歡用 VSode 寫程式，畢竟各種套件、主題和 <a href="/posts/access_free_github_education_benefits/">GitHub Copilot</a> 太香了。<s>拒絕白色介面</s></p><h1 id="安裝步驟">安裝步驟</h1><h2 id="Visual-Studio-Code">Visual Studio Code</h2><h3 id="安裝-Visual-Studio-Code">安裝 Visual Studio Code</h3><ol><li><p>下載安裝檔<br>前往 <a href="https://code.visualstudio.com/download">Visual Studio Code 官網的下載頁面</a>下載安裝檔，並開啟安裝檔安裝 Visual Studio Code。<br><img src="/img/cpp_in_vscode/vscode_download.png" alt="Visual Studio Code 官網的下載頁面"></p></li><li><p>開啟安裝檔後使用預設選項安裝即可。</p></li></ol><h3 id="安裝-VScode-插件">安裝 VScode 插件</h3><ol><li><p>點擊左邊的延伸模組或使用快捷鍵 <strong>Ctrl + Shift + X</strong> 開啟延伸模組頁面。</p></li><li><p>搜尋 C++ 並安裝 <strong>C/C++</strong>、<strong>C/C++</strong>、<strong>C/C++ Themes</strong>。<br><img src="/img/cpp_in_vscode/cpp.png" alt="C/C++"></p></li><li><p>搜尋 Code Runner 並安裝 Code Runner。<br><img src="/img/cpp_in_vscode/code_runner.png" alt="Code Runner"></p></li></ol><h2 id="MinGW">MinGW</h2><h3 id="安裝">安裝</h3><p>MinGW 包含了編譯器以及一系列的標頭檔與函式庫，是在 Windows 系統上開發 C++ 的必備工具。</p><ol><li><p>前往 <a href="https://sourceforge.net/projects/mingw/">SourceForge</a> 下載 MinGW。<br><img src="/img/cpp_in_vscode/SourceForge.png" alt="SourceForge"></p></li><li><p>開啟安裝檔並點擊 <strong>Install</strong> 安裝。<br><img src="/img/cpp_in_vscode/mingw_install.png" alt="MinGW 安裝介面"></p></li><li><p>開啟 MinGW 並找到 <code>mingw32-base</code>，點擊右鍵，選擇 <strong>Mark for Installation</strong>。<br><img src="/img/cpp_in_vscode/mingw_UI.png" alt="選擇 Mark for Installation"></p></li><li><p>右上角選單選擇 <strong>Installation</strong>，並選擇 <strong>Apply Changes</strong>。<br><img src="/img/cpp_in_vscode/mingw_apply_changes.png" alt="選擇 Apply Changes"></p></li></ol><h3 id="加入環境變數">加入環境變數</h3><p>加入環境變數後，就能夠在任何目錄下使用編譯器了！！</p><ol><li><p>按下快捷鍵 <strong>WIN + S</strong>，並輸入 <code>path</code>，開啟<strong>編輯系統環境變數</strong>。<br><img src="/img/cpp_in_vscode/search_path.png" alt="搜尋 path"></p></li><li><p>點擊右下角的<strong>環境變數</strong>。<br><img src="/img/cpp_in_vscode/path.png" alt="點擊環境變數"></p></li><li><p>選擇自己使用者的 <strong>PATH</strong> 選項並點擊下方的<strong>編輯</strong>鍵。<br><img src="/img/cpp_in_vscode/path_edit.png" alt="選擇編輯"></p></li><li><p>點擊右上角的新增鍵，在框框內輸入 MinGW 安裝位置下的 <code>bin</code> 位置後後點擊確定。</p> <div class="note warning flat"><p>安裝路徑需依照個人狀況判斷。</p></div><p><img src="/img/cpp_in_vscode/add_mingw.png" alt="輸入 MinGW 的安裝位置"></p></li><li><p>重新開啟新的終端機，輸入 <code>g++ --version</code> 確認是否安裝成功。</p></li></ol><h1 id="使用">使用</h1><p>在 VScode 中編輯完一個 C++ 程式後，可以點擊左上方的播放按紐進行程式的編譯與執行。<br><img src="/img/cpp_in_vscode/run.png" alt="選擇 Run Code"></p><p>可以使用 hello, world 測試：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;hello, world&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>印出 <code>helo, world</code> 即為成功！！以後就可以快樂地使用 Visual Studio Code 寫 C++ 了！🎉🎉</p><h1 id="引入-bits-stdc-h">引入 &lt;bits/stdc++.h&gt;</h1><p>如果在引入 &lt;bits/stdc++.h&gt; 出現問題，可移駕至下一篇文章觀看：<a href="/posts/stdc++-h_in_vscode/">Visual Studio Code 無法使用 &lt;bits/stdc++.h&gt;</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教學 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+            <tag> MinGW </tag>
+            
+            <tag> VScode </tag>
+            
+            <tag> Code Runner </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>取得 GitHub Education benefits</title>
+      <link href="/posts/access_free_github_education_benefits/"/>
+      <url>/posts/access_free_github_education_benefits/</url>
+      
+        <content type="html"><![CDATA[<div class="note danger flat"><p>一切資訊請皆以官方為主，如網站內容有誤請告知。</p></div><h1 id="什麼是-GitHub-Education-benefits">什麼是 GitHub Education benefits</h1><p>GitHub Education benefits 是 GitHub 給學生的優惠，使用後你可以取得 GitHub PRO 和其他各種好處。如免費註冊 .me 網域一年、免費使用 JetBrains、免費使用 GitHub Copilot 等等，個人認為有 GitHub Copilot 就值了。詳細可以到<a href="https://education.github.com/pack/offers">官方網站</a>細看。</p><h1 id="申請的前提">申請的前提</h1><ul><li>擁有一個 GitHub 帳號</li><li>13 歲以上</li><li>正在受認可的機構就讀</li><li>可提供在學證明的文件</li></ul><p>ヾ(≧▽≦*)o<br>基本上臺灣的國高中生和大學生都可以申請！！</p><h1 id="申請步驟">申請步驟</h1><ol><li><p>前往<a href="https://education.github.com/discount_requests/application">官方頁面</a>並登入後依照自己的需求選擇。這裡我選擇學生。<br><img src="/img/access_free_github_education_benefits/1.png" alt="官方頁面"></p></li><li><p>往下滑動，找到 Application。你可能需要輸入學校配發的電子郵件信箱，我已經填寫過所以並無出現。接著輸入你的學校名稱後按下 <strong>Continue</strong>。<br><img src="/img/access_free_github_education_benefits/2.png" alt="輸入學校名稱"></p></li><li><p>待頁面跳轉後，準備好自己的證明文件。<br><img src="/img/access_free_github_education_benefits/3.png" alt="上傳頁面"></p> <div class="note warning flat"><p>文件上必須標有日期！</p></div></li><li><p>往下滑動，上傳身分證明文件後點擊 <strong>Process my application</strong>。</p> <div class="note warning flat"><p>上傳文件請勿修改或編輯，如果編輯過會被發現，無法申請！<br><img src="/img/access_free_github_education_benefits/warning.png" alt="修改文件會發生的事情"></p></div><p><img src="/img/access_free_github_education_benefits/5.png" alt="由此上傳文件"></p></li><li><p>接著就可以等待申請通過囉！！<br>印象中 1~3 天就可以通過。</p></li></ol><h1 id="申請通過後">申請通過後</h1><p>可以到自己的 GitHub 頁面查看，可以發現左下角多了一個 PRO 的標誌，代表已經取得 GitHub PRO 了。同時也可以享有 GitHub Education benefits 的福利。🎉🎉<br><img src="/img/access_free_github_education_benefits/6.png" alt="我的 GitHub Bio"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教學 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> GitHub </tag>
+            
+            <tag> GitHub PRO </tag>
+            
+            <tag> GitHub Copilot </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2024 櫻花科學計畫（SSHP）參與心得</title>
       <link href="/posts/reflections_on_sshp24/"/>
       <url>/posts/reflections_on_sshp24/</url>
