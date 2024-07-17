@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>ZeroJudge o087 王子的名字</title>
+      <link href="/posts/zj_o087/"/>
+      <url>/posts/zj_o087/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://zerojudge.tw/ShowProblem?problemid=o087">ZeroJudge o087 王子的名字</a></p><h1 id="解題思路">解題思路</h1><p>這題給出了一個 Python 的函式，因此這裡較適合用 Python 解。必須利用此函式為各種名字評分，並依照分數排列名字。既然提姆已經給出算分函式，我們就不必知道算分函式的作用，知道他會回傳分數就好。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># o087 AC</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 題目給的函式，直接貼上來</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">Evaluate</span>(<span class="params">Name: <span class="built_in">str</span></span>):                       </span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">type</span>(Name) != <span class="built_in">str</span>):                     </span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>                              </span><br><span class="line">                                               </span><br><span class="line">    Score = <span class="number">0</span>                                  </span><br><span class="line">    NameLen = <span class="built_in">len</span>(Name)                        </span><br><span class="line">                                               </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(NameLen):                   </span><br><span class="line">        CharCode = <span class="built_in">ord</span>(Name[i])                </span><br><span class="line">        Score += ((CharCode * <span class="number">1123</span>) % <span class="number">1002</span>)    </span><br><span class="line">                                               </span><br><span class="line">        <span class="keyword">while</span> (CharCode &gt; <span class="number">0</span>):                  </span><br><span class="line">            Score += (CharCode % <span class="number">10</span>)           </span><br><span class="line">            CharCode = (CharCode // <span class="number">10</span>)        </span><br><span class="line">                                               </span><br><span class="line">    <span class="keyword">return</span> (Score % <span class="number">101</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 輸入 N</span></span><br><span class="line">n = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 輸入 N 個名字，同時計算分數，並存入一個 list</span></span><br><span class="line">name_list = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    name = <span class="built_in">input</span>()</span><br><span class="line">    score = Evaluate(name) <span class="comment"># 呼叫算分函式</span></span><br><span class="line">    name_list.append((name, score))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 以分數排序名字</span></span><br><span class="line">sorted_name_list = <span class="built_in">sorted</span>(name_list, key=<span class="keyword">lambda</span> x: x[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 印出排序後的名字和分數</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> sorted_name_list:</span><br><span class="line">    <span class="built_in">print</span>(i[<span class="number">0</span>], i[<span class="number">1</span>])</span><br></pre></td></tr></table></figure><p><img src="/img/zj_o087/python_ac.png" alt="Python AC"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 競程解題 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Online Judge </tag>
+            
+            <tag> ZeroJudge </tag>
+            
+            <tag> 排序 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Visual Studio Code 無法使用 &lt;bits/stdc++.h&gt;</title>
       <link href="/posts/stdc++-h_in_vscode/"/>
       <url>/posts/stdc++-h_in_vscode/</url>
