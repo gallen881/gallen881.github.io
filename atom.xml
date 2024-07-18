@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>和泉小角落</title>
+  
+  
+  <link href="https://gallen881.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://gallen881.github.io/"/>
+  <updated>2024-07-18T02:53:46.655Z</updated>
+  <id>https://gallen881.github.io/</id>
+  
+  <author>
+    <name>和泉かやと</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ZeroJudge j224. 寶可夢圖鑑</title>
+    <link href="https://gallen881.github.io/posts/zj_j224/"/>
+    <id>https://gallen881.github.io/posts/zj_j224/</id>
+    <published>2024-07-18T02:18:26.000Z</published>
+    <updated>2024-07-18T02:53:46.655Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://zerojudge.tw/ShowProblem?problemid=j224">ZeroJudge j224. 寶可夢圖鑑</a></p><h1 id="解題思路">解題思路</h1><p>文文有可能重複抓到一樣的神奇寶貝，我們必須計算文文抓到的種類數量，而不是抓到的神奇寶貝數量。因此，若有重複的編號不必計算，此題適合用 <code>set</code>！！利用 <code>set</code> 的不重複特性，就可以輕易的將重複的神奇寶貝編號排除。</p><h1 id="set-特性"><code>set</code> 特性</h1><h2 id="C">C++</h2><ul><li><strong>容器內元素不重複</strong></li><li>會自動排序</li><li>容器內元素的值不可修改</li><li>可新增或移除元素</li></ul><h2 id="Python">Python</h2><ul><li><strong>容器內元素不重複</strong></li><li>容器內元素無順序、無索引</li><li>容器內元素的值不可修改</li><li>可新增或移除元素</li></ul><h1 id="程式碼">程式碼</h1><h2 id="C-2">C++</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// j224 AC</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> N;</span><br><span class="line">    cin &gt;&gt; N;</span><br><span class="line">    set&lt;<span class="type">int</span>&gt; pokemon; <span class="comment">// 建立一個 set 來存放寶可夢的編號</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; i++)&#123;</span><br><span class="line">        <span class="type">int</span> x;</span><br><span class="line">        cin &gt;&gt; x;</span><br><span class="line">        pokemon.<span class="built_in">insert</span>(x); <span class="comment">// 將寶可夢的編號加入 set，因 set 元素不重複特性不會加入重複的編號</span></span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; pokemon.<span class="built_in">size</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>; <span class="comment">// 輸出 set 的大小，即為不重複的寶可夢數量</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="/img/zj_j224/cpp_ac.png" alt="C++ AC"></p><h2 id="Python-一行解">Python 一行解</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">input</span>(); <span class="built_in">print</span>(<span class="built_in">len</span>(<span class="built_in">set</span>(<span class="built_in">input</span>().split())))</span><br></pre></td></tr></table></figure><p><img src="/img/zj_j224/python_ac.png" alt="Python AC"></p>]]></content>
+    
+    
+    <summary type="html">ZeroJudge j224 C++、Python 詳解</summary>
+    
+    
+    
+    <category term="競程解題" scheme="https://gallen881.github.io/categories/%E7%AB%B6%E7%A8%8B%E8%A7%A3%E9%A1%8C/"/>
+    
+    
+    <category term="C++" scheme="https://gallen881.github.io/tags/C/"/>
+    
+    <category term="Online Judge" scheme="https://gallen881.github.io/tags/Online-Judge/"/>
+    
+    <category term="ZeroJudge" scheme="https://gallen881.github.io/tags/ZeroJudge/"/>
+    
+    <category term="Python" scheme="https://gallen881.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ZeroJudge n688. pC. 卡牌遊戲</title>
+    <link href="https://gallen881.github.io/posts/zj_n688/"/>
+    <id>https://gallen881.github.io/posts/zj_n688/</id>
+    <published>2024-07-17T07:08:12.000Z</published>
+    <updated>2024-07-18T02:25:36.113Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://zerojudge.tw/ShowProblem?problemid=n688">ZeroJudge n688. pC. 卡牌遊戲</a></p><h1 id="解題思路">解題思路</h1><ul><li>必須使用 K 次魔法把正數變成負數、負數變成正數。</li><li>可對同個卡牌重複使用魔法。</li><li>必須用完 K 次魔法。</li></ul><p>可以分為以下狀況：</p><ol><li>負數數量大於 K：<br>從最小的負數開始轉換 K 次負數即可。</li><li>負數數量小於 K，且 K 減去負數數量為偶數：<br>將所有負數轉為正數，正數直接加總即可（使用偶數次魔法對數值無影響）</li><li>負數數量小於 K，且 K 減去負數數量為奇數：<br>將所有負數轉為正數後，需判斷要讓哪個數字轉為負數。<br>負數中最大的數轉為正數後與最小的正數比大小。<ul><li>若後者較大，使前者轉負數</li><li>若前者較大，使後者轉負數</li></ul></li><li>沒有負數，且 K 為偶數：<br>直接加總所有數字。</li><li>沒有負數，且 K 為基數：<br>將最小的數轉為負數後加總。</li></ol><h1 id="程式碼">程式碼</h1><h2 id="Python">Python</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># n688 AC</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 取得 N, K</span></span><br><span class="line">N, K = [<span class="built_in">int</span>(i) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">input</span>().split()]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 取得 N 個數字並排序</span></span><br><span class="line">a = <span class="built_in">sorted</span>([<span class="built_in">int</span>(i) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">input</span>().split()])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 將負數與正數分開</span></span><br><span class="line">am = [] <span class="comment"># 負數</span></span><br><span class="line">ap = [] <span class="comment"># 正數</span></span><br><span class="line"><span class="keyword">for</span> number <span class="keyword">in</span> a:</span><br><span class="line">    <span class="keyword">if</span> number &lt; <span class="number">0</span>:</span><br><span class="line">        am.append(number)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        ap.append(number)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 計算負數的數量</span></span><br><span class="line">am_length = <span class="built_in">len</span>(am)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果 K 小於等於負數的數量</span></span><br><span class="line"><span class="keyword">if</span> K &lt;= am_length:</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(K): <span class="comment"># 將前 K 個負數轉為正數</span></span><br><span class="line">        am[i] = -am[i]</span><br><span class="line">    ans = <span class="built_in">sum</span>(am) + <span class="built_in">sum</span>(ap) <span class="comment"># 狀況 1.</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果 K 大於負數的數量</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="comment"># 如果 K 減去負數的數量後是偶數</span></span><br><span class="line">    <span class="comment"># 則將所有負數轉為正數</span></span><br><span class="line">    <span class="comment"># 剩下的次數可兩兩抵銷</span></span><br><span class="line">    <span class="keyword">if</span> (K - am_length) % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">        ans = - <span class="built_in">sum</span>(am) + <span class="built_in">sum</span>(ap) <span class="comment"># 狀況 2.、狀況 4.</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 如果 K 減去負數的數量後是奇數</span></span><br><span class="line">    <span class="comment"># 且負數的數量不為 0</span></span><br><span class="line">    <span class="comment"># 必須從已經轉換的負數或正數中選擇一個數字轉為負數</span></span><br><span class="line">    <span class="keyword">elif</span> am_length:</span><br><span class="line">        <span class="comment"># 最大負數轉正後比最小正數小</span></span><br><span class="line">        <span class="comment"># 將最大負數轉正後再轉為負數最划算</span></span><br><span class="line">        <span class="keyword">if</span> -am[-<span class="number">1</span>] &lt; ap[<span class="number">0</span>]:</span><br><span class="line">            ans = -<span class="built_in">sum</span>(am[:-<span class="number">1</span>]) + am[-<span class="number">1</span>] + <span class="built_in">sum</span>(ap) <span class="comment"># 狀況 3-1.</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 最大負數轉正後比最小正數大</span></span><br><span class="line">        <span class="comment"># 將最小正數轉為負數最划算</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            ans = -<span class="built_in">sum</span>(am) + <span class="built_in">sum</span>(ap[<span class="number">1</span>:]) - ap[<span class="number">0</span>] <span class="comment"># 狀況 3-2.</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 沒有負數，且 K 為奇數，則取最小正數轉為負數</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        ans = <span class="built_in">sum</span>(ap[<span class="number">1</span>:]) - ap[<span class="number">0</span>] <span class="comment"># 狀況 5.</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(ans)</span><br></pre></td></tr></table></figure><p><img src="/img/zj_n688/python_ac.png" alt="Python AC"></p>]]></content>
+    
+    
+    <summary type="html">ZeroJudge n688 Python 詳解</summary>
+    
+    
+    
+    <category term="競程解題" scheme="https://gallen881.github.io/categories/%E7%AB%B6%E7%A8%8B%E8%A7%A3%E9%A1%8C/"/>
+    
+    
+    <category term="Online Judge" scheme="https://gallen881.github.io/tags/Online-Judge/"/>
+    
+    <category term="ZeroJudge" scheme="https://gallen881.github.io/tags/ZeroJudge/"/>
+    
+    <category term="Python" scheme="https://gallen881.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ZeroJudge o087. 王子的名字</title>
+    <link href="https://gallen881.github.io/posts/zj_o087/"/>
+    <id>https://gallen881.github.io/posts/zj_o087/</id>
+    <published>2024-07-17T02:10:41.000Z</published>
+    <updated>2024-07-18T02:25:57.541Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://zerojudge.tw/ShowProblem?problemid=o087">ZeroJudge o087. 王子的名字</a></p><h1 id="解題思路">解題思路</h1><p>這題給出了一個 Python 的函式，因此這裡較適合用 Python 解。必須利用此函式為各種名字評分，並依照分數排列名字。既然提姆已經給出算分函式，我們就不必知道算分函式的作用，知道他會回傳分數就好。</p><h1 id="程式碼">程式碼</h1><h2 id="Python">Python</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># o087 AC</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 題目給的函式，直接貼上來</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">Evaluate</span>(<span class="params">Name: <span class="built_in">str</span></span>):                       </span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">type</span>(Name) != <span class="built_in">str</span>):                     </span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>                              </span><br><span class="line">                                               </span><br><span class="line">    Score = <span class="number">0</span>                                  </span><br><span class="line">    NameLen = <span class="built_in">len</span>(Name)                        </span><br><span class="line">                                               </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(NameLen):                   </span><br><span class="line">        CharCode = <span class="built_in">ord</span>(Name[i])                </span><br><span class="line">        Score += ((CharCode * <span class="number">1123</span>) % <span class="number">1002</span>)    </span><br><span class="line">                                               </span><br><span class="line">        <span class="keyword">while</span> (CharCode &gt; <span class="number">0</span>):                  </span><br><span class="line">            Score += (CharCode % <span class="number">10</span>)           </span><br><span class="line">            CharCode = (CharCode // <span class="number">10</span>)        </span><br><span class="line">                                               </span><br><span class="line">    <span class="keyword">return</span> (Score % <span class="number">101</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 輸入 N</span></span><br><span class="line">n = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 輸入 N 個名字，同時計算分數，並存入一個 list</span></span><br><span class="line">name_list = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    name = <span class="built_in">input</span>()</span><br><span class="line">    score = Evaluate(name) <span class="comment"># 呼叫算分函式</span></span><br><span class="line">    name_list.append((name, score))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 以分數排序名字</span></span><br><span class="line">sorted_name_list = <span class="built_in">sorted</span>(name_list, key=<span class="keyword">lambda</span> x: x[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 印出排序後的名字和分數</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> sorted_name_list:</span><br><span class="line">    <span class="built_in">print</span>(i[<span class="number">0</span>], i[<span class="number">1</span>])</span><br></pre></td></tr></table></figure><p><img src="/img/zj_o087/python_ac.png" alt="Python AC"></p>]]></content>
+    
+    
+    <summary type="html">ZeroJudge o087 Python 詳解</summary>
+    
+    
+    
+    <category term="競程解題" scheme="https://gallen881.github.io/categories/%E7%AB%B6%E7%A8%8B%E8%A7%A3%E9%A1%8C/"/>
+    
+    
+    <category term="Online Judge" scheme="https://gallen881.github.io/tags/Online-Judge/"/>
+    
+    <category term="ZeroJudge" scheme="https://gallen881.github.io/tags/ZeroJudge/"/>
+    
+    <category term="Python" scheme="https://gallen881.github.io/tags/Python/"/>
+    
+    <category term="排序" scheme="https://gallen881.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Visual Studio Code 無法使用 &lt;bits/stdc++.h&gt;</title>
+    <link href="https://gallen881.github.io/posts/stdc++-h_in_vscode/"/>
+    <id>https://gallen881.github.io/posts/stdc++-h_in_vscode/</id>
+    <published>2024-07-16T08:44:08.000Z</published>
+    <updated>2024-07-16T11:53:44.922Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言">前言</h1><p>如果想要在 Visual Studio Code 上編輯 C++ 的話，可以參考上一篇文章：<a href="/posts/cpp_in_vscode">在 Visual Studio Code 建置 C++ 編輯環境</a>。讓你快樂地在 VScode 上編輯 CPP 文件。</p><p>但是，<br>這個快樂不會持續很久，你會突然發現，你不能用快樂的萬用標頭檔 &lt;bits/stdc++.h&gt;。😥<br><img src="/img/stdc++-h_in_vscode/error.png" alt="引入錯誤"></p><h1 id="解決方法">解決方法</h1><p>如果有看上一篇 C++ 環境的安裝，就會有 MinGW 與套件 C/C++。而 &lt;bits/stdc++.h&gt; 在安裝 MinGW 的時候就會被放在 MinGW 的資料夾裡。<br><code>MinGW\lib\gcc\mingw32\6.3.0\include\c++\mingw32</code><br>所以只要讓 VScode 自己來這個路徑找就好了！！</p><ol><li><p>打開 Visual Studio Code</p></li><li><p>點擊左下角的齒輪後，點設定。<br><img src="/img/stdc++-h_in_vscode/setting_btn.png" alt="點選設定"></p></li><li><p>搜尋 <code>includepath</code> 後選擇 <code>C_Cpp › Default: Include Path</code> 下的新增路徑。<br><img src="/img/stdc++-h_in_vscode/setting.png" alt="點擊紅框框之按鈕"></p></li><li><p>輸入自己的路徑，並按下確定。</p> <div class="note info flat"><p>請依照自己的情況修改路徑！！<br>e.g.</p><ul><li>D:\MinGW\lib\gcc\mingw32\6.3.0\include\c++\mingw32</li><li>C:\MinGW\lib\gcc\mingw32\6.3.0\include\c++\mingw32</li></ul></div><p><img src="/img/stdc++-h_in_vscode/enter_path.png" alt="輸入路徑"></p></li><li><p>回到檔案查看，可以發現錯誤已經被消除！！<br><img src="/img/stdc++-h_in_vscode/fixed.png" alt="hello, world"></p></li></ol>]]></content>
+    
+    
+    <summary type="html">教你如何在 VScode 上使用萬用標頭檔：bits/stdc++.h</summary>
+    
+    
+    
+    <category term="教學" scheme="https://gallen881.github.io/categories/%E6%95%99%E5%AD%B8/"/>
+    
+    
+    <category term="C++" scheme="https://gallen881.github.io/tags/C/"/>
+    
+    <category term="VScode" scheme="https://gallen881.github.io/tags/VScode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在 Visual Studio Code 建置 C++ 編輯環境</title>
+    <link href="https://gallen881.github.io/posts/cpp_in_vscode/"/>
+    <id>https://gallen881.github.io/posts/cpp_in_vscode/</id>
+    <published>2024-07-16T03:29:08.000Z</published>
+    <updated>2024-07-16T11:55:54.804Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="為什麼是-VScode？">為什麼是 VScode？</h1><p>為什麼要用 Visual Studio Code 寫 C++ 呢？或許你會覺得裝 Code::Blocks 就好了，何必多此一舉？確實，我也覺得 Code::Blocks 寫 C++ 很好用。但是我就是喜歡用 VSode 寫程式，畢竟各種套件、主題和 <a href="/posts/access_free_github_education_benefits/">GitHub Copilot</a> 太香了。<s>拒絕白色介面</s></p><h1 id="安裝步驟">安裝步驟</h1><h2 id="Visual-Studio-Code">Visual Studio Code</h2><h3 id="安裝-Visual-Studio-Code">安裝 Visual Studio Code</h3><ol><li><p>下載安裝檔<br>前往 <a href="https://code.visualstudio.com/download">Visual Studio Code 官網的下載頁面</a>下載安裝檔，並開啟安裝檔安裝 Visual Studio Code。<br><img src="/img/cpp_in_vscode/vscode_download.png" alt="Visual Studio Code 官網的下載頁面"></p></li><li><p>開啟安裝檔後使用預設選項安裝即可。</p></li></ol><h3 id="安裝-VScode-插件">安裝 VScode 插件</h3><ol><li><p>點擊左邊的延伸模組或使用快捷鍵 <strong>Ctrl + Shift + X</strong> 開啟延伸模組頁面。</p></li><li><p>搜尋 C++ 並安裝 <strong>C/C++</strong>、<strong>C/C++</strong>、<strong>C/C++ Themes</strong>。<br><img src="/img/cpp_in_vscode/cpp.png" alt="C/C++"></p></li><li><p>搜尋 Code Runner 並安裝 Code Runner。<br><img src="/img/cpp_in_vscode/code_runner.png" alt="Code Runner"></p></li></ol><h2 id="MinGW">MinGW</h2><h3 id="安裝">安裝</h3><p>MinGW 包含了編譯器以及一系列的標頭檔與函式庫，是在 Windows 系統上開發 C++ 的必備工具。</p><ol><li><p>前往 <a href="https://sourceforge.net/projects/mingw/">SourceForge</a> 下載 MinGW。<br><img src="/img/cpp_in_vscode/SourceForge.png" alt="SourceForge"></p></li><li><p>開啟安裝檔並點擊 <strong>Install</strong> 安裝。<br><img src="/img/cpp_in_vscode/mingw_install.png" alt="MinGW 安裝介面"></p></li><li><p>開啟 MinGW 並找到 <code>mingw32-base</code>，點擊右鍵，選擇 <strong>Mark for Installation</strong>。<br><img src="/img/cpp_in_vscode/mingw_UI.png" alt="選擇 Mark for Installation"></p></li><li><p>右上角選單選擇 <strong>Installation</strong>，並選擇 <strong>Apply Changes</strong>。<br><img src="/img/cpp_in_vscode/mingw_apply_changes.png" alt="選擇 Apply Changes"></p></li></ol><h3 id="加入環境變數">加入環境變數</h3><p>加入環境變數後，就能夠在任何目錄下使用編譯器了！！</p><ol><li><p>按下快捷鍵 <strong>WIN + S</strong>，並輸入 <code>path</code>，開啟<strong>編輯系統環境變數</strong>。<br><img src="/img/cpp_in_vscode/search_path.png" alt="搜尋 path"></p></li><li><p>點擊右下角的<strong>環境變數</strong>。<br><img src="/img/cpp_in_vscode/path.png" alt="點擊環境變數"></p></li><li><p>選擇自己使用者的 <strong>PATH</strong> 選項並點擊下方的<strong>編輯</strong>鍵。<br><img src="/img/cpp_in_vscode/path_edit.png" alt="選擇編輯"></p></li><li><p>點擊右上角的新增鍵，在框框內輸入 MinGW 安裝位置下的 <code>bin</code> 位置後後點擊確定。</p> <div class="note warning flat"><p>安裝路徑需依照個人狀況判斷。</p></div><p><img src="/img/cpp_in_vscode/add_mingw.png" alt="輸入 MinGW 的安裝位置"></p></li><li><p>重新開啟新的終端機，輸入 <code>g++ --version</code> 確認是否安裝成功。</p></li></ol><h1 id="使用">使用</h1><p>在 VScode 中編輯完一個 C++ 程式後，可以點擊左上方的播放按紐進行程式的編譯與執行。<br><img src="/img/cpp_in_vscode/run.png" alt="選擇 Run Code"></p><p>可以使用 hello, world 測試：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;hello, world&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>印出 <code>helo, world</code> 即為成功！！以後就可以快樂地使用 Visual Studio Code 寫 C++ 了！🎉🎉</p><h1 id="引入-bits-stdc-h">引入 &lt;bits/stdc++.h&gt;</h1><p>如果在引入 &lt;bits/stdc++.h&gt; 出現問題，可移駕至下一篇文章觀看：<a href="/posts/stdc++-h_in_vscode/">Visual Studio Code 無法使用 &lt;bits/stdc++.h&gt;</a></p>]]></content>
+    
+    
+    <summary type="html">教你如何在 VScode 上快樂地寫 C++</summary>
+    
+    
+    
+    <category term="教學" scheme="https://gallen881.github.io/categories/%E6%95%99%E5%AD%B8/"/>
+    
+    
+    <category term="C++" scheme="https://gallen881.github.io/tags/C/"/>
+    
+    <category term="MinGW" scheme="https://gallen881.github.io/tags/MinGW/"/>
+    
+    <category term="VScode" scheme="https://gallen881.github.io/tags/VScode/"/>
+    
+    <category term="Code Runner" scheme="https://gallen881.github.io/tags/Code-Runner/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>取得 GitHub Education benefits</title>
+    <link href="https://gallen881.github.io/posts/access_free_github_education_benefits/"/>
+    <id>https://gallen881.github.io/posts/access_free_github_education_benefits/</id>
+    <published>2024-07-16T03:14:48.000Z</published>
+    <updated>2024-07-17T00:55:32.605Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note danger flat"><p>一切資訊請皆以官方為主，如網站內容有誤請告知。</p></div><h1 id="什麼是-GitHub-Education-benefits">什麼是 GitHub Education benefits</h1><p>GitHub Education benefits 是 GitHub 給學生的優惠，使用後你可以取得 GitHub PRO 和其他各種好處。如免費註冊 .me 網域一年、免費使用 JetBrains、免費使用 GitHub Copilot 等等，個人認為有 GitHub Copilot 就值了。詳細可以到<a href="https://education.github.com/pack/offers">官方網站</a>細看。</p><h1 id="申請的前提">申請的前提</h1><ul><li>擁有一個 GitHub 帳號</li><li>13 歲以上</li><li>正在受認可的機構就讀</li><li>可提供在學證明的文件</li></ul><p>ヾ(≧▽≦*)o<br>基本上國高中生和大學生都可以申請！！</p><h1 id="申請步驟">申請步驟</h1><ol><li><p>前往<a href="https://education.github.com/discount_requests/application">官方頁面</a>並登入後依照自己的需求選擇。這裡我選擇學生。<br><img src="/img/access_free_github_education_benefits/1.png" alt="官方頁面"></p></li><li><p>往下滑動，找到 Application。你可能需要輸入學校配發的電子郵件信箱，我已經填寫過所以並無出現。接著輸入你的學校名稱後按下 <strong>Continue</strong>。<br><img src="/img/access_free_github_education_benefits/2.png" alt="輸入學校名稱"></p></li><li><p>待頁面跳轉後，準備好自己的證明文件。<br><img src="/img/access_free_github_education_benefits/3.png" alt="上傳頁面"></p> <div class="note warning flat"><p>文件上必須標有日期！</p></div></li><li><p>往下滑動，上傳身分證明文件後點擊 <strong>Process my application</strong>。</p> <div class="note warning flat"><p>上傳文件請勿修改或編輯，如果編輯過會被發現，無法申請！<br><img src="/img/access_free_github_education_benefits/warning.png" alt="修改文件會發生的事情"></p></div><p><img src="/img/access_free_github_education_benefits/5.png" alt="由此上傳文件"></p></li><li><p>接著就可以等待申請通過囉！！<br>印象中 1~3 天就可以通過。</p></li></ol><h1 id="申請通過後">申請通過後</h1><p>可以到自己的 GitHub 頁面查看，可以發現左下角多了一個 PRO 的標誌，代表已經取得 GitHub PRO 了。同時也可以享有 GitHub Education benefits 的福利。🎉🎉<br><img src="/img/access_free_github_education_benefits/6.png" alt="我的 GitHub Bio"></p>]]></content>
+    
+    
+    <summary type="html">教你如何取得 GitHub 學生豪華大禮包</summary>
+    
+    
+    
+    <category term="教學" scheme="https://gallen881.github.io/categories/%E6%95%99%E5%AD%B8/"/>
+    
+    
+    <category term="GitHub" scheme="https://gallen881.github.io/tags/GitHub/"/>
+    
+    <category term="GitHub PRO" scheme="https://gallen881.github.io/tags/GitHub-PRO/"/>
+    
+    <category term="GitHub Copilot" scheme="https://gallen881.github.io/tags/GitHub-Copilot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2024 櫻花科學計畫（SSHP）參與心得</title>
+    <link href="https://gallen881.github.io/posts/reflections_on_sshp24/"/>
+    <id>https://gallen881.github.io/posts/reflections_on_sshp24/</id>
+    <published>2024-07-10T11:16:34.000Z</published>
+    <updated>2024-07-14T09:23:25.339Z</updated>
+    
+    <content type="html"><![CDATA[<style>.container {    position: relative;    width: 100%;    height: 0;    padding-bottom: 56.25%;}.object_ {    position: absolute;    top: 0;    left: 0;    width: 100%;    height: 100%;}</style><div class="note info flat"><p>如內容有誤或侵害權利，請告知，將立即修正。<br>If the content is incorrect or infringes upon rights, please inform me and it will be corrected immediately.</p></div><h1 id="事前選拔">事前選拔</h1><p>我十分榮幸能錄取 2024 年的櫻花科學計畫，代表臺灣學生到日本參加活動。櫻花科學計畫的選拔在臺灣條件算是比較難的，被錄取時自己當然是開心極了，同時也很期待和不同學校的電神互相認識。</p><p>附上今年臺灣的報名公告：</p><div class=container><object    type="application/pdf"    data="/datas/reflections_on_sshp24/2024甄選赴日參加櫻花科學活動公告.pdf"    class="object_"></object></div><h1 id="名古屋">名古屋</h1><h2 id="第一天-06-16">第一天 06/16</h2><h3 id="中部国際空港駅">中部国際空港駅</h3><p>第一天基本上就是坐飛機行程，我們大約中午就抵達了<a href="https://maps.app.goo.gl/u6r8Cc6KiWEHdn239">中部国際空港駅</a>。下飛機後我和 maxdo 同學一起去買了一張 Manaca，聽 maxdo 同學說這似乎在名古屋才買的到？原先就有一張 Suica 得我如今又拿到一張 Manaca，這件事似乎在暗示我要將交通系 IC 全部收集完。<br><img src="/img/reflections_on_sshp24/20240710_220716.jpg" alt="Manaca（黃）和 Suica（綠）"></p><h3 id="Denny’s">Denny’s</h3><p>在市區稍微逛一逛後，到 Denny’s 吃晚餐。我沒有想到，後續幾天的晚餐竟然也是在這裡度過。<br><img src="/img/reflections_on_sshp24/20240616_180047.jpg" alt="第一天 Denny's 晚餐"></p><h3 id="飯店">飯店</h3><p>我一直很好奇我到底會和誰同房，沒想到我們住的竟然是單人房🤯！而且空間大還有浴缸！！</p><div class="gallery-container" data-type="data" data-button="">      <div class="gallery-data">[{"url":"/img/reflections_on_sshp24/20240616_162918.jpg","alt":"我住的房間（對窗）"},{"url":"/img/reflections_on_sshp24/20240616_162922.jpg","alt":"我住的房間（對門）"},{"url":"/img/reflections_on_sshp24/20240616_163036.jpg","alt":"我住的房間（浴室）"}]</div>      <div class="gallery-items">      </div>    </div><h2 id="第二天-06-17">第二天 06/17</h2><h3 id="開幕式">開幕式</h3><p>一早就是開幕式，在開幕式上認識了柬埔寨和越南的朋友。而主辦方也帶領我們進行一個叫做 NASA Game 的破冰遊戲，我們必須小組討論甚麼東西受困在月球時最有用，什麼最沒用。這個遊戲十分有趣，不過我覺得用手槍的用法有點奇怪。</p><div class="gallery-container" data-type="data" data-button="">      <div class="gallery-data">[{"url":"/img/reflections_on_sshp24/20240617_095021.jpg","alt":"開幕式會場"},{"url":"/img/reflections_on_sshp24/20240617_095023.jpg","alt":"開幕式會場"},{"url":"/img/reflections_on_sshp24/20240617_124818.jpg","alt":"開幕式會場"}]</div>      <div class="gallery-items">      </div>    </div><h3 id="磁浮鐵道館">磁浮鐵道館</h3><p>下午的參訪是<a href="https://maps.app.goo.gl/P5aKZaoAZwuH6WPF6">磁浮鐵道館</a>。<br>一些車子：</p><div class="gallery-container" data-type="data" data-button="">      <div class="gallery-data">[{"url":"/img/reflections_on_sshp24/20240617_131955.jpg","alt":"入口處 JR 標誌"},{"url":"/img/reflections_on_sshp24/20240617_132855.jpg","alt":"C6217"},{"url":"/img/reflections_on_sshp24/20240617_132906.jpg","alt":"車子"},{"url":"/img/reflections_on_sshp24/20240617_133058.jpg","alt":"車子"},{"url":"/img/reflections_on_sshp24/20240617_133103.jpg","alt":"車子"},{"url":"/img/reflections_on_sshp24/20240617_133221.jpg","alt":"臺灣高鐵同款車"},{"url":"/img/reflections_on_sshp24/20240617_133407.jpg","alt":"車子"},{"url":"/img/reflections_on_sshp24/20240617_135116.jpg","alt":"車子"},{"url":"/img/reflections_on_sshp24/20240617_135119.jpg","alt":"車子"},{"url":"/img/reflections_on_sshp24/20240617_135226.jpg","alt":"車子"},{"url":"/img/reflections_on_sshp24/20240617_135250.jpg","alt":"車子"},{"url":"/img/reflections_on_sshp24/20240617_135713.jpg","alt":"車子"},{"url":"/img/reflections_on_sshp24/20240617_140454.jpg","alt":"車子"},{"url":"/img/reflections_on_sshp24/20240617_141132.jpg","alt":"車子"},{"url":"/img/reflections_on_sshp24/20240617_141633.jpg","alt":"車子"},{"url":"/img/reflections_on_sshp24/20240617_141736.jpg","alt":"車子"},{"url":"/img/reflections_on_sshp24/20240617_141741.jpg","alt":"車子"},{"url":"/img/reflections_on_sshp24/VID_20180102_065411_00_007_2024-07-11_14-31-06_截图.jpg","alt":"車子"},{"url":"/img/reflections_on_sshp24/20240617_141827.jpg","alt":"車子"},{"url":"/img/reflections_on_sshp24/20240617_145633.jpg","alt":"日本未開發鐵路前使用之公車"},{"url":"/img/reflections_on_sshp24/20240617_151913.jpg","alt":"場外廣場"}]</div>      <div class="gallery-items">      </div>    </div><h3 id="LaLaport-名古屋港-AQULS">LaLaport 名古屋港 AQULS</h3><p>晚餐在 <a href="https://maps.app.goo.gl/HqTwvR5MQQwoQCVa9">LaLaport 名古屋港 AQULS</a>，給我們兩三個小時用餐和逛街。正好那裏的 Bandai Namco 有 Chunithm 和音擊，玩了一個多小時？<br><img src="/img/reflections_on_sshp24/20240617_164629.jpg" alt="maxdo 玩 Chunithm"></p><p>玩完後的晚餐是<a href="https://maps.app.goo.gl/R7JdRm9sWpaGVQmr7">回転すし 金の魚魚丸</a>，兩個人共吃了約五千日圓。總體來說還挺推薦的，炙燒鮭魚不錯吃😋。</p><h2 id="第三天-06-18">第三天 06/18</h2><h3 id="名古屋工業大学">名古屋工業大学</h3><p><img src="/img/reflections_on_sshp24/20240618_130549.jpg" alt="名古屋工業大学"></p><p>早上的行程是<a href="https://maps.app.goo.gl/uhxc9AwteGFa9MiZ8">名古屋工業大学</a>，我們被分成數組分別參觀不同實驗室。印象中我參觀的實驗室是 KATO Lab，主要研究 AI 的訓練以及各種機器人。除了教授，還有實驗室中的學生和我們分享成果。他們的想法都很不錯，預測帕金森氏病（PD）、監測老人用藥情況、增強文字訊息的情感互動，這些都對社會有一定的幫助。期望他們的研究順利。</p><p>另外我們也在這間實驗室見證了<a href="https://www.guinnessworldrecords.com/world-records/smallest-robot-humanoid">金氏世界紀錄認證</a>的最小人形機器人。他能走路、跳舞，甚至能打拳和踢腳，<s>戰鬥力十足</s>。</p><div class=container><iframe class=object_ src="https://www.youtube.com/embed/GgltRgK1hyw?si=tdEYjhmJh881O-Sn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><h3 id="トヨタ産業技術記念館">トヨタ産業技術記念館</h3><p>下午的行程是<a href="https://maps.app.goo.gl/TkuYd4SdZY7L2MfS7">トヨタ産業技術記念館</a>，展示了 TOYATA 的歷史與產品。沒想到 TOYOTA 竟然是做紡織起家的，後來才慢慢開始發展汽車工業。</p><div class="gallery-container" data-type="data" data-button="">      <div class="gallery-data">[{"url":"/img/reflections_on_sshp24/20240618_141211.jpg","alt":"紡織機器"},{"url":"/img/reflections_on_sshp24/20240618_141224.jpg","alt":"紡織機器"}]</div>      <div class="gallery-items">      </div>    </div><div class="container"><video controls class="object_">    <source src="/img/reflections_on_sshp24/VID_20180103_064414_00_014_14.mp4" type="video/mp4"></video></div><div class="gallery-container" data-type="data" data-button="">      <div class="gallery-data">[{"url":"/img/reflections_on_sshp24/20240618_143735.jpg","alt":"車子"},{"url":"/img/reflections_on_sshp24/20240618_144530.jpg","alt":"車子"},{"url":"/img/reflections_on_sshp24/20240618_144924.jpg","alt":"車子"},{"url":"/img/reflections_on_sshp24/20240618_151807.jpg","alt":"車子"}]</div>      <div class="gallery-items">      </div>    </div><div class="container"><video controls class="object_">    <source src="/img/reflections_on_sshp24/VID_20180103_074246_00_019.mp4" type="video/mp4"></video></div><div class="container"><video controls class="object_">    <source src="/img/reflections_on_sshp24/VID_20180103_074246_00_019_2.mp4" type="video/mp4"></video></div><div class="container"><video controls class="object_">    <source src="/img/reflections_on_sshp24/VID_20180103_080430_00_021.mp4" type="video/mp4"></video></div><h3 id="ノリタケの森">ノリタケの森</h3><p>在去 shopping mall 之前去了旁邊的<a href="https://maps.app.goo.gl/EhN6EiBmffe5Nwrz5">ノリタケの森</a>，是一個陶器的博物館。但大家沒甚麼興趣稍微看一看就走了。</p><h3 id="イオンモール-Nagoya-Noritake-Garden">イオンモール Nagoya Noritake Garden</h3><p>今天的晚餐在<a href="https://maps.app.goo.gl/XWC3q1z3Ek7eniDZ8">イオンモール Nagoya Noritake Garden</a> 解決。這裡雖然有 Bandai Namco，但只有太鼓達人一個音遊。在<a href="https://maps.app.goo.gl/nntMZoSpYaZamPEV9">豚骨麺屋</a>吃完拉麵後，太無聊去超市逛逛，東西超便宜！！</p><div class="gallery-container" data-type="data" data-button="">      <div class="gallery-data">[{"url":"/img/reflections_on_sshp24/20240618_174705.jpg","alt":"拉麵"},{"url":"/img/reflections_on_sshp24/20240618_175807.jpg","alt":"拉麵"}]</div>      <div class="gallery-items">      </div>    </div><h2 id="第四天-06-19">第四天 06/19</h2><h3 id="愛知県立岡崎高等学校">愛知県立岡崎高等学校</h3><p>今天一整天的行程幾乎都在<a href="https://maps.app.goo.gl/cyvbHjibeSCLU8uZ9">愛知県立岡崎高等学校</a>。早上在學校的大禮堂聽因為發明藍色 LED 而得到諾貝爾物理學獎的天野浩教授演講。中午時會和學伴一起吃午餐，印象中我的學伴叫做 Sho Ota さん。他因為忘記帶名牌掛繩所以用充電線綁在脖子上代替，是個十分有個性的人。他們的便當幾乎都是自己在家準備好帶來的，雖然份量小但看上去十分美味。</p><p>午餐後由另一位學伴帶我參觀校園以及觀賞海報展覽，學伴叫做一翔さん。我們互相介紹時十分驚喜，Kazuto 和 Kayato，我們的名字只差一個字！！後來在參觀海報展覽時，遇到的日本同學都很友善。我很驚訝ももなさん第二次看見我時還記得我的名字，令我十分開心。之後又遇到 Yoshito さん等人，是十分有趣、不怕生的一群人，也很愛起鬨。最後我們一起拍了 JOJO 立的照片，<s>看起來就像一群人中二病發作wwww</s>。</p><p>在 Sho Ota さん的班上玩了一些團康遊戲後就到社團參觀，我去的是茶道部。我們被帶進一間鋪上塌塌米的茶室，品嘗和菓子和茶。我第一次知道原來走路時踩塌塌米之間的邊緣是禁忌，好像是邊緣上常有許多家紋或動植物的圖案，如果踩在上面就等於踐踏祖先或動植物。坐定後有許多穿和服的人走進來為我們送和菓子和茶，和菓子有一點點甜，茶不錯喝。他們對於喝茶的方法十分講究，印象中要左手拿碗，右手扶著，接著順時針轉動茶碗再喝，避免從茶碗的正面喝茶，然後必須分二到三口將茶全部喝完。</p><p>再送茶的期間亭主擔心大家腳酸，一直提醒大家不必跪坐，可以照自己舒服的方式坐。不習慣跪坐的話要維持姿勢確實會有點吃力。＞﹏＜</p><p>整趟旅程最有趣的活動莫過於參訪岡崎高中，和許多同年的外國學生互動的機會是十分難得的。<br>由於被日方通知隨意在網路上散播學生的照片會有法律問題，因此這裡就不放照片了。原本想放大門但忘記拍了。╯︿╰</p><h3 id="7-ELEVEN">7-ELEVEN</h3><p>晚上在 7-ELEVEN 買了 maxdo 同學推薦的冰，很不錯吃。但是房間的冰箱不冰，吃的時候冰都已經融化了。😥</p><div class="gallery-container" data-type="data" data-button="">      <div class="gallery-data">[{"url":"/img/reflections_on_sshp24/20240620_014148.jpg","alt":"冰"},{"url":"/img/reflections_on_sshp24/20240620_014545.jpg","alt":"冰"}]</div>      <div class="gallery-items">      </div>    </div><h2 id="第五天-06-20">第五天 06/20</h2><h3 id="名古屋大学">名古屋大学</h3><p>今天的行程幾乎都在<a href="https://maps.app.goo.gl/S7bpM4HR9tFza6mi7">名古屋大学</a>，我們參觀了實驗室和博物館。印象最深刻的一定是 Plasma 的研究，他們對於 Plasma 已經到了狂熱的地步，各種地方都能用上 Plasma。有個展示使用特斯拉線圈撥放瑪莉歐的音樂十分有趣：</p><div class="container"><video controls class="object_">    <source src="/img/reflections_on_sshp24/20240620_132911.mp4" type="video/mp4"></video></div><p>這個東西在<a href="https://shopee.tw/search?keyword=%E7%89%B9%E6%96%AF%E6%8B%89%E7%B7%9A%E5%9C%88">蝦皮</a>是可以買到的。</p><h3 id="animate">animate</h3><p>晚上我們自己去在<a href="https://maps.app.goo.gl/PsZQrXLpMCjnwB1k8">名古屋 PARCO</a> 的 <a href="https://maps.app.goo.gl/cYPNLaNUdE8Z7AqJ6">animate</a> 購物。原本想要買模型，但可惜那間店太小了沒有賣模型。有看到一些東方的書，但是沒有特別感興趣。最後象徵性地買了一隻初音立牌。<br><img src="/img/reflections_on_sshp24/miku.png" alt="初音立牌"></p><h2 id="第六天-06-21">第六天 06/21</h2><h3 id="名古屋城">名古屋城</h3><p>上午就開始下大雨，到了<a href="https://maps.app.goo.gl/nWYmCidfm7rbw6io6">名古屋城</a>雨還是一直下，最後只好大家撐傘參觀。雖然下雨增加了行動的不便利，不過雨中的名古屋城另有一番風味。</p><div class="gallery-container" data-type="data" data-button="">      <div class="gallery-data">[{"url":"/img/reflections_on_sshp24/20240621_092418.jpg","alt":"名古屋城"},{"url":"/img/reflections_on_sshp24/20240621_095653.jpg","alt":"名古屋城"},{"url":"/img/reflections_on_sshp24/20240621_102139.jpg","alt":"名古屋城"}]</div>      <div class="gallery-items">      </div>    </div><div class="container"><video controls class="object_">    <source src="/img/reflections_on_sshp24/VID_20180106_034408_00_040.mp4" type="video/mp4"></video></div><p>在紀念品店外的販賣機看到有在賣 <a href="https://www.cbdsq.jp/">CBDX</a>。為什麼特別提到他？因為這款飲料加入的 CBD 是由大麻中取出，具有放鬆的效果，不過此款飲料應該是安全的，可惜沒有買來喝喝看。<br><img src="/img/reflections_on_sshp24/20240621_112434.jpg" alt="CBDX"></p><h3 id="閉幕式">閉幕式</h3><p>閉幕式時每個國家都需要表演，臺灣表演的是丟丟銅仔：隨著自製沙鈴的節奏跟著音樂揮扇子，帶出丟丟銅仔的意境。雖然表演時有點小插曲，但不傷大雅。因為代表臺灣的學生來自各個縣市，平常沒有機會一起練習，所以我們的練習時間主要都在傍晚的自由時間。表演時看大家的反應，覺得練習值得了。<br><img src="/img/reflections_on_sshp24/20240614_223804.jpg" alt="自製沙鈴"></p><p>在這個期間也看到其他國家的表演，整體十分歡樂🎉🎉。</p><h3 id="BIG-ECHO">BIG ECHO</h3><p>閉幕式後就沒有行程了，因此我們傍晚去<a href="https://maps.app.goo.gl/3yEarXUJzMR4mqSt8">ビッグエコー</a>唱カラオケ。只買了一個小時，沒想到時間一下就到了。可惜當時已經門禁時間九點了，不然還可以再唱久一點。而我完全不會唱歌，不是聽別人唱就是拿麥克風亂唱😅。<br><img src="/img/reflections_on_sshp24/20240621_200432.jpg" alt="包廂"></p><h2 id="第七天-06-22">第七天 06/22</h2><h3 id="中部国際空港駅-2">中部国際空港駅</h3><p>今天也是坐飛機行程。</p><div class="gallery-container" data-type="data" data-button="">      <div class="gallery-data">[{"url":"/img/reflections_on_sshp24/20240622_071542.jpg","alt":"機場"},{"url":"/img/reflections_on_sshp24/20240622_073507.jpg","alt":"可愛插圖"},{"url":"/img/reflections_on_sshp24/20240622_074358.jpg","alt":"國際線"},{"url":"/img/reflections_on_sshp24/20240622_080725.jpg","alt":"飛機"},{"url":"/img/reflections_on_sshp24/20240622_080728.jpg","alt":"飛機"},{"url":"/img/reflections_on_sshp24/20240622_080742.jpg","alt":"GATE"}]</div>      <div class="gallery-items">      </div>    </div><div class="container"><video controls class="object_">    <source src="/img/reflections_on_sshp24/20240622_095711_small.mp4" type="video/mp4"></video></div><p>好奇為何起飛時手機貼著拍會有類似波浪的效果。</p><h2 id="其他活動">其他活動</h2><h3 id="桌遊局">桌遊局</h3><p>幾乎每天晚上都會有人固定在某人的房間玩桌遊，和一群電神玩阿瓦隆和血與刃的白薔薇十分燒腦，經歷了許多勾心鬥角的高端局。此外毛這個遊戲也非常有趣，是個不用知道規則也能玩的遊戲。</p><h3 id="大浴場局">大浴場局</h3><p>我們住的飯店在一樓有浴場，問大家都沒有人要去泡，所以之後只有我和 maxdo 同學去泡，之後老師也加入了。雖然只有一池，但也算舒服。自從開始去大浴場洗澡後，好像就沒有再用過浴室了。</p><h1 id="心得">心得</h1><p>非常感謝有這個機會讓我前往日本交流，這些活動都十分難得且有趣。而參加活動不只是參觀各個設施、開拓眼界，同時也是訓練自己的外文溝通能力以及社交能力，可以強迫自己說英文並且社交。這趟旅程中結交了許多國內外的好友，大家都十分友善。經過這次的參訪，給了我前往日本留學或工作的知識以及管道，對於我幫助很大。</p><p>櫻花科學計畫是個好活動，期望這個活動能夠持續下去。</p><h1 id="vlog">vlog</h1><p>特別感謝蛋捲 PVP 幫我們紀錄旅程並剪輯成 vlog。</p><div class="container"><iframe class="object_" src="https://www.youtube.com/embed/videoseries?si=2zvjBJ1XvrrtSVLG&amp;list=PLuwtyQLUwnb_GELMWpfMihBYscqsH3VST" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><h1 id="✨特別感謝">✨特別感謝</h1><ul><li>JST</li><li>SSHP</li><li>國立臺灣師範大學</li><li>參訪之各設施</li><li>帶隊老師</li><li>臺灣的同學們</li><li>外國朋友們</li></ul><p>謝天謝地</p>]]></content>
+    
+    
+    <summary type="html">The experience of sshp24.</summary>
+    
+    
+    
+    <category term="心得" scheme="https://gallen881.github.io/categories/%E5%BF%83%E5%BE%97/"/>
+    
+    
+    <category term="日本" scheme="https://gallen881.github.io/tags/%E6%97%A5%E6%9C%AC/"/>
+    
+    <category term="旅遊" scheme="https://gallen881.github.io/tags/%E6%97%85%E9%81%8A/"/>
+    
+    <category term="SSHP" scheme="https://gallen881.github.io/tags/SSHP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>探究不同頻率的疊加對繩波的影響</title>
+    <link href="https://gallen881.github.io/posts/interference_of_two_waves_of_different_frequencies/"/>
+    <id>https://gallen881.github.io/posts/interference_of_two_waves_of_different_frequencies/</id>
+    <published>2024-06-11T20:05:10.000Z</published>
+    <updated>2024-07-14T01:35:02.251Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="假設">假設</h1><p>當兩個波的頻率呈倍數關係時其干涉之繩波可達穩定狀態</p><h1 id="定義">定義</h1><p>穩定狀態：在肉眼觀測下，繩波波形固定不變</p><h1 id="變因">變因</h1><ul><li>操作變因：兩個單體個別的振動頻率</li><li>應變變因：繩波的形狀與狀態</li></ul><h1 id="實驗器材">實驗器材</h1><ol><li>單體兩個</li><li>氣球握把兩個</li><li>手機(音波數位訊號產生器)兩台</li><li>擴大機兩台</li><li>3.5mm TRRS to 3.5mm TRRS 公對公電線兩條</li><li>附鱷魚夾之電線四條</li><li>手機(攝影機)</li><li>棉繩</li><li>鐵尺</li><li>黑色海報紙</li></ol><h1 id="實驗步驟">實驗步驟</h1><h2 id="實驗器材設置">實驗器材設置</h2><ol><li>將兩台擴大機插上電源</li><li>將氣球握把分別固定於單體震動薄膜之中心</li><li>以附有鱷魚夾之電線分別連結單體與擴大器</li><li>將棉線兩端分別綁在氣球握把上</li><li>手機下載 <a href="https://phyphox.org/">phyphox</a> 作為音波數位訊號產生器</li><li>以音源線連接手機以及擴大器</li><li>將黑色海報紙放在繩子後以利錄影</li></ol><p><img src="/img/interference_of_two_waves_of_different_frequencies/20240529_104242.jpg" alt="隨興之器材擺放"></p><h2 id="實驗器材校正">實驗器材校正</h2><ol><li><p>使用鐵尺將綿線兩端打結處調整至距單體 5 公分處</p></li><li><p>使一側單體以最大音量播放頻率為 30 赫茲之聲音</p></li><li><p>量測產生之繩波振幅</p></li><li><p>改以另一側之單體重複步驟 2~3</p></li><li><p>將振幅較大之一側單體音量調小直到繩波振幅等於另一測之振幅</p> <div class="note info flat"><p>步驟 2~5：<br>調整兩個單體的音量相同，確保控制變因不變。</p></div></li></ol><h2 id="實驗進行步驟">實驗進行步驟</h2><ol><li>設定兩側單體聲音頻率為 30 赫茲</li><li>同時使左右單體開始震動</li><li>觀察繩波並用手機錄影</li><li>將左側單體播放之聲音頻率增加 10 赫茲</li><li>重複步驟 2~4 7次</li><li>設定兩側單體聲音頻率為 40 赫茲</li><li>重複步驟 2~4 7次</li><li>設定兩側單體聲音頻率為 50 赫茲</li><li>重複步驟 2~4 6次</li></ol><h1 id="實驗數據">實驗數據</h1><!-- <style type="text/css">.tg  {border-collapse:collapse;border-spacing:0;}.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;  overflow:hidden;padding:10px 5px;word-break:normal;}.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}.tg .tg-baqh{text-align:center;vertical-align:top}.tg .tg-0lax{text-align:left;vertical-align:top}</style> --><table class="tg"><thead>  <tr>    <th class="tg-baqh" colspan="4">右側單體震動頻率 30 Hz</th>  </tr></thead><tbody>  <tr>    <td class="tg-0lax">兩氣球握把距離(cm)</td>    <td class="tg-0lax">繩長(cm)</td>    <td class="tg-0lax">左側單體震動頻率(Hz)</td>    <td class="tg-0lax">是否達穩定狀態</td>  </tr>  <tr>    <td class="tg-0lax">94.5</td>    <td class="tg-0lax">97.8</td>    <td class="tg-0lax">30</td>    <td class="tg-0lax">是</td>  </tr>  <tr>    <td class="tg-0lax">94.5</td>    <td class="tg-0lax">97.8</td>    <td class="tg-0lax">40</td>    <td class="tg-0lax">否</td>  </tr>  <tr>    <td class="tg-0lax">94.5</td>    <td class="tg-0lax">97.8</td>    <td class="tg-0lax">50</td>    <td class="tg-0lax">否</td>  </tr>  <tr>    <td class="tg-0lax">94.5</td>    <td class="tg-0lax">97.8</td>    <td class="tg-0lax">60</td>    <td class="tg-0lax">是</td>  </tr>  <tr>    <td class="tg-0lax">94.5</td>    <td class="tg-0lax">97.8</td>    <td class="tg-0lax">70</td>    <td class="tg-0lax">否</td>  </tr>  <tr>    <td class="tg-0lax">94.5</td>    <td class="tg-0lax">97.8</td>    <td class="tg-0lax">80</td>    <td class="tg-0lax">否</td>  </tr>  <tr>    <td class="tg-0lax">94.5</td>    <td class="tg-0lax">97.8</td>    <td class="tg-0lax">90</td>    <td class="tg-0lax">是</td>  </tr>  <tr>    <td class="tg-0lax">94.5</td>    <td class="tg-0lax">97.8</td>    <td class="tg-0lax">100</td>    <td class="tg-0lax">是</td>  </tr></tbody></table><!-- <style type="text/css">.tg  {border-collapse:collapse;border-spacing:0;}.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;  overflow:hidden;padding:10px 5px;word-break:normal;}.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}.tg .tg-za14{border-color:inherit;text-align:left;vertical-align:bottom}</style> --><table class="tg"><thead>  <tr>    <th class="tg-c3ow" colspan="4">右側單體震動頻率 40 Hz</th>  </tr></thead><tbody>  <tr>    <td class="tg-za14">兩氣球握把距離(cm)</td>    <td class="tg-za14">繩長(cm)</td>    <td class="tg-za14">左側單體震動頻率(Hz)</td>    <td class="tg-za14">是否達穩定狀態</td>  </tr>  <tr>    <td class="tg-za14">94.5</td>    <td class="tg-za14">97.8</td>    <td class="tg-za14">40</td>    <td class="tg-za14">是</td>  </tr>  <tr>    <td class="tg-za14">94.5</td>    <td class="tg-za14">97.8</td>    <td class="tg-za14">50</td>    <td class="tg-za14">否</td>  </tr>  <tr>    <td class="tg-za14">94.5</td>    <td class="tg-za14">97.8</td>    <td class="tg-za14">60</td>    <td class="tg-za14">否</td>  </tr>  <tr>    <td class="tg-za14">94.5</td>    <td class="tg-za14">97.8</td>    <td class="tg-za14">70</td>    <td class="tg-za14">否</td>  </tr>  <tr>    <td class="tg-za14">94.5</td>    <td class="tg-za14">97.8</td>    <td class="tg-za14">80</td>    <td class="tg-za14">是</td>  </tr>  <tr>    <td class="tg-za14">94.5</td>    <td class="tg-za14">97.8</td>    <td class="tg-za14">90</td>    <td class="tg-za14">否</td>  </tr>  <tr>    <td class="tg-za14">94.5</td>    <td class="tg-za14">97.8</td>    <td class="tg-za14">100</td>    <td class="tg-za14">否</td>  </tr></tbody></table><!-- <style type="text/css">.tg  {border-collapse:collapse;border-spacing:0;}.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;  overflow:hidden;padding:10px 5px;word-break:normal;}.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}.tg .tg-za14{border-color:inherit;text-align:left;vertical-align:bottom}</style> --><table class="tg"><thead>  <tr>    <th class="tg-c3ow" colspan="4">右側單體震動頻率 50 Hz</th>  </tr></thead><tbody>  <tr>    <td class="tg-za14">兩氣球握把距離(cm)</td>    <td class="tg-za14">繩長(cm)</td>    <td class="tg-za14">左側單體震動頻率(Hz)</td>    <td class="tg-za14">是否達穩定狀態</td>  </tr>  <tr>    <td class="tg-za14">94.5</td>    <td class="tg-za14">97.8</td>    <td class="tg-za14">50</td>    <td class="tg-za14">是</td>  </tr>  <tr>    <td class="tg-za14">94.5</td>    <td class="tg-za14">97.8</td>    <td class="tg-za14">60</td>    <td class="tg-za14">否</td>  </tr>  <tr>    <td class="tg-za14">94.5</td>    <td class="tg-za14">97.8</td>    <td class="tg-za14">70</td>    <td class="tg-za14">否</td>  </tr>  <tr>    <td class="tg-za14">94.5</td>    <td class="tg-za14">97.8</td>    <td class="tg-za14">80</td>    <td class="tg-za14">否</td>  </tr>  <tr>    <td class="tg-za14">94.5</td>    <td class="tg-za14">97.8</td>    <td class="tg-za14">90</td>    <td class="tg-za14">否</td>  </tr>  <tr>    <td class="tg-za14">94.5</td>    <td class="tg-za14">97.8</td>    <td class="tg-za14">100</td>    <td class="tg-za14">是</td>  </tr></tbody></table><div class="gallery-group-main"><figure class="gallery-group">  <img class="gallery-group-img no-lightbox" src='/img/interference_of_two_waves_of_different_frequencies/4030_cover.png' alt="Group Image Gallery">  <figcaption>  <div class="gallery-group-name">實驗影片</div>  <p>右側單體震動頻率為30赫茲時的影片紀錄</p>  <a href='/datas/interference_of_two_waves_of_different_frequencies_videos'></a>  </figcaption>  </figure>  </div><h1 id="結果討論">結果討論</h1><p>當兩側單體的頻率為倍數關係時，可觀測到繩波波形達到穩定狀態。推測倍數的頻率關係會使產生的波長有一定的比例關係，因此在互相干涉達到穩定狀態。而非倍數關係時，大部分繩波波形皆不穩定，只有左 100 右 30 的組別達到穩定。根據實驗認為原因為兩頻率相差較大，頻率 100 產生的振幅相對頻率 30 產生的小，因此無法對頻率 30 產生的波形造成明顯的干涉。<br><strong>由實驗數據可支持我們的假設。</strong></p><h1 id="模擬">模擬</h1><h2 id="數位模擬">數位模擬</h2><p>透過 Desmos 編寫數學式來模擬波與波干涉的關係。</p><div class="container"><iframe src="https://www.desmos.com/calculator/poblv8zszq?embed" style="border: 1px solid #ccc" frameborder=0 class="video"></iframe></div><h2 id="類比模擬">類比模擬</h2><p>透過示波器來模擬波與波干涉的關係。<br><img src="/img/interference_of_two_waves_of_different_frequencies/IMG_0162.JPG" alt="示波器模擬"></p><style>.container {    position: relative;    width: 100%;    height: 0;    padding-bottom: 56.25%;}.video {    position: absolute;    top: 0;    left: 0;    width: 100%;    height: 100%;}</style><div class="container"><video controls class="video">    <source src="/img/interference_of_two_waves_of_different_frequencies/MVI_0165.mp4" type="video/mp4"></video></div><h1 id="✨特別感謝">✨特別感謝</h1><p>ianwang 技術支援</p>]]></content>
+    
+    
+    <summary type="html">觀察不同頻率的波之干涉對繩波穩定度的影響</summary>
+    
+    
+    
+    <category term="探究與實作" scheme="https://gallen881.github.io/categories/%E6%8E%A2%E7%A9%B6%E8%88%87%E5%AF%A6%E4%BD%9C/"/>
+    
+    
+    <category term="繩波" scheme="https://gallen881.github.io/tags/%E7%B9%A9%E6%B3%A2/"/>
+    
+    <category term="駐波" scheme="https://gallen881.github.io/tags/%E9%A7%90%E6%B3%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>The traditions of Tao</title>
+    <link href="https://gallen881.github.io/posts/the_traditions_of_tao/"/>
+    <id>https://gallen881.github.io/posts/the_traditions_of_tao/</id>
+    <published>2024-05-30T07:34:04.000Z</published>
+    <updated>2024-05-30T11:11:19.450Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="The-traditions-of-Tao">The traditions of Tao</h1><p>We all know that sumo wrestlers only wear a length of cloth on their crotch, but do you know why Tao’s men also wear like that?<br>Before we talk about this question, let’s learn more about Tao. The Tao people, also known as the Yami people, are the only aboriginal ethnic group in Taiwan whose main traditional settlements are located on the outlying islands of Taiwan. They have a marine culture, with great ritual and spiritual significance placed on boat-building and fishing. When it comes to Tao, we must talk about tatala. Tatalas are extremely important instruments on living and traditional events for Tao people. They are made of several boards, smaller Tatalas are made of 21 boards while bigger ones need 27 boards. Every Tatala has a totem in the shape of an eye on their bow and stern. It is believed that it can guide the boat in the sea and disperse disasters.<br>Apart from the Tatalas, Tao’s clothes also have some totems. The traditional clothing of Tao’s women would include a shawl, a short skirt and a rope. On the shawl were stripes in black, blue and white, it was called nyozitan na ayob. The Taos think the nyozitan na ayob could protect their souls and ward off evils. Tao men’s clothing is very different from women’s, they wear a vest with blue and white color and a length of cloth on their crotch. The reason why they wear this way is because of the job they do. Most of the Tao’s men are fishermen who have to work on the sea under scorching sun lights. If they wear too much, water will soak their pants and let them get heavier, the hot and humid weather will also discomfort them. So it is necessary for them to wear less.<br>Besides the aforementioned traditions, there are still a lot of things that we haven’t talked about like the underground house or myths and legends. Undoubtedly, all of the traditions of Tao are indispensable and precious for Taiwan.</p><h1 id="Reference">Reference</h1><p>[1]維基百科（2024）。<em>達悟族</em>。取自 <a href="https://zh.wikipedia.org/zh-tw/%E9%81%94%E6%82%9F%E6%97%8F">https://zh.wikipedia.org/zh-tw/達悟族</a><br>[2]蘭嶼．人之島（2023）。<em>達悟的拼板舟</em>。取自 <a href="https://travel.lanyu.info/tao-culture/%E9%81%94%E6%82%9F%E7%9A%84%E6%8B%BC%E6%9D%BF%E8%88%9F">https://travel.lanyu.info/tao-culture/達悟的拼板舟</a><br>[3]張靈、那牧特、蕭祺等（2015）。Ayob no tao 最好的衣服。<em>952 vazay tamo 第三期</em>。</p>]]></content>
+    
+    
+    <summary type="html">News Writing Practice</summary>
+    
+    
+    
+    
+    <category term="達悟族" scheme="https://gallen881.github.io/tags/%E9%81%94%E6%82%9F%E6%97%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Jellyfin 播放影片花屏、嚴重卡頓</title>
+    <link href="https://gallen881.github.io/posts/jellyfin_flickering/"/>
+    <id>https://gallen881.github.io/posts/jellyfin_flickering/</id>
+    <published>2024-05-23T04:10:05.000Z</published>
+    <updated>2024-05-23T06:20:39.953Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="問題發生">問題發生</h1><p>前些日子想和 ianwang 一起用 Jellyfin 的同步功能一起看影片時，發現對方的 Macbook 播放影片時嚴重卡頓、甚至出現花屏，完全無法觀看。<br><img src="/img/jellyfin_flickering/screen_flickering.png" alt="Jellyfin 播放影片時花屏"></p><h1 id="發現問題">發現問題</h1><p>但是我的 Windows 10 筆記型電腦全沒問題，我們認為問題出現在影片的解碼上。於是在網路搜尋一陣子後在 Jellyfin 的<a href="https://jellyfin.org/docs/general/administration/hardware-acceleration/">官網</a>發現這麼一段話：</p><div class="note green icon-padding flat"><i class="note-icon fa-regular fa-lightbulb"></i><p>TIP<br>The hardware decoding of H.264 / AVC 10-bit (High 10 profile) video is not supported by any Intel, NVIDIA and AMD GPU. Jellyfin will always fallback to software decoding for it. Consider upgrading such video to H.265 / HEVC 10-bit (Main 10 profile).</p></div>  <p>意思是大部分的 GPU 都無法對 H.264 / AVC 10-bit (High 10 profile) 的影片硬體解碼。我去 Jellyfin 上找到媒體資訊後發現，這影片正好就是 H.264 high 10。 :O<br><img src="/img/jellyfin_flickering/high_10.png" alt="影片的媒體資訊"></p><blockquote><p>媒體資訊可以在影片附近的三個點點找到</p></blockquote><h1 id="解決問題">解決問題</h1><p>其實我對硬體解碼那些也不是很了解，不過調整以下設定解決了我的問題。</p><ol><li>在桌面版 Jellyfin 點選右上角 <i class="fa-solid fa-user"></i> 圖示進入帳號設定<br><img src="/img/jellyfin_flickering/settings.png" alt="設定"></li><li>選擇用戶端設定並找到 <code>Force_transcode_hi10p</code> 選項<br><img src="/img/jellyfin_flickering/hi10p.png" alt="Force_transcode_hi10pt"></li><li>勾選 <code>Force_transcode_hi10p</code> 選項</li><li>播放影片測試</li></ol><p>我們依照以上步驟解決了問題，不過不保證所有裝置皆適用。</p><p>ψ(｀∇´)ψ</p>]]></content>
+    
+    
+    <summary type="html">Jellyfin 播放 H.264 High 10 時花屏、卡頓之解決</summary>
+    
+    
+    
+    
+    <category term="Jellyfin" scheme="https://gallen881.github.io/tags/Jellyfin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>命運石之門聖地巡禮——秋葉神社</title>
+    <link href="https://gallen881.github.io/posts/akibajinja/"/>
+    <id>https://gallen881.github.io/posts/akibajinja/</id>
+    <published>2024-05-03T15:21:57.000Z</published>
+    <updated>2024-07-14T01:34:27.864Z</updated>
+    
+    <content type="html"><![CDATA[<p><em>すべてはシュタインズゲートの選択だ。</em></p><h1 id="聖地巡禮">聖地巡禮</h1><h2 id="石頭門">石頭門</h2><p>命運石之門中的柳林神社其神社本身的原型為秋葉神社。<br><img src="https://imgur.com/cwPdr68.jpg" alt="命運石之門中的柳林神社本體"><br><img src="/img/akibajinja/IMG_133.JPG" alt="位於上野的秋葉神社"></p><p>若有實地走訪可能會發現秋葉神社的入口和柳林神社不一樣，其實柳林神社入口的原型是位於秋葉原的柳森神社。[1]</p><p>實際上秋葉神社的入口<br><img src="/img/akibajinja/IMG_124.JPG" alt="秋葉神社入口鳥居"> <img src="/img/akibajinja/IMG_123.JPG" alt="秋葉神社入口旗子"></p><h2 id="地理">地理</h2><p>秋葉神社，位於<a href="https://maps.google.com/?cid=2760654605758643743">東京都台東區松が谷三丁目10番7號</a>。</p><h2 id="歷史">歷史</h2><p>明治初年常有火光之災，因此在現在的秋葉原建造了這座寺廟，作為東京市民祈求防火的場所。[2]</p><p>原名為鎮火社。同時也是秋葉原的地名由來。[3]</p><p>叫做秋葉神社卻不在秋葉原？明治 21 年(1888)時，日本鉄道為了從現在的上野駅延長到秋葉原駅，鎮火社遷移到現址。到昭和 5 年(1930)時改名為秋葉神社。[3]<br><img src="/img/akibajinja/IMG_136.JPG" alt="秋葉神社遷址百年紀念碑"></p><h2 id="參考資料">參考資料</h2><p>[1]cominlin。(2020)。[聖地] 命運石之門無印&amp;zero&amp;劇場版 聖地巡禮。取自 <a href="https://disp.cc/b/ACG/cR45">https://disp.cc/b/ACG/cR45</a><br>[2]東京都神社庁。(n.d.)。秋葉神社。取自 <a href="http://www.tokyo-jinjacho.or.jp/taito/3051/">http://www.tokyo-jinjacho.or.jp/taito/3051/</a><br>[3]ウィキペディア。(2023)。秋葉神社 (台東区)。取自 <a href="https://ja.wikipedia.org/wiki/%E7%A7%8B%E8%91%89%E7%A5%9E%E7%A4%BE_(%E5%8F%B0%E6%9D%B1%E5%8C%BA)">https://ja.wikipedia.org/wiki/秋葉神社_(台東区)</a></p><h1 id="抽籤">抽籤</h1><p>100 圓就能抽籤，抽到了大吉！！<br><img src="/img/akibajinja/20240501_162724.jpg" alt="籤"><br><img src="/img/akibajinja/20240501_162736.jpg" alt="籤"><br>徵求懂日文的朋友幫忙翻譯。</p><h1 id="其他照片">其他照片</h1><div class="gallery-container" data-type="data" data-button="">      <div class="gallery-data">[{"url":"/img/akibajinja/other/IMG_125.JPG","alt":"倉庫？"},{"url":"/img/akibajinja/other/IMG_126.JPG","alt":"手水舎"},{"url":"/img/akibajinja/other/IMG_131.JPG","alt":"石獅子"},{"url":"/img/akibajinja/other/IMG_132.JPG","alt":"石子路"},{"url":"/img/akibajinja/other/IMG_134.JPG","alt":"手水舎"},{"url":"/img/akibajinja/other/IMG_135.JPG","alt":"石子路"},{"url":"/img/akibajinja/other/IMG_137.JPG","alt":"石子路"},{"url":"/img/akibajinja/other/IMG_139.JPG","alt":"樹上葫蘆"},{"url":"/img/akibajinja/other/IMG_140.JPG","alt":"神札所"},{"url":"/img/akibajinja/other/IMG_141.JPG","alt":"神社建築"},{"url":"/img/akibajinja/other/IMG_142.JPG","alt":"手水舎內的感應式水龍頭"},{"url":"/img/akibajinja/other/IMG_143.JPG","alt":"秋葉神社"}]</div>      <div class="gallery-items">      </div>    </div><h1 id="✨特別感謝">✨特別感謝</h1><p>ianwang 相機提供</p>]]></content>
+    
+    
+    <summary type="html">造訪秋葉神社時的紀錄以及與石頭門的淵源</summary>
+    
+    
+    
+    
+    <category term="命運石之門" scheme="https://gallen881.github.io/tags/%E5%91%BD%E9%81%8B%E7%9F%B3%E4%B9%8B%E9%96%80/"/>
+    
+    <category term="神社" scheme="https://gallen881.github.io/tags/%E7%A5%9E%E7%A4%BE/"/>
+    
+    <category term="日本" scheme="https://gallen881.github.io/tags/%E6%97%A5%E6%9C%AC/"/>
+    
+    <category term="旅遊" scheme="https://gallen881.github.io/tags/%E6%97%85%E9%81%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>「午後の紅茶」包裝下的秘密</title>
+    <link href="https://gallen881.github.io/posts/afternoon_black_tea/"/>
+    <id>https://gallen881.github.io/posts/afternoon_black_tea/</id>
+    <published>2024-05-03T10:30:55.000Z</published>
+    <updated>2024-07-14T00:39:05.499Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note warning flat"><p>以下情節除飲料包裝外皆為虛構</p></div><p>某個自主學習的下午，天空澄澈而明朗，微風輕拂著臉頰，帶來一絲絲清涼與愉悅。我坐教室的一隅，手中拿著檸檬口味「午後の紅茶」，茶香在空氣中瀰漫開來，令人心曠神怡。此時此刻，沒有任何煩惱能夠擾亂我的心情，只有純粹的喜悅和滿足，讓我完全沉浸在這片平靜而愜意的氛圍中。</p><p>當最後一口茶滑過喉嚨，餘味漸漸消逝，我感受到一絲絲的失落籠罩在心頭。瓶中空空如也，我心中也空落落的，那份喜悅與平靜，彷彿與茶杯裡的一抹殘茶一同消逝了，只剩一陣微風掠過後的一絲寂寥。我這時意識到這美好時光已然結束，仿佛失去了一份心靈的寄託，不禁感到有些孤獨與失落。</p><p>雙眼傻傻地看著寶特瓶包裝，人生第一次感受到何為「望眼欲穿」。哪怕只剩一滴，一滴都不能浪費！我撕開包裝檢查哪裡還有遺漏的紅茶。</p><p>！！！</p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><p>特別感謝 alanjiang 圖片提供<br><img src="/img/afternoon_black_tea/20231107_111149.jpg" alt="午後の紅茶內外包裝"></p><p>見到這個場景，一股難以置信的震撼從心底湧上，心中充斥著一種複雜的矛盾感。那仿若真實的茶香、那撫心舒適的滋味，突然間變得虛幻不實，令我感到一種深深的失望與憤怒。</p><p>確實，他真的沒寫錯，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.1</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">0.1\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8056em;vertical-align:-0.0556em;"></span><span class="mord">0.1%</span></span></span></span> 是真的小於 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">10\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8056em;vertical-align:-0.0556em;"></span><span class="mord">10%</span></span></span></span> 呢！</p>]]></content>
+    
+    
+    <summary type="html">揭發隱藏在包裝下，那不為人知的秘密</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>探究純水中加入不同量的有色液體對 RGB 顏色的影響</title>
+    <link href="https://gallen881.github.io/posts/rye_juice_rgb/"/>
+    <id>https://gallen881.github.io/posts/rye_juice_rgb/</id>
+    <published>2024-04-18T00:55:01.000Z</published>
+    <updated>2024-07-14T01:34:52.886Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="假設">假設</h1><p>水中加入有色液體的量與白光穿透顏色呈比例關係。</p><h1 id="變因">變因</h1><ul><li>操作變因：加入液體的量</li><li>應變變因：白光穿透厚的顏色</li></ul><h1 id="實驗器具、材料">實驗器具、材料</h1><ul><li>透明水箱</li><li>50ml 燒杯</li><li>10ml 量筒</li><li>攪拌棒</li><li>鋁罐裝黑麥汁</li><li>LED 白光手電筒</li><li>手機(相機)</li></ul><h1 id="實驗步驟">實驗步驟</h1><ol><li>量取水 100 毫升，並倒入透明水箱。</li><li>以量筒取 10 毫升黑麥汁兩次，並倒入透明水箱且攪拌均勻。<br><img src="/img/rye_juice_rgb/20240320_110259.jpg" alt="10ml 黑麥汁"></li><li>調整相機參數<table><thead><tr><th>ISO</th><th>S</th><th>f/</th><th>焦距</th><th>EV</th><th>WB</th></tr></thead><tbody><tr><td>640</td><td>1/5000</td><td>1.78</td><td>4.05mm</td><td>+0.0</td><td>5000K</td></tr></tbody></table></li><li>以手電筒白光照射於水箱一側，手機鏡頭至於另一側。<br><img src="/img/rye_juice_rgb/20240320_114446.jpg" alt="設備擺設"></li><li>拍照紀錄</li><li>重複步驟 2 至 5 兩次</li><li>清理水箱</li><li>重複步驟 1 至 7 兩次</li></ol><h1 id="實驗結果">實驗結果</h1><p>純水：</p><blockquote><p>R：193<br>G：228<br>B：251</p></blockquote><h2 id="變化折線圖">變化折線圖</h2><p><img src="/img/rye_juice_rgb/1st.png" alt="第一次加入黑麥汁後水顏色變化折線圖"><br><img src="/img/rye_juice_rgb/2nd.png" alt="第二次加入黑麥汁後水顏色變化折線圖"><br><img src="/img/rye_juice_rgb/3rd.png" alt="第三次加入黑麥汁後水顏色變化折線圖"><br><img src="/img/rye_juice_rgb/average.png" alt="加入黑麥汁後水顏色平均變化折線圖"></p><h2 id="原始圖檔">原始圖檔</h2><div class="gallery-container" data-type="data" data-button="">      <div class="gallery-data">[{"url":"/img/rye_juice_rgb/images/water_only.jpg","alt":"純水原始照片"},{"url":"/img/rye_juice_rgb/images/1st_20ml.jpg","alt":"第一次實驗加入 20 毫升黑麥汁原始照片"},{"url":"/img/rye_juice_rgb/images/1st_40ml.jpg","alt":"第一次實驗加入 40 毫升黑麥汁原始照片"},{"url":"/img/rye_juice_rgb/images/1st_60ml.jpg","alt":"第一次實驗加入 60 毫升黑麥汁原始照片"},{"url":"/img/rye_juice_rgb/images/2nd_20ml.jpg","alt":"第二次實驗加入 20 毫升黑麥汁原始照片"},{"url":"/img/rye_juice_rgb/images/2nd_40ml.jpg","alt":"第二次實驗加入 40 毫升黑麥汁原始照片"},{"url":"/img/rye_juice_rgb/images/2nd_60ml.jpg","alt":"第二次實驗加入 60 毫升黑麥汁原始照片"},{"url":"/img/rye_juice_rgb/images/3rd_20ml.jpg","alt":"第三次實驗加入 20 毫升黑麥汁原始照片"},{"url":"/img/rye_juice_rgb/images/3rd_40ml.jpg","alt":"第三次實驗加入 40 毫升黑麥汁原始照片"},{"url":"/img/rye_juice_rgb/images/3rd_60ml.jpg","alt":"第三次實驗加入 60 毫升黑麥汁原始照片"}]</div>      <div class="gallery-items">      </div>    </div><h2 id="色階圖">色階圖</h2><p><img src="/img/rye_juice_rgb/figures/water_only.png" alt="純水色階圖"></p><div class="gallery-container" data-type="data" data-button="">      <div class="gallery-data">[{"url":"/img/rye_juice_rgb/figures/1st_20ml.png","alt":"第一次實驗加入 20 毫升黑麥汁色階圖"},{"url":"/img/rye_juice_rgb/figures/1st_40ml.png","alt":"第一次實驗加入 40 毫升黑麥汁色階圖"},{"url":"/img/rye_juice_rgb/figures/1st_60ml.png","alt":"第一次實驗加入 60 毫升黑麥汁色階圖"},{"url":"/img/rye_juice_rgb/figures/2nd_20ml.png","alt":"第二次實驗加入 20 毫升黑麥汁色階圖"},{"url":"/img/rye_juice_rgb/figures/2nd_40ml.png","alt":"第二次實驗加入 40 毫升黑麥汁色階圖"},{"url":"/img/rye_juice_rgb/figures/2nd_60ml.png","alt":"第二次實驗加入 60 毫升黑麥汁色階圖"},{"url":"/img/rye_juice_rgb/figures/3rd_20ml.png","alt":"第三次實驗加入 20 毫升黑麥汁色階圖"},{"url":"/img/rye_juice_rgb/figures/3rd_40ml.png","alt":"第三次實驗加入 40 毫升黑麥汁色階圖"},{"url":"/img/rye_juice_rgb/figures/3rd_60ml.png","alt":"第三次實驗加入 60 毫升黑麥汁色階圖"}]</div>      <div class="gallery-items">      </div>    </div><h1 id="結果討論">結果討論</h1><ol><li><p>純水的 RGB 數值落差大</p><p>目前認為的主要原因有兩個：</p><ol><li>LED 光譜<br>上網查詢發現 LED 白光光譜不是均勻的，其中藍色特別強。推測實驗使用之手電筒也是如此。<a href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99">[1]</a><br><img src="/img/rye_juice_rgb/led.png" alt="LED 光譜"></li><li>瑞利散射<br>當入射光的波長比碰到的微粒還要大很多時，就會產生瑞利散射。散射強度與波長的四次方成反比，也就是說波長越短，越容易散射<a href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99">[2]</a>。推測白光通過透明水箱時，波長較短的藍光因水箱壁中的微小雜質而產生散射，導致水箱整體看起來偏藍。</li></ol></li><li><p>加入黑麥汁後 R 數值上升<br>推測是水中多了雜質後，影響了散射而產生的結果。</p></li><li><p>黑麥汁的量與 RGB 數值的關係<br>從實驗結果來看無法看出其中具有明顯的比例關係，可能的原因有以下幾點：</p><ol><li>水箱的散射干擾<br>需更換為更透明乾淨的水箱進行實驗。</li><li>LED 白光光譜不均勻<br>須改用光譜較平均的光源進行實驗。</li><li>實驗數據較少<br>需重複實驗更多次以了解整體走向。</li><li>假設錯誤</li></ol></li></ol><h1 id="結論">結論</h1><p>本次實驗的數據不足以驗證假設，須重新設計實驗或更改假設。</p><h1 id="參考資料">參考資料</h1><p>[1]台表检测。（2018）。常见白色led灯光谱范围介绍。取自 <a href="http://www.tsmtlab.com/news.detail.php?id=112">http://www.tsmtlab.com/news.detail.php?id=112</a><br>[2]張瑞棋。（2015）。天空為什麼是藍色的？瑞利誕辰｜科學史上的今天：11/12。取自 <a href="https://pansci.asia/archives/129071">https://pansci.asia/archives/129071</a></p>]]></content>
+    
+    
+    <summary type="html">加入不同量的黑麥汁觀察顏色變化</summary>
+    
+    
+    
+    <category term="探究與實作" scheme="https://gallen881.github.io/categories/%E6%8E%A2%E7%A9%B6%E8%88%87%E5%AF%A6%E4%BD%9C/"/>
+    
+    
+    <category term="黑麥汁" scheme="https://gallen881.github.io/tags/%E9%BB%91%E9%BA%A5%E6%B1%81/"/>
+    
+    <category term="RGB" scheme="https://gallen881.github.io/tags/RGB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>重乳奶茶的價錢問題</title>
+    <link href="https://gallen881.github.io/posts/milk_tea_unbox/"/>
+    <id>https://gallen881.github.io/posts/milk_tea_unbox/</id>
+    <published>2024-03-08T12:22:03.000Z</published>
+    <updated>2024-03-31T05:46:49.072Z</updated>
+    
+    <content type="html"><![CDATA[<p>開箱奶茶！！<br><img src="/img/milk_tea_unbox/20240305_145215.jpg" alt="奶茶"></p><p>這個重乳奶茶前陣子好像十分流行，我自己也很喜歡喝(*/ω＼*)。如上圖，可以知道他有兩種包裝，不過這兩種包裝的價錢卻不一樣呢！</p><h1 id="大包裝奶茶">大包裝奶茶</h1><p><img src="/img/milk_tea_unbox/20240305_145538.jpg" alt="大包裝奶茶"></p><p>由上圖可得知大包裝奶茶共有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>400</mn><mi>m</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">400ml</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">400</span><span class="mord mathnormal">m</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span></span></span></span> 且要 35 元。<br><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>35</mn><mo>÷</mo><mn>400</mn><mo>=</mo><mn>0.0875</mn></mrow><annotation encoding="application/x-tex">35\div400=0.0875</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">35</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">÷</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">400</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.0875</span></span></span></span><br>則每一毫升奶茶要價 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.0875</mn></mrow><annotation encoding="application/x-tex">0.0875</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.0875</span></span></span></span> 元</p><h1 id="小包裝奶茶">小包裝奶茶</h1><p><img src="/img/milk_tea_unbox/20240305_145507.jpg" alt="小包裝奶茶"></p><p>由上圖可得知大包裝奶茶共有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>330</mn><mi>m</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">330ml</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">330</span><span class="mord mathnormal">m</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span></span></span></span> 且要 25 元。<br><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>25</mn><mo>÷</mo><mn>330</mn><mo>≒</mo><mn>0.0758</mn></mrow><annotation encoding="application/x-tex">25\div330\fallingdotseq0.0758</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">25</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">÷</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7264em;vertical-align:-0.082em;"></span><span class="mord">330</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel amsrm">≒</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.0758</span></span></span></span><br>則每一毫升奶茶要價約 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.0758</mn></mrow><annotation encoding="application/x-tex">0.0758</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.0758</span></span></span></span> 元</p><h1 id="結論">結論</h1><p>由以上可知，購買小包裝的奶茶較便宜！！ヾ(^▽^*)))<s>而且還附吸管。</s></p>]]></content>
+    
+    
+    <summary type="html">比較兩種奶茶包裝的價錢，兼開箱</summary>
+    
+    
+    
+    
+    <category term="冷知識" scheme="https://gallen881.github.io/tags/%E5%86%B7%E7%9F%A5%E8%AD%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【開箱】PD 誘騙頭、UKKO 100W 充電頭</title>
+    <link href="https://gallen881.github.io/posts/ukko_P310A_and_PD2DC_adapter_unbox/"/>
+    <id>https://gallen881.github.io/posts/ukko_P310A_and_PD2DC_adapter_unbox/</id>
+    <published>2024-03-04T14:49:27.000Z</published>
+    <updated>2024-07-14T01:34:35.459Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note danger flat"><p>請對自身設備以及狀況做評估，使用非官方充電器有一定風險，本網站對於以下操作均不做保證。風險自負。</p></div><p>最近親友告訴我有種東西叫做 PD 誘騙器，可以把使用 PD 協議的 TYPE-C 轉成 DC 接頭，並升壓到 20V，可以讓不支援 PD 充電協議的筆電也可以使用 PD 充電。最困擾我使用 Windows 電競筆電的一點就是續航力低，進行普通文書處理只可使用約兩小時，看影片約一個半小時，玩遊戲約半小時至一小時。且充電變壓器和磚頭有得比，笨重不便攜帶。如果有了 PD 誘騙器以上問題不就解決了？續航力低可以用行動電源充，原廠充電器可以用體積更小的氮化鎵 PD 充電器取代。基於以上因素，我將 PD 充電頭、PD 充電線、PD 誘騙器買回來了！！\(@^0^@)/</p><h1 id="測試物品">測試物品</h1><ul><li><a href="https://shopee.tw/%E3%80%90%E8%AB%8B%E5%85%88%E7%9C%8B%E9%81%8E%E5%95%86%E5%93%81%E6%8F%8F%E8%BF%B0%E5%9C%A8%E4%B8%8B%E5%96%AE%E3%80%91Type-C%E8%BD%89DC%E7%AD%86%E9%9B%BB%E5%85%85%E9%9B%BB%E9%A0%AD-PD%E8%AA%98%E9%A8%99%E5%99%A8-PD%E8%AA%98%E9%A8%99%E7%B7%9A-%E8%AA%98%E5%B0%8E%E9%A0%AD-%E8%8F%AF%E7%A2%A9%E7%AD%86%E9%9B%BB%E5%85%85%E9%9B%BB%E5%99%A8-%E7%AD%86%E9%9B%BB%E5%85%85%E9%9B%BB%E9%A0%AD-i.10147662.15389207449?sp_atk=0d7c9eb5-b503-40a8-b860-8c0d87b383f2&amp;xptdk=0d7c9eb5-b503-40a8-b860-8c0d87b383f2">100W PD 誘騙器</a></li><li><a href="https://24h.pchome.com.tw/prod/DYBD0O-1900GSFLL?fq=/S/DYBD02">UKKO P310A 100W GaN 氮化鎵 充電器</a></li><li>小米行動電源3 20000 高配版</li><li>100W PD 充電線</li><li>電競筆電(Acer AN515-44-R7CV)</li></ul><h1 id="開箱-100W-PD-誘騙器">開箱 100W PD 誘騙器</h1><p>配合我的筆電規格，我購買 5.5*1.7mm 尺寸的誘騙頭，並選擇 100W 的規格。<br><img src="/img/ukko_P310A_and_PD2DC_adapter_unbox/20240304_223944.jpg" alt="100W PD 誘騙器"></p><p>有和賣家聊過，說是其實可以跑超過 100W，實際測試只能跑到約 101W，不能超過太多。<br><img src="/img/ukko_P310A_and_PD2DC_adapter_unbox/image.png" alt="與賣家對話紀錄"></p><p>使用時若有充電會亮藍燈，無充電則不亮燈。<br><img src="/img/ukko_P310A_and_PD2DC_adapter_unbox/20240304_224357.jpg" alt="誘騙器燈號"></p><h1 id="開箱-UKKO-P310A-100W-GaN-氮化鎵-充電器">開箱 UKKO P310A 100W GaN 氮化鎵 充電器</h1><p>PChome 上原價是 3990，但常常在打折。有看過只要 999，我則是以 1260 買下。</p><p>外包裝是一個小紙盒。<br><img src="/img/ukko_P310A_and_PD2DC_adapter_unbox/20240304_223607.jpg" alt="紙盒正面"><br><img src="/img/ukko_P310A_and_PD2DC_adapter_unbox/20240304_223638.jpg" alt="紙盒背面"></p><p>內部附有說明書以及充電頭，充電頭有泡泡紙做為緩衝，不錯。<br><img src="/img/ukko_P310A_and_PD2DC_adapter_unbox/20240304_223700.jpg" alt="紙盒內部"><br><img src="/img/ukko_P310A_and_PD2DC_adapter_unbox/20240304_223742.jpg" alt="說明書"></p><p>充電頭本體為霧面材質，光滑不留指印，忍不住讓人一直摸。<br><img src="/img/ukko_P310A_and_PD2DC_adapter_unbox/20240304_223721.jpg" alt="充電頭"><br><img src="/img/ukko_P310A_and_PD2DC_adapter_unbox/20240304_223436.jpg" alt="充電頭"></p><p>帶有三個 TYPE-C 以及一個 TYPE-A。<br><img src="/img/ukko_P310A_and_PD2DC_adapter_unbox/20240304_223451.jpg" alt="充電頭"><br><img src="/img/ukko_P310A_and_PD2DC_adapter_unbox/20240304_223810.jpg" alt="充電頭"></p><div class="note info flat"><p>充電頭在不同的情況下輸出瓦數會有所不同，請務必參考說明書確認。</p></div><h2 id="贈品">贈品</h2><p>想不到吧！PChome 上竟然有送贈品：</p><ul><li>100W PD 充電線 1m</li><li>三合一充電線</li><li>兩調整束帶</li></ul><h1 id="電競筆電-PD-充電實測">電競筆電 PD 充電實測</h1><p>電競筆電原廠充電器為 135W，使用 100W 可能會造成供電不足等問題。<br>供電不足時筆電充電與開機燈號同時閃爍。</p><h2 id="使用-UKKO-100W-充電頭">使用 UKKO 100W 充電頭</h2><p>在電量較低(0~40%)時建議調整電量模式為省電模式，如使用效能模式容易造成供電不足。電量較高(60~100%)時可使用效能模式，甚至可以玩一些小遊戲。<br><img src="/img/ukko_P310A_and_PD2DC_adapter_unbox/20240304_224323.jpg" alt="充電"><br><img src="/img/ukko_P310A_and_PD2DC_adapter_unbox/20240304_224357.jpg" alt="充電"></p><h2 id="使用小米行動電源">使用小米行動電源</h2><p>小米行動電源只有最高 45W 輸出，實測無法邊充邊用，筆電必須進入睡眠模式或關機才可充電。</p><h1 id="總結">總結</h1><p>PD 誘騙頭這樣用下來十分滿意。搭配 PD 充電頭、充電線就不需要帶整個原廠變壓器出門，體積直接減少一半！！\(￣︶￣*\))。搭配行動電源也可以作為臨時需要充電的緊急措施。如果不介意使用非官方充電器的話十分適合購買使用。</p><p>UKKO 的充電頭也沒甚麼大問題，價格也較便宜，可以購買。</p><h1 id="✨特別感謝">✨特別感謝</h1><p>叔叔之器材提供與知識傳遞</p>]]></content>
+    
+    
+    <summary type="html">開箱 UKKO 100W 充電頭並搭配 PD 誘騙頭實測電競筆電 PD 充電</summary>
+    
+    
+    
+    <category term="開箱" scheme="https://gallen881.github.io/categories/%E9%96%8B%E7%AE%B1/"/>
+    
+    
+    <category term="UKKO" scheme="https://gallen881.github.io/tags/UKKO/"/>
+    
+    <category term="PD" scheme="https://gallen881.github.io/tags/PD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>旺宏科學獎參賽心得</title>
+    <link href="https://gallen881.github.io/posts/reflections_on_macronix_science_awards22/"/>
+    <id>https://gallen881.github.io/posts/reflections_on_macronix_science_awards22/</id>
+    <published>2024-03-02T07:55:13.000Z</published>
+    <updated>2024-07-14T01:35:24.280Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言">前言</h1><p>這是參加旺宏科學獎的心得，內容不包括國際科展。過了四個月才發是有點晚，請見諒。<br>文筆不好，比賽經歷十分冗長，可直接跳至<a href="#%E5%BF%83%E5%BE%97">心得</a>觀看。</p><h1 id="比賽經歷">比賽經歷</h1><details class="toggle" ><summary class="toggle-button" style="">比賽經歷</summary><div class="toggle-content"><h2 id="產生題目">產生題目</h2><p>一開始我其實根本沒有想過我會去比賽，當時只覺得我只要好好讀書就好。讓我想去參加比賽的是高一的物理老師<s>還有四十萬獎學金</s>。當時李老師在我們第一堂物理課就告訴大家有旺宏科學獎這比賽，說想要比的可以去找他。當然，我並沒有去找他。當時認為比賽這種事情讓資優班的學生去就好，我應該拿不了什麼名次，所以沒有特別在意。之後聽說班上有學要參加那個比賽，而且已經在準備了。這時我覺得班上同學都可以參加，我應該也可以試試看。向那幾位同學打聽後，發現李老師好像常常帶學生做比賽，之前李老師也自己說過他帶過一個金牌的，真的拿了四十萬，現在去美國讀書。所以就去找了李老師。</p><p>它讓我先想想看自己想做什麼類別，當時我認為我已經自學 Python 半年，資訊能力應該沒甚麼問題，所以先往資訊科學的方面思考。這時我注意到科展中有件作品是用 NLP 模型翻譯文言文，當時覺得很有趣也十分實用。加上當時 ChatGPT 出來不久，我也對機器學習有不小的興趣，所以就開始往機器學習的方面思考。突然想到自己之前有嘗試過寫程式將<em>su3cl3</em>轉換成<em>你好</em>，不過成果沒有很好，所以這次的題目就產生了🎉🎉。</p><h2 id="文獻研究">文獻研究</h2><p><em>su3cl3</em>轉換為<em>你好</em>的困難點在於程式只看<em>su3cl3</em>有可能會翻譯為<em>擬郝</em>。當時我認為應該可以將<em>su3cl3</em>與<em>你好</em>視為兩種語言並訓練機器翻譯模型進行翻譯。不過當時的我並不會機器學習，連最基礎的架構都懵懵懂懂。不過我們社團有個很電的洋蔥學長會機器學習，正好也熟悉 NLP，向他請教後它天推薦我一本書——<a href="https://www.books.com.tw/products/0010926182">《Keras大神歸位：深度學習全面進化！用 Python 實作CNN、RNN、GRU、LSTM、GAN、VAE、Transformer》</a>。聽了之後我馬上就去把它買回來看，沒想到超好看！！我每天廢寢忘食的看，學校看、廁所看、吃飯看、半夜看，<s>感覺全身充滿了機器學習的力量</s>。我還和大家分享這本書超好看，大家好像都覺得我瘋了。這個狀態持續了兩個禮拜，我終於對機器學習有了初步的認識。我十分推薦大家去買這本書來學習。</p><p>後來在逛 GitHub 的時候看到有人用 Viterbi Algorithm 製作拼音的轉換。我覺得除了機器學習，多加一個演算法或許方法會比較多樣，於是開始研究維特比演算法的原理。不過自己寫程式比較少碰競程，對這種 Dynamic Programming(?) 不太熟，問了有在寫競程的同學後才理解一點點。</p><h2 id="初賽研究">初賽研究</h2><p>初賽最一開始是照著書上自己改資料集，訓練 BiGRU 翻譯模型，有成功翻譯。這個時候大概是我參加這次比賽第三高興的時刻（完全自學沒經驗的我竟然自己訓練出了一個可以用的機器翻譯模型！！）之後又照著書上試了 Transformer，翻譯準確率有顯著提升。接著算出了一個隱式馬可夫模型（HMM），搭配維特比演算法使用，速度比機器學習快上好幾倍。訓練出模型就是要應用！於是我把他套用到 Discord Bot 裡面，這樣在 Bot 就可以在 Discord 伺服器中幫我進行即時翻譯。</p><p>段考後要開始打報告書了，沒想到我的拖延症又發作，拖到剩一個禮拜才開始打，那大概是我最瘋狂的一次打報告。帶筆電到學校上課打到沒電，回家後繼續打、邊吃晚餐邊打，一直打到半夜三點多在桌上睡著。後面幾天乾脆直接請假在家裡打，晚上直接打到早上<s>看日出</s>。在截止前十分鐘終於修改好要上傳，旺宏的上傳網站竟然死了，我一直重複試試到超過十二點半還在試，快要崩潰(；′⌒`)。幸好最後開放到隔天上傳。</p><h2 id="決賽研究">決賽研究</h2><p>得知進入決賽的時候我十分驚訝，沒想到從快六百件作品中選二十件可以選到我。當時在電腦送修，跟親戚出去玩，還是被老師打電話通知的。這時是我這次比賽第二高興的時刻。</p><p>八月時開始繼續準備決賽。當時李老師跟我說內容至少要有 50% 不一樣讓我有點嚇到，所以我覺得需要多一點模型互相比較成效，所以又試了 GRU、LSTM、Transformer、mT5等模型。會想實驗 mT5 主要是因為看見洋蔥學長科展得名發文，發現他作了遷移學習，再加上評審初賽建議。不過第一次碰 mT5 這種預訓練模型，又沒有整理好的書學習，完全不知道從何下手。最後總算是花了兩個禮拜的瘋狂測試成功 fine-tune。</p><p>在報告書截稿前我的拖延症又發作了，結果報告書前兩天才做完，還有介紹影片以及報告簡報沒有做。不得已只好稍微放低影片品質才勉強趕上期限。</p><h2 id="決賽當天">決賽當天</h2><p>決賽時和家人一起到位於新竹科學園區的旺宏電子總部進行報告，不得不說當天超緊張，我在上車後直接睡覺壓壓驚。進新竹科學園區後發現超級大，看見各種神奇的電子公司🍄，有種劉姥姥進大觀園的感覺。</p><p>到了會場才發現多數工作人員都是前幾屆比進決賽的學長姊，甚至還有李老師之前帶的學生。當時工作人員問我簡報有沒有包含學校資訊，說是不能包含。我這時突然想到我的簡報中有出現「雄女」，雖然這很明顯不是我的學校，但因為這件事又變得更緊張了。</p><p>決賽時，一進教室就是十五個評審圍一圈盯著我看，雖然大家都說評審很友善，但還是不能太相信。<br>似乎是太緊張了，我比練習時還要快結束，有些小細節沒說到。而評審問的問題也很犀利，我幾乎都回答不出來。另外評審也給了我有關資料統計的建議，在這方面我確實有疏忽，沒有好好統計總字數、各句字數等，只靠單純的句數來判斷資料大小。</p><p>賽後總算是放鬆了，心想只要慢慢等結果就好。接著被攝影師抓去拍照。攝影師硬是要我擺出有活力的姿勢，我說擺不出來它便直接拿出圖片給我參考，結果都是 JOJO立……。</p><h2 id="決賽後">決賽後</h2><p>決賽後和家人去附近的漁港吃午餐，雖然不小心被當盤子，我當時卻不由自主地感到高興。</p><h2 id="頒獎日">頒獎日</h2><p>頒獎在國際會議中心。在會場大家可以互相觀摩對方的作品，我對字幕那組特別感興趣。在我向記者以及來賓介紹我的作品時，我注意到有個衣衫不整的大叔走到我攤位的角落拿起我的資料默默的看。我有點嚇到，但因為正在介紹所以沒有對他多說什麼，結果之後他就被警衛帶走了。<br>附上當時我覺得拍得不錯的照片：<br><img src="https://www.mxeduc.org.tw/news/NewsImages/20231112/%E4%B8%AD%E7%A0%94%E9%99%A2%E5%BB%96%E4%BF%8A%E6%99%BA%E9%99%A2%E9%95%B7%E5%81%95%E5%90%8C%E5%90%B3%E6%95%8F%E6%B1%82%E8%91%A3%E4%BA%8B%E9%95%B7%E3%80%81%E6%95%99%E8%82%B2%E9%83%A8%E5%BB%96%E8%88%88%E5%9C%8B%E4%B8%BB%E7%A7%98%E5%8F%8A%E5%9C%8B%E7%A7%91%E6%9C%83%E6%9E%97%E5%BB%A3%E5%AE%8F%E4%B8%BB%E7%A7%98%E5%8F%83%E8%A7%80%E9%AB%94%E9%A9%97%E4%BB%8A%E5%B9%B4%E9%87%91%E7%89%8C%E7%8D%8E%E7%8D%B2%E7%8D%8E%E5%90%8C%E5%AD%B8%E4%BD%9C%E5%93%81.jpg" alt="向來賓解說作品"></p><p style="font-size:55%;">壓力超大≡(▔﹏▔)≡</p><p>頒獎時是先從小獎開始唱名並一個個走上台頒獎，當時的想法只有<strong>下一個會不會是我</strong>。唱名到銀牌獎時，我聽到坐在我旁邊的李老師輕輕地說了聲 YES！而坐在我旁邊的同學則是對我說他覺得我會得金牌，叫我想一下致詞。最後成真了。這時是我這次比賽第一高興的時刻。<br>。<br>。<br>。<br>致詞完一走下台就被記者找去訪問，三四個記者圍著我拿著手機、錄音筆有點反應不過來。回座位時頒獎已經結束了。</p><p>離開會場時我又遇到了那位中年大叔，他過來跟我握手表示恭喜。他說他近來會場後馬上就來看我的作品，就直接確定金牌會是我，沒有去看其他人的作品。雖然感覺很奇怪，但還是感謝他如此看重我，況且他也沒做什麼事。</p><p>鞋子濕掉都是雨的錯🌨🌨。<br>頒獎典禮又有個旺宏科學獎聯誼會的聚餐在金色三麥，似乎是進入決賽的人都能進入旺宏科學獎聯誼會。在聯誼會中，有許多十幾年前的學長姐也來參加。<br>到了交換禮物的環節，每個人都可以上台分享自己收到的禮物，並請送禮者上台解釋，於是我就被叫上來臺了。或許是現在比較少看見了吧，我送出我珍藏的磁碟片，對方似乎感到很意外。我則是收到來自韓國的護手霜。</p></div></details><h1 id="心得">心得</h1><p>不知不覺就這樣完成了一件事，現在回想起來在趕報告修 Bug 時都很累，但當時卻願意花時間、精力去做好這件事。能做鑽研感興趣的事情十分令人快樂，可以捨棄其他事情(那次段考卻是考最好的一次🤡)，全心投入程式碼中。這次比賽的其他選手也十分強大，認識這些人，甚至看著這些人，<s>感覺自己也變強不少ww(並沒有</s>。接下來還是會繼續參加比賽，<s>總覺得不能回頭了ww</s>(實際上已經參加了。</p><p>心得似乎結束了，有點少？有想到再加。</p><h1 id="後記">後記</h1><p>話說旺宏的官方新聞稿寫錯，我明明就是用超過一百萬句句子，結果他寫成十萬……。然後模型的準確率雖然有超過 90 但還是會有些地方翻不準，請見諒。</p><h1 id="連結">連結</h1><p>紀錄一下連接( *^-^)ρ</p><h2 id="作品">作品</h2><ul><li><a href="https://github.com/gallen881/bopomofo2hanzi">GitHub</a>  <p style="font-size:50%;">歡迎大家的星星</p></li><li><a href="https://gallen881.github.io/bopomofo2hanzi/">Online Translator</a></li><li><a href="https://www.mxeduc.org.tw/scienceaward/history/projectDoc/22th/doc/SA22-160_final.pdf">報告書</a>  <p style="font-size:16%;">不要看！！</p></li></ul><h2 id="新聞-黑歷史">新聞(<s>黑歷史</s></h2><p>想一想還是不要放好了</p><h1 id="✨特別感謝">✨特別感謝</h1><ul><li>旺宏教育基金會</li><li>李柏翰老師</li><li>洋蔥學長</li><li>TWTom</li><li>alanjiang</li><li>大尾巴沐沐</li><li>紫塔門藏</li><li>ianwang</li></ul><p>謝天謝地</p>]]></content>
+    
+    
+    <summary type="html">參加第二十二屆旺宏科學獎的過程記錄</summary>
+    
+    
+    
+    <category term="心得" scheme="https://gallen881.github.io/categories/%E5%BF%83%E5%BE%97/"/>
+    
+    
+    <category term="旺宏科學獎" scheme="https://gallen881.github.io/tags/%E6%97%BA%E5%AE%8F%E7%A7%91%E5%AD%B8%E7%8D%8E/"/>
+    
+    <category term="輸入法" scheme="https://gallen881.github.io/tags/%E8%BC%B8%E5%85%A5%E6%B3%95/"/>
+    
+    <category term="科展" scheme="https://gallen881.github.io/tags/%E7%A7%91%E5%B1%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【開箱】提瓦特動物園-菲謝爾</title>
+    <link href="https://gallen881.github.io/posts/fischl_doll_unbox/"/>
+    <id>https://gallen881.github.io/posts/fischl_doll_unbox/</id>
+    <published>2024-02-28T12:22:44.000Z</published>
+    <updated>2024-07-14T00:38:28.308Z</updated>
+    
+    <content type="html"><![CDATA[<p>幾天前在高雄逛安利美特的時候看到這個玩偶，同行友人覺得很可愛就買下來了。這次和他借來開箱！！</p><p>用塑膠盒子裝起來，從外面可以稍微看見本體。<br><img src="/img/fischl_doll_unbox/20240208_175348.JPG" alt="包裝"></p><p>用美工刀劃開包裝。<br><img src="/img/fischl_doll_unbox/20240208_175546.JPG" alt="開箱中"><img src="/img/fischl_doll_unbox/20240208_175604.JPG" alt="開箱中"></p><p>內部本體用塑膠袋包著，不錯不錯。<br><img src="/img/fischl_doll_unbox/20240208_175606.JPG" alt="塑膠袋"></p><p>拆開後就可以看見本體了！！！<br><img src="/img/fischl_doll_unbox/20240208_175938.JPG" alt="本體"><img src="/img/fischl_doll_unbox/20240208_180020.JPG" alt="本體"><img src="/img/fischl_doll_unbox/20240208_180030.JPG" alt="本體"></p><p>整體的品質十分了好，沒看到特別明顯的脫線或破洞。十分適合掛著欣賞。<br><img src="/img/fischl_doll_unbox/20240208_184050.jpg" alt="本體"></p><p>除了菲謝爾之外，還有許多不同角色！！<br><img src="/img/fischl_doll_unbox/image.png" alt="提瓦特動物園"></p>]]></content>
+    
+    
+    <summary type="html">開箱在安利美特買到的菲謝爾玩偶</summary>
+    
+    
+    
+    <category term="開箱" scheme="https://gallen881.github.io/categories/%E9%96%8B%E7%AE%B1/"/>
+    
+    
+    <category term="原神" scheme="https://gallen881.github.io/tags/%E5%8E%9F%E7%A5%9E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vim 微笑彩蛋</title>
+    <link href="https://gallen881.github.io/posts/vim_smile/"/>
+    <id>https://gallen881.github.io/posts/vim_smile/</id>
+    <published>2024-01-09T14:05:36.000Z</published>
+    <updated>2024-01-09T23:39:57.456Z</updated>
+    
+    <content type="html"><![CDATA[<p>常常寫程式的話應該會知道 Vim，有許多工程師都愛用這個文字編輯器。寫程式寫累的話，不如試試以下彩蛋！！</p><ol><li><p>打開終端機<br><img src="/img/vim_smile/terminal.png" alt="終端機"></p></li><li><p>輸入 <code>vim</code> 在終端機中開啟 Vim</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim</span><br></pre></td></tr></table></figure><p><img src="/img/vim_smile/enter_vim.png" alt="輸入vim"></p></li><li><p>輸入 <code>:smile</code></p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:smile</span><br></pre></td></tr></table></figure><p><img src="/img/vim_smile/enter_smile.png" alt="enter_:smile"></p></li><li><p>發現笑臉！！<br><img src="/img/vim_smile/vim_smile.png" alt="vim_smile"></p></li></ol>]]></content>
+    
+    
+    <summary type="html">Vim 不為人知的小知識</summary>
+    
+    
+    
+    
+    <category term="冷知識" scheme="https://gallen881.github.io/tags/%E5%86%B7%E7%9F%A5%E8%AD%98/"/>
+    
+    <category term="Vim" scheme="https://gallen881.github.io/tags/Vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>諮商心理師經驗分享筆記</title>
+    <link href="https://gallen881.github.io/posts/counseling_psychologist/"/>
+    <id>https://gallen881.github.io/posts/counseling_psychologist/</id>
+    <published>2024-01-05T04:19:17.000Z</published>
+    <updated>2024-01-05T04:25:07.646Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="諮商心理師">諮商心理師</h1><p>黃欣悅學姊 2024/01/05 臺師大附中 1597 班經驗分享</p><h2 id="適合諮商的狀況">適合諮商的狀況</h2><ul><li>情緒低落、亢奮</li><li>睡眠飲食作息問題</li><li>人際關係</li></ul><h2 id="心理師狀態">心理師狀態</h2><ul><li>薪水 40K</li><li>工時 8hr 以上</li><li>與客戶溝通易有壓力</li><li>一天諮商多人</li></ul><h2 id="四大工作內容">四大工作內容</h2><h3 id="諮商專業類">諮商專業類</h3><p>用諮商技巧在對話中幫助個案(個別、多人)</p><p>常見困難：</p><ul><li>個案拒絕接受幫助</li><li>與個案價值觀相差大</li><li>發生移情或反移情</li></ul><p>常見工作地點：</p><ul><li>醫療院所</li><li>社區機構</li><li>校園輔導中心</li><li>政府部門</li></ul><h3 id="衛教推廣類">衛教推廣類</h3><p>心理健康相關知識演講、工作坊、心理測驗</p><p>常見困難：</p><ul><li>需臨場發揮</li><li>收到負評</li><li>無人邀約</li></ul><p>常見工作地點：</p><ul><li>社區機構</li><li>政府部門</li><li>校園輔導中心</li><li>醫療院所</li></ul><h3 id="行政文書類">行政文書類</h3><p>跑公文、寫計畫、打雜</p><p>常見困難：</p><ul><li>遇到豬隊友</li><li>遇到不合理的工作分配</li></ul><p>常見工作地點：</p><ul><li>政府部門</li><li>校園輔導中心</li><li>社區機構</li><li>醫療院所</li></ul><h3 id="專業進修類">專業進修類</h3><blockquote><p>法定要求心理師每六年需上滿 180hr 的專業課程</p></blockquote><p>常見工作地點：<br>每人不同</p><h2 id="如何成為諮商心理師">如何成為諮商心理師</h2><h3 id="大學">大學</h3><blockquote><p>讀相關科系</p></blockquote><p>Q1：心輔系還是心理系？<br>諮商輔導以<strong>助人</strong>為目標<br>心理學系著重<strong>了解人的本質</strong></p><p>Q2：高中的準備</p><ul><li>心理相關專題</li><li>參加輔導室活動</li><li>記錄各活動感想</li></ul><p>推薦 Youtube 頻道：<a href="https://www.youtube.com/@co_masaki">Ma’s life 心理師的日常</a></p><h3 id="研究所">研究所</h3><blockquote><p>就讀諮商研究所</p></blockquote><p>畢業三年起跳，錄取率低<br>畢業三元素：修課、實習、論文</p><h3 id="諮商實習">諮商實習</h3><p>通常在碩一碩二<br>兼職一年<br>全職一年</p><h3 id="國考">國考</h3><blockquote><p>取得諮商心理師證照</p></blockquote><h2 id="常見-QA">常見 QA</h2><h3 id="精神科醫師、臨床心理師、諮商心理師比較">精神科醫師、臨床心理師、諮商心理師比較</h3><ul><li>精神科醫師<br>症狀診斷</li><li>臨床研究所<br>心理評估、心理測驗</li><li>諮商心理師<br>心理諮商、心理諮詢</li></ul>]]></content>
+    
+    
+    <summary type="html">黃欣悅學姊 2024/01/05 臺師大附中 1597 班經驗分享</summary>
+    
+    
+    
+    
+    <category term="經驗分享" scheme="https://gallen881.github.io/tags/%E7%B6%93%E9%A9%97%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="心理師" scheme="https://gallen881.github.io/tags/%E5%BF%83%E7%90%86%E5%B8%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>探究催化劑重複使用下對過氧化氫氧氣產量之影響</title>
+    <link href="https://gallen881.github.io/posts/catalase_research_2/"/>
+    <id>https://gallen881.github.io/posts/catalase_research_2/</id>
+    <published>2023-12-28T12:46:37.000Z</published>
+    <updated>2024-07-14T00:40:32.763Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="探究催化劑重複使用下對過氧化氫氧氣產量之影響">探究催化劑重複使用下對過氧化氫氧氣產量之影響</h1><h6 id="探究與實作悲歌"><s>探究與實作悲歌</s></h6><h2 id="實驗室前準備">實驗室前準備</h2><h3 id="實驗藥品">實驗藥品</h3><ul><li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>2</mn></msub><msub><mi>O</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">H_2O_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></li><li>酵母水溶液</li><li>海藻酸鈉水溶液</li><li>氯化鈣水溶液<br><img src="/img/catalase_research_2/20231201_093104.jpg" alt="實驗藥品"></li></ul><h3 id="實驗器材">實驗器材</h3><ul><li>燒杯</li><li>量筒</li><li>玻璃棒</li><li>水盆</li><li>針筒</li><li>紗布</li><li>計時器(手機)</li></ul><h2 id="實驗步驟">實驗步驟</h2><ol><li>將酵母水溶液倒入海藻酸鈉水溶液中並吸取 2ml 以針筒滴入氯化鈣水溶液中。<br><video width="320" controls>   <source src="/img/catalase_research_2/20231201_100021.mp4" type="video/mp4"> </video></li><li>用紗布濾出生成在氯化鈣水溶液中的小球並放入針筒中。<br><img src="/img/catalase_research_2/20231201_095044.jpg" alt=""></li><li>在同一針筒中加入雙氧水並將針筒放入裝滿水之水槽中。<br><img src="/img/catalase_research_2/20231201_100622.jpg" alt=""></li><li>利用排水集氣法蒐集氧氣。</li><li>計算產生之氧氣體體積。</li><li>清洗用具。</li></ol><h2 id="實驗記錄">實驗記錄</h2><!-- <style type="text/css">.tg  {border-collapse:collapse;border-spacing:0;}.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;  overflow:hidden;padding:10px 5px;word-break:normal;}.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}</style> --><table class="tg"><thead>  <tr>    <th class="tg-0pky">實驗</th>    <th class="tg-0pky">經過時間(秒)</th>    <th class="tg-0pky">使用第一次(毫升)</th>    <th class="tg-0pky">使用第二次(毫升)</th>    <th class="tg-0pky">使用第三次(毫升)</th>  </tr></thead><tbody>  <tr>    <td class="tg-0pky" rowspan="6">第<br>一<br>次<br>實<br>驗</td>    <td class="tg-0pky">5</td>    <td class="tg-0pky">0.10</td>    <td class="tg-0pky">0.10</td>    <td class="tg-0pky">0.20</td>  </tr>  <tr>    <td class="tg-0pky">10</td>    <td class="tg-0pky">0.60</td>    <td class="tg-0pky">0.50</td>    <td class="tg-0pky">0.25</td>  </tr>  <tr>    <td class="tg-0pky">15</td>    <td class="tg-0pky">1.10</td>    <td class="tg-0pky">0.80</td>    <td class="tg-0pky">0.60</td>  </tr>  <tr>    <td class="tg-0pky">20</td>    <td class="tg-0pky">1.75</td>    <td class="tg-0pky">1.30</td>    <td class="tg-0pky">1.00</td>  </tr>  <tr>    <td class="tg-0pky">25</td>    <td class="tg-0pky">2.20</td>    <td class="tg-0pky">1.75</td>    <td class="tg-0pky">1.30</td>  </tr>  <tr>    <td class="tg-0pky">30</td>    <td class="tg-0pky">2.75</td>    <td class="tg-0pky">2.00</td>    <td class="tg-0pky">1.75</td>  </tr>  <tr>    <td class="tg-0pky" rowspan="6">第<br>二<br>次<br>實<br>驗<br></td>    <td class="tg-0pky">5</td>    <td class="tg-0pky">0.10</td>    <td class="tg-0pky">0.30</td>    <td class="tg-0pky">0.25</td>  </tr>  <tr>    <td class="tg-0pky">10</td>    <td class="tg-0pky">0.50</td>    <td class="tg-0pky">0.80</td>    <td class="tg-0pky">0.50</td>  </tr>  <tr>    <td class="tg-0pky">15</td>    <td class="tg-0pky">1.00</td>    <td class="tg-0pky">1.50</td>    <td class="tg-0pky">0.75</td>  </tr>  <tr>    <td class="tg-0pky">20</td>    <td class="tg-0pky">1.70</td>    <td class="tg-0pky">1.70</td>    <td class="tg-0pky">1.10</td>  </tr>  <tr>    <td class="tg-0pky">25</td>    <td class="tg-0pky">2.10</td>    <td class="tg-0pky">2.25</td>    <td class="tg-0pky">1.30</td>  </tr>  <tr>    <td class="tg-0pky">30</td>    <td class="tg-0pky">2.60</td>    <td class="tg-0pky">2.50</td>    <td class="tg-0pky">1.50</td>  </tr>  <tr>    <td class="tg-0pky" rowspan="6">第<br>三<br>次<br>實<br>驗</td>    <td class="tg-0pky">5</td>    <td class="tg-0pky">0.30</td>    <td class="tg-0pky">0.50</td>    <td class="tg-0pky">0.30</td>  </tr>  <tr>    <td class="tg-0pky">10</td>    <td class="tg-0pky">1.00</td>    <td class="tg-0pky">1.10</td>    <td class="tg-0pky">1.10</td>  </tr>  <tr>    <td class="tg-0pky">15</td>    <td class="tg-0pky">1..50</td>    <td class="tg-0pky">1.80</td>    <td class="tg-0pky">1.75</td>  </tr>  <tr>    <td class="tg-0pky">20</td>    <td class="tg-0pky">2.20</td>    <td class="tg-0pky">2.30</td>    <td class="tg-0pky">2.20</td>  </tr>  <tr>    <td class="tg-0pky">25</td>    <td class="tg-0pky">2.70</td>    <td class="tg-0pky">2.00</td>    <td class="tg-0pky">2.80</td>  </tr>  <tr>    <td class="tg-0pky">30</td>    <td class="tg-0pky">3.50</td>    <td class="tg-0pky">3.40</td>    <td class="tg-0pky">3.50</td>  </tr></tbody></table><p><img src="/img/catalase_research_2/image.png" alt="第一次實驗"><br><img src="/img/catalase_research_2/image-1.png" alt="第二次實驗"><br><img src="/img/catalase_research_2/image-2.png" alt="第三次實驗"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;探究催化劑重複使用下對過氧化氫氧氣產量之影響&quot;&gt;探究催化劑重複使用下對過氧化氫氧氣產量之影響&lt;/h1&gt;
+&lt;h6 id=&quot;探究與實作悲歌&quot;&gt;&lt;s&gt;探究與實作悲歌&lt;/s&gt;&lt;/h6&gt;
+&lt;h2 id=&quot;實驗室前準備&quot;&gt;實驗室前準備&lt;/h2&gt;
+&lt;h3 id=&quot;實驗藥品&quot;&gt;實</summary>
+      
+    
+    
+    
+    <category term="探究與實作" scheme="https://gallen881.github.io/categories/%E6%8E%A2%E7%A9%B6%E8%88%87%E5%AF%A6%E4%BD%9C/"/>
+    
+    
+    <category term="過氧化氫酶" scheme="https://gallen881.github.io/tags/%E9%81%8E%E6%B0%A7%E5%8C%96%E6%B0%AB%E9%85%B6/"/>
+    
+  </entry>
+  
+</feed>
