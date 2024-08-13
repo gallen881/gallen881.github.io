@@ -4,6 +4,41 @@
   
     
     <entry>
+      <title>在 Windows 上安裝 AdGuard Home 並用於路由器 (超簡單教學)</title>
+      <link href="/posts/install_adguard_home/"/>
+      <url>/posts/install_adguard_home/</url>
+      
+        <content type="html"><![CDATA[<p>這次的教學是如何在家中的 Windows 電腦上安裝 <a href="https://adguard.com/zh_tw/adguard-home/overview.html">AdGuard Home</a> 作為路由器的 DNS 伺服器讓全家人免受各種廣告的干擾。</p><h1 id="前言">前言</h1><h2 id="什麼是-DNS？">什麼是 DNS？</h2><p>DNS(Domain Name System)，中文為網域名稱系統，提供域名解析的服務。在網路世界，每台電腦都有它自己的地址，也就是 IP。我們使用瀏覽器上網時，就像我們的電腦去指定的地址拿取其他電腦中的資料，也就是電腦向伺服器 IP 發起請求。但平時瀏覽 Google、Youtube 或者和泉小角落時我們都沒有輸入 IP，都是輸入網址，電腦怎麼知道去哪裡找資料呢？實際上電腦就是用網址取得 IP 的！！在一般常見的網址中包含網站的域名，電腦會透過我們輸入的網址得知欲前往之網站的域名，再詢問 DNS 伺服器這個域名對應的 IP。因此，IP 作為地址，域名就像是地址的名字。例如我今天想瀏覽小明的網站，我先在瀏覽器輸入小明的電腦(域名)，我的電腦轉而向 DNS 伺服器詢問小明的電腦的地址(IP)，得知地址後我的電腦再訪問該地址，成功瀏覽小明的網站！！</p><p>DNS 伺服器有很多，速度、功能以及安全性皆有所差異。</p><h2 id="什麼是-AdGuard-Home">什麼是 AdGuard Home</h2><p>AdGuard 最著名的功能就是擋廣告，許多人都會再瀏覽器上安裝其插件。而 AdGuard Home 是 AdGuard 推出的開源 DNS 伺服器，內含許多阻擋廣告的功能。相比其他 DNS 服務，雖然有些皆有阻擋廣告的功能，但自己架設的 DNS 伺服器可以客製化調整，架設在自己家也較安心。</p><h3 id="AdGuard-Home-如何阻擋廣告">AdGuard Home 如何阻擋廣告</h3><p>AdGuard Home 使用 DNS Sinkhole 的方法來阻擋廣告，這種方法會對特定的域名給出錯誤的結果。假設我今天想要瀏覽小明的網站，但是 DNS 故意回報我錯誤的地址，就會導致小明的網站無法正常顯示。這一樣適用於廣告！！當電腦向廣告的域名發送請求時，DNS故意回報 <code>0.0.0.0</code> 給電腦，導致請求失敗，就無法顯示廣告了。</p><p>但是像 Youtube 這種影片中的影片較難阻檔，因為其來源多是 <a href="http://youtube.com">youtube.com</a>，如果封鎖了，影片也一起不能看了。若要阻擋這類廣告推薦安裝<a href="https://chromewebstore.google.com/detail/adguard-%E5%BB%A3%E5%91%8A%E5%B0%81%E9%8E%96%E5%99%A8/bgnkhhnnamicmpeenaelnjfhikgbkllg">插件</a>解決。</p><h1 id="教學">教學</h1><p>正式進入教學啦！</p><h2 id="安裝-AdGuard-Home">安裝 AdGuard Home</h2><ol><li>至 <a href="https://github.com/AdguardTeam/AdGuardHome/releases">AdGuard Home 的 GitHub Releases 頁面</a>下載 Windows 執行檔到伺服器電腦。(此時版本為 v0.107.52)<br><img src="/img/install_adguard_home/releases.png" alt="AdGuard Home 的 GitHub Releases 頁面"></li><li>下載後解壓縮，得到以下檔案。<br><img src="/img/install_adguard_home/AdGuard_files.png" alt="解壓縮後 AdGuardHome 的內容"></li><li>按下 <code>Win + S</code> 開啟搜尋欄搜尋 <code>powershell</code>，點選以<strong>系統管理員身分執行</strong>。<br><img src="/img/install_adguard_home/search_powershell.png" alt="搜尋 powershell"></li><li>在 PowerShell 中使用 <code>cd</code> 指令切換至解壓縮檔案後出現的 <code>AdGuardHome</code> 目錄位置。以下以我的目錄位置舉例。 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> C:\Users\user\Documents\AdGuardHome</span><br></pre></td></tr></table></figure></li><li>輸入以下指令安裝 AdGuard Home。 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./AdGuardHome -s install</span><br></pre></td></tr></table></figure></li><li>看到 <code>service: action install has been done successfully on windows-service</code> 等成功的句子代表你已經成功安裝！</li></ol><h2 id="初步的-AdGuard-Home-設定">初步的 AdGuard Home 設定</h2><p>依照以上步驟安裝好後不代表可以使用喔！還必須進行必要的設定。</p><ol><li><p>在 PowerShell 中輸入 <code>ipconfig</code> 查看伺服器在內網的 IP 位置。如圖，我的伺服器內網 IP 是 <code>192.168.1.4</code>。同時記住預設閘道，第 6. 點會用到。<br><img src="/img/install_adguard_home/ipconfig.png" alt="輸入 ipconfig 查看 IP"></p></li><li><p>在同一網路內的電腦瀏覽器輸入<code>你的伺服器內網 IP:3000</code>，以我的情況舉例：<br><a href="http://192.168.1.4:3000">http://192.168.1.4:3000</a></p></li><li><p>成功連線後會出現以下設定介面，點擊<code>開始吧</code>。<br><img src="/img/install_adguard_home/setting1.png" alt="初步設定 1/5"></p></li><li><p>這部將設定控制面板以及 DNS 伺服器的端口。推薦管理員網路介面的連接埠續用 3000，DNS 伺服器維持 53。設定完成後點擊下一頁。<br><img src="/img/install_adguard_home/setting2.png" alt="設定連接埠"></p></li><li><p>這裡將設定管理員的帳號密碼，請務必牢記。<br><img src="/img/install_adguard_home/setting3.png" alt="設定帳號密碼"></p></li><li><p>到這裡就是關鍵的一步了，要指定路由器使用我們剛架好的路由器。輸入路由器 IP 已進入路由器設定，我的情況是：<a href="http://192.168.1.1">http://192.168.1.1</a>。</p></li><li><p>登入路由器。如果您不知道您的路由器帳號密碼，請洽您的網路供應商。(或是試試看路由器底下的預設帳號密碼)<br><img src="/img/install_adguard_home/router_login.png" alt="登入路由器"></p></li><li><p>每個品牌設定皆略有不同，以我的情況舉例，我使用 ASUS RT-N18U。</p><ol><li>點擊左側<code>區域網路(LAN)</code>並點擊上方 <code>DHCP 伺服器</code>。<br><img src="/img/install_adguard_home/DHCP_setting1.png" alt="找到 DHCP 伺服器"></li><li>建議固定伺服器內網 IP<ol><li>找到下方<code>啟用手動指定功能</code>，選擇<code>是</code>。<br><img src="/img/install_adguard_home/DHCP_setting2.png" alt="開啟手動指定功能"></li><li>在下方 <code>Client Name (MAC address)</code> 欄位輸入自己喜歡的名稱(例如 DNS Server)，在右邊的 <code>IP 位址</code>欄位輸入伺服器內網 IP。點擊加號，最後點擊最下面<code>套用本頁面設定</code>。<br><img src="/img/install_adguard_home/DHCP_setting3.png" alt="固定伺服器內網 IP"></li></ol></li><li>在 <code>DNS 伺服器</code>欄位輸入伺服器內網 IP。<br><img src="/img/install_adguard_home/DHCP_setting4.png" alt="在 DNS 伺服器欄位輸入伺服器內網 IP"></li><li>再次點擊最下面<code>套用本頁面設定</code>。</li></ol><p>到這裡路由器內的設定就完成了！</p></li><li><p>回到 AdGuard Home 頁面，點擊下一步。</p></li><li><p>到這裡已經完成設定了，繼續前往登入。<br><img src="/img/install_adguard_home/adguard_login.png" alt="登入 AdGuard Home"></p></li><li><p>登入後看見主畫面，確認正常運作！！<br><img src="/img/install_adguard_home/adguard_homepage.png" alt="AdGuard Home 主畫面"></p></li><li><p>回到自身電腦，開啟終端輸入以下指令確認電腦是否已經在使用新的 DNS。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nslookup gallen881.github.io</span><br></pre></td></tr></table></figure><p>觀察 Adress 是否為伺服器的內網 IP。<br><img src="/img/install_adguard_home/nslookup.png" alt="確認 Adress IP"></p></li></ol><p>到這裡設定就完成啦！！電腦已經在使用 AdGuard Home 了，可以觀察廣告有沒有減少喔。</p><h2 id="進階的-AdGuard-Home-設定">進階的 AdGuard Home 設定</h2><h3 id="上游-DNS">上游 DNS</h3><p>點擊上方<code>設定</code>後選擇 <code>DNS 設定</code>可以找到<code>上游的 DNS 伺服器</code>設定，推薦以下幾個 DNS。</p><ul><li>Google: 8.8.8.8</li><li>Cloudflare: 1.1.1.1</li><li>中華電信: 168.95.1.1</li></ul><p>以下模式可選擇<code>並行的請求</code>加快速度。<br><img src="/img/install_adguard_home/DNS_setting1.png" alt="設定 DNS"><br>記得滑到下方點擊套用！</p><h3 id="DNS-封鎖清單">DNS 封鎖清單</h3><p>這就是為什麼要自己架設 DNS 伺服器了，你可以自己在這裡控制擋住甚麼廣告。<br><img src="/img/install_adguard_home/DNS_setting2.png" alt="DNS 封鎖清單"><br>點擊<code>新增封鎖清單</code>可以加入別人整理好的廣告地址，也可以加入自己整理的。如果我想阻擋 Spotify 的廣告，我可以上網搜尋 Spotify 的封鎖清單，接著加入我的清單中。DNS 為我封鎖廣告後，我的 Spotify 就不會出現廣告了！！ヾ(≧▽≦*)o<br><a href="https://raw.githubusercontent.com/root-host/Spotify-AdBlock/master/domains2">Spotify 的封鎖清單</a></p><h3 id="更多">更多</h3><p>還有很多設定，可以自己玩玩看！也歡迎留言詢問。</p><h1 id="結語">結語</h1><p>成功的在 Windows 架設了自己的 DNS 伺服器，以後不再受廣告煩惱了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教學 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> DNS </tag>
+            
+            <tag> AdGuard </tag>
+            
+            <tag> Windows </tag>
+            
+            <tag> 路由器 </tag>
+            
+            <tag> Spotify </tag>
+            
+            <tag> 廣告 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ZeroJudge a217. caps lock的災難</title>
       <link href="/posts/zj_a217/"/>
       <url>/posts/zj_a217/</url>
