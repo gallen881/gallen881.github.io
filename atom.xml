@@ -6,7 +6,7 @@
   <link href="https://gallen881.github.io/atom.xml" rel="self"/>
   
   <link href="https://gallen881.github.io/"/>
-  <updated>2024-08-14T09:41:31.551Z</updated>
+  <updated>2024-10-02T10:28:34.165Z</updated>
   <id>https://gallen881.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows 10 卡在歡迎無法登入</title>
+    <link href="https://gallen881.github.io/posts/windows10_stuck_on_welcome_screen/"/>
+    <id>https://gallen881.github.io/posts/windows10_stuck_on_welcome_screen/</id>
+    <published>2024-09-15T13:26:27.000Z</published>
+    <updated>2024-10-02T10:28:34.165Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言">前言</h1><p>前幾天正覺得 Windows 10 電腦卡頓，想到一段時間沒有關機了，於是心血來潮將筆電重新啟動。但是電腦卻一直無重新啟動，我只好直接強制關機再開機。沒想到開機登入後一直卡在歡迎的畫面轉圈圈，而這一轉就是一小時。以下是我嘗試的一些方法。</p><h1 id="方法">方法</h1><ol><li><p>重新啟動<br>完全沒用，開機後還是卡在歡迎畫面。</p></li><li><p>直接放著讓他跑<br>應該沒用，嘗試放了一個小時還在歡迎轉圈圈，受不了就關掉了。不知道放更久會不會就進去了。</p></li><li><p>用安全模式登入<br>完全沒用，安全模式登入只要等五分鐘即可進入系統，與一小時相比迅速非常多，不過還是很慢。且使用安全模式進去後再重新用正常模式依然無法登入。</p></li><li><p>禁用硬碟<br>完全沒用，我的筆電有三顆硬碟，我在 BIOS 中將兩顆硬碟禁用，只保留一顆系統碟。依然無法登入。</p></li><li><p>使用其他帳號登入<br>有一點用，正好我的筆電有兩個帳號，另一個帳號十分快速就登入了。但當我要使用我主要的帳號授權管理員權限給第二個帳號時，輸入密碼後依然卡住。到這裡我覺得是軟體的問題，尤其是我主要的帳號。</p></li><li><p>回到還原點<br>有一點用，回到還原點和重設是不一樣的。重設是將電腦的設定與軟體回復預設狀態，還原點則是將設定與軟體回到幾天前的狀態。沒想到回到還原點後再讓他在歡迎跑約二十分鐘就可以登入了！！這時候我會趕緊使用 Windows 的修復指令來嘗試修復電腦：</p> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DISM.exe /Online /Cleanup-image /Restorehealth</span><br><span class="line">sfc /scannow</span><br></pre></td></tr></table></figure><p>詳細的可以參考這篇：<br><a href="https://support.microsoft.com/zh-tw/topic/%E4%BD%BF%E7%94%A8%E7%B3%BB%E7%B5%B1%E6%AA%94%E6%A1%88%E6%AA%A2%E6%9F%A5%E7%A8%8B%E5%BC%8F%E5%B7%A5%E5%85%B7%E4%BE%86%E4%BF%AE%E5%BE%A9%E9%81%BA%E5%A4%B1%E6%88%96%E6%90%8D%E6%AF%80%E7%9A%84%E7%B3%BB%E7%B5%B1%E6%AA%94%E6%A1%88-79aa86cb-ca52-166a-92a3-966e85d4094e">https://support.microsoft.com/zh-tw/topic/使用系統檔案檢查程式工具來修復遺失或損毀的系統檔案-79aa86cb-ca52-166a-92a3-966e85d4094e</a></p><p>這樣就修好了，但這只是治標不治本。我發現有時我直接<strong>重新啟動</strong>就會出問題，我必須要<strong>關機</strong>再<strong>開機</strong>。就算我都先關機再開機，過不了三四天又會在歡迎卡住。</p></li><li><p>升級 Windows 11<br>我認為會卡在歡迎是軟體的問題，說不定升級系統可以把壞掉的文件洗掉，因此我開始嘗試升級 Windows 11。幸運的是，我的電腦符合規格，不用另外做其他事情就能升級。不幸的是，不知道出了甚麼問題，再升級時一樣遇到了卡死的問題。我使用了各種方法皆是如此：</p><ul><li>Windows Update：卡在 96%</li><li>Windows 11 安裝小幫手：卡在 99%</li><li>Windwos 11 安裝程式：卡在 90%</li></ul><p>只剩製作開機隨身碟升級的這個方法沒有試，但以上三個方法每個都等了六個小時以上，再等下去會影響到我的事情，因此沒有繼續升級。</p></li></ol><h1 id="結論">結論</h1><p>目前已第六個方法效果最為顯著，但我並不認為這個問題就此解決了，這依舊只是一個暫時性的解決方案。如果有任何建議或想法，歡迎留言討論，我需要你的幫助。</p>]]></content>
+    
+    
+    <summary type="html">嘗試用各種方法解決 Windows 的奇妙問題</summary>
+    
+    
+    
+    
+    <category term="Windows 10" scheme="https://gallen881.github.io/tags/Windows-10/"/>
+    
+    <category term="Windows 11" scheme="https://gallen881.github.io/tags/Windows-11/"/>
+    
+  </entry>
   
   <entry>
     <title>在 Windows 上安裝 AdGuard Home 並用於路由器 (超簡單教學)</title>
@@ -464,27 +485,6 @@
     
     
     <category term="原神" scheme="https://gallen881.github.io/tags/%E5%8E%9F%E7%A5%9E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vim 微笑彩蛋</title>
-    <link href="https://gallen881.github.io/posts/vim_smile/"/>
-    <id>https://gallen881.github.io/posts/vim_smile/</id>
-    <published>2024-01-09T14:05:36.000Z</published>
-    <updated>2024-01-09T23:39:57.456Z</updated>
-    
-    <content type="html"><![CDATA[<p>常常寫程式的話應該會知道 Vim，有許多工程師都愛用這個文字編輯器。寫程式寫累的話，不如試試以下彩蛋！！</p><ol><li><p>打開終端機<br><img src="/img/vim_smile/terminal.png" alt="終端機"></p></li><li><p>輸入 <code>vim</code> 在終端機中開啟 Vim</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim</span><br></pre></td></tr></table></figure><p><img src="/img/vim_smile/enter_vim.png" alt="輸入vim"></p></li><li><p>輸入 <code>:smile</code></p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:smile</span><br></pre></td></tr></table></figure><p><img src="/img/vim_smile/enter_smile.png" alt="enter_:smile"></p></li><li><p>發現笑臉！！<br><img src="/img/vim_smile/vim_smile.png" alt="vim_smile"></p></li></ol>]]></content>
-    
-    
-    <summary type="html">Vim 不為人知的小知識</summary>
-    
-    
-    
-    
-    <category term="冷知識" scheme="https://gallen881.github.io/tags/%E5%86%B7%E7%9F%A5%E8%AD%98/"/>
-    
-    <category term="Vim" scheme="https://gallen881.github.io/tags/Vim/"/>
     
   </entry>
   
