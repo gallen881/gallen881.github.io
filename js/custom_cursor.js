@@ -47,7 +47,7 @@ links.forEach((link) => {
   });
   link.addEventListener("mouseout", (e) => {
     cursor.style.backgroundColor = "#95bcd6";
-    cursorBorder.style.setProperty("--size", "27px");
+    cursorBorder.style.setProperty("--size", "28px");
   });
 });
 
