@@ -2,18 +2,17 @@
   cursor: none;
 }
 
-.search-dialog {
+.search-dialog, .fancybox__container {
   *{cursor: auto;}
 }
 
 
 #cursor {
-  --size: 8px;
   position: fixed;
-  top: calc(var(--size) / -2);
-  left: calc(var(--size) / -2);
-  width: var(--size);
-  height: var(--size);
+  top: calc(var(--height) / -2);
+  left: calc(var(--width) / -2);
+  width: var(--width);
+  height: var(--height);
   background-color: #95bcd6;
   /* mix-blend-mode: difference; */
   transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
@@ -24,7 +23,7 @@
 }
 
 #cursor-border {
-  --size: 27px;
+  --size: 28px;
   position: fixed;
   top: calc(var(--size) / -2);
   left: calc(var(--size) / -2);
