@@ -6,7 +6,6 @@
   *{cursor: auto;}
 }
 
-
 #cursor {
   position: fixed;
   top: calc(var(--height) / -2);
