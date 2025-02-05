@@ -150,16 +150,16 @@ class LocalSearch {
       url.searchParams.append('highlight', keywords.join(' '))
 
       if (slicesOfTitle.length !== 0) {
-        resultItem += `<div class="local-search-hit-item"><a href="${url.href}"><span class="search-result-title">${this.highlightKeyword(title, slicesOfTitle[0])}</span>`
+        resultItem += `<li class="local-search-hit-item"><a href="${url.href}"><span class="search-result-title">${this.highlightKeyword(title, slicesOfTitle[0])}</span>`
       } else {
-        resultItem += `<div class="local-search-hit-item"><a href="${url.href}"><span class="search-result-title">${title}</span>`
+        resultItem += `<li class="local-search-hit-item"><a href="${url.href}"><span class="search-result-title">${title}</span>`
       }
 
       slicesOfContent.forEach(slice => {
         resultItem += `<p class="search-result">${this.highlightKeyword(content, slice)}...</p></a>`
       })
 
-      resultItem += '</div>'
+      resultItem += '</li>'
       resultItems.push({
         item: resultItem,
         id: resultItems.length,
@@ -281,7 +281,7 @@ window.addEventListener('load', () => {
 
       const stats = languages.hits_stats.replace(/\$\{hits}/, resultItems.length)
 
-      container.innerHTML = `<div class="search-result-list">${resultItems.map(result => result.item).join('')}</div>`
+      container.innerHTML = `<ol class="search-result-list">${resultItems.map(result => result.item).join('')}</ol>`
       statsItem.innerHTML = `<hr><div class="search-result-stats">${stats}</div>`
       window.pjax && window.pjax.refresh(container)
     }
@@ -301,9 +301,7 @@ window.addEventListener('load', () => {
   }
 
   const openSearch = () => {
-    const bodyStyle = document.body.style
-    bodyStyle.width = '100%'
-    bodyStyle.overflow = 'hidden'
+    btf.overflowPaddingR.add()
     btf.animateIn($searchMask, 'to_show 0.5s')
     btf.animateIn($searchDialog, 'titleScale 0.5s')
     setTimeout(() => { input.focus() }, 300)
@@ -325,9 +323,7 @@ window.addEventListener('load', () => {
   }
 
   const closeSearch = () => {
-    const bodyStyle = document.body.style
-    bodyStyle.width = ''
-    bodyStyle.overflow = ''
+    btf.overflowPaddingR.remove()
     btf.animateOut($searchDialog, 'search_close .5s')
     btf.animateOut($searchMask, 'to_hide 0.5s')
     window.removeEventListener('resize', fixSafariHeight)
