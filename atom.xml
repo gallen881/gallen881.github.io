@@ -6,7 +6,7 @@
   <link href="https://gallen881.github.io/atom.xml" rel="self"/>
   
   <link href="https://gallen881.github.io/"/>
-  <updated>2024-12-21T13:06:28.621Z</updated>
+  <updated>2025-02-05T14:34:32.837Z</updated>
   <id>https://gallen881.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>金崙野溪溫泉♨️</title>
+    <link href="https://gallen881.github.io/posts/jinlun_spring/"/>
+    <id>https://gallen881.github.io/posts/jinlun_spring/</id>
+    <published>2025-02-05T11:13:27.000Z</published>
+    <updated>2025-02-05T14:34:32.837Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言">前言</h1><p>年假的時候去了臺東，東部的溫泉十分多。原本的計畫是去<a href="https://maps.app.goo.gl/6EzEp7asqHY1eb4x5">金峰溫泉</a>，但是開到拉冷冷部落附近時發現因為最近的地震整個路都塌掉了，因此改前往金崙溫泉。</p><h1 id="金崙溫泉">金崙溫泉</h1><h2 id="交通">交通</h2><div class="container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.5498631083888!2d120.9354431752656!3d22.52887317952287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fd3836c8b907d%3A0x298bfe012eb04260!2z6YeR5bSZ5rqr5rOJ!5e1!3m2!1szh-TW!2stw!4v1738755125613!5m2!1szh-TW!2stw" class="object" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div><br><p>我們從南迴公路南下至金崙村後沿著金崙林道一直向西行，一直到看見金崙溫泉虹橋。不過橋邊的入口似乎不易下到河床，我們參考<a href="https://bimeci.pixnet.net/blog/post/234434802">這裡</a>的行進路線，超過金崙溫泉虹橋繼續沿著金崙林道開一小段直到左側出現水泥小路。如果底盤夠深可以直接開下去，有一小塊平地可以停車，或直接開到河床停，若不夠深就只能停路邊。似乎很多人在這邊敲到底盤。💀</p><p><img src="/img/jinlun_spring/image1.png" alt="右下角是停車空地，左上角是溫泉和大橋"></p><h2 id="溫泉">溫泉</h2><p>從入口往北走一小段就可以到溫泉，溫泉大致上可以分成淺水區、深水區與跳水區。淺水區水雖然淺但是溫度比較高，還有人用石頭圍成一池一池的水池。深水區顧名思義較淺水區深許多，可以整個人泡進水中，不過深水區的溫度就沒有淺水區高。跳水區則是在深水區的中央，水深約超過兩公尺。旁邊有天然的岩石跳臺，有兩公尺、三公尺和四公尺高的可以選擇。<br>溫泉底部都是爛泥，當天去的時候人蠻多的，所以許多泥被攪動，水呈現灰色。</p><p><img src="/img/jinlun_spring/map.png" alt="簡易地圖"></p><div class="container"><video controls class="object" src="/img/jinlun_spring/GX010920.mp4" title="前往溫泉"></video></div><br><p><img src="/img/jinlun_spring/image2.png" alt="可以看見金崙溫泉虹橋"><br><img src="/img/jinlun_spring/image3.png" alt="淺水區的水池"><br><img src="/img/jinlun_spring/image5.png" alt="深水區和跳水區"><br><img src="/img/jinlun_spring/image4.png" alt="跳水區跳水"></p><details class="toggle" ><summary class="toggle-button" style="">ianwang 跳水影片</summary><div class="toggle-content"><div class="container"><video controls class="object" src="/img/jinlun_spring/GX010922.mp4" title="ianwang 跳水一跳"></video></div><div class="container"><video controls class="object" src="/img/jinlun_spring/GX010923.mp4" title="ianwang 跳水二跳"></video></div><div class="container"><video controls class="object" src="/img/jinlun_spring/GX010925.mp4" title="ianwang 跳水三跳"></video></div><div class="container"><video controls class="object" src="/img/jinlun_spring/GX010926.mp4" title="ianwang 跳水四跳"></video></div></div></details><p>準備回程時就下雨了🌧️。</p><div class="container"><video controls class="object" src="/img/jinlun_spring/GX010932.mp4" title="回程"></video></div><h1 id="後記">後記</h1><p>野溪溫泉相較於一般溫泉池多了自然的樂趣，也讓我有了遠離賽博科技的一日。</p>]]></content>
+    
+    
+    <summary type="html">年假去臺東泡溫泉</summary>
+    
+    
+    
+    <category term="旅遊" scheme="https://gallen881.github.io/categories/%E6%97%85%E9%81%8A/"/>
+    
+    
+    <category term="旅遊" scheme="https://gallen881.github.io/tags/%E6%97%85%E9%81%8A/"/>
+    
+    <category term="溫泉" scheme="https://gallen881.github.io/tags/%E6%BA%AB%E6%B3%89/"/>
+    
+  </entry>
   
   <entry>
     <title>讓游標變得與眾不同！網站游標改造</title>
@@ -411,7 +434,7 @@
     <link href="https://gallen881.github.io/posts/akibajinja/"/>
     <id>https://gallen881.github.io/posts/akibajinja/</id>
     <published>2024-05-03T15:21:57.000Z</published>
-    <updated>2024-07-14T01:34:27.864Z</updated>
+    <updated>2025-02-05T11:15:31.777Z</updated>
     
     <content type="html"><![CDATA[<p><em>すべてはシュタインズゲートの選択だ。</em></p><h1 id="聖地巡禮">聖地巡禮</h1><h2 id="石頭門">石頭門</h2><p>命運石之門中的柳林神社其神社本身的原型為秋葉神社。<br><img src="https://imgur.com/cwPdr68.jpg" alt="命運石之門中的柳林神社本體"><br><img src="/img/akibajinja/IMG_133.JPG" alt="位於上野的秋葉神社"></p><p>若有實地走訪可能會發現秋葉神社的入口和柳林神社不一樣，其實柳林神社入口的原型是位於秋葉原的柳森神社。[1]</p><p>實際上秋葉神社的入口<br><img src="/img/akibajinja/IMG_124.JPG" alt="秋葉神社入口鳥居"> <img src="/img/akibajinja/IMG_123.JPG" alt="秋葉神社入口旗子"></p><h2 id="地理">地理</h2><p>秋葉神社，位於<a href="https://maps.google.com/?cid=2760654605758643743">東京都台東區松が谷三丁目10番7號</a>。</p><h2 id="歷史">歷史</h2><p>明治初年常有火光之災，因此在現在的秋葉原建造了這座寺廟，作為東京市民祈求防火的場所。[2]</p><p>原名為鎮火社。同時也是秋葉原的地名由來。[3]</p><p>叫做秋葉神社卻不在秋葉原？明治 21 年(1888)時，日本鉄道為了從現在的上野駅延長到秋葉原駅，鎮火社遷移到現址。到昭和 5 年(1930)時改名為秋葉神社。[3]<br><img src="/img/akibajinja/IMG_136.JPG" alt="秋葉神社遷址百年紀念碑"></p><h2 id="參考資料">參考資料</h2><p>[1]cominlin。(2020)。[聖地] 命運石之門無印&amp;zero&amp;劇場版 聖地巡禮。取自 <a href="https://disp.cc/b/ACG/cR45">https://disp.cc/b/ACG/cR45</a><br>[2]東京都神社庁。(n.d.)。秋葉神社。取自 <a href="http://www.tokyo-jinjacho.or.jp/taito/3051/">http://www.tokyo-jinjacho.or.jp/taito/3051/</a><br>[3]ウィキペディア。(2023)。秋葉神社 (台東区)。取自 <a href="https://ja.wikipedia.org/wiki/%E7%A7%8B%E8%91%89%E7%A5%9E%E7%A4%BE_(%E5%8F%B0%E6%9D%B1%E5%8C%BA)">https://ja.wikipedia.org/wiki/秋葉神社_(台東区)</a></p><h1 id="抽籤">抽籤</h1><p>100 圓就能抽籤，抽到了大吉！！<br><img src="/img/akibajinja/20240501_162724.jpg" alt="籤"><br><img src="/img/akibajinja/20240501_162736.jpg" alt="籤"><br>徵求懂日文的朋友幫忙翻譯。</p><h1 id="其他照片">其他照片</h1><div class="gallery-container" data-type="data" data-button="">      <div class="gallery-data">[{"url":"/img/akibajinja/other/IMG_125.JPG","alt":"倉庫？"},{"url":"/img/akibajinja/other/IMG_126.JPG","alt":"手水舎"},{"url":"/img/akibajinja/other/IMG_131.JPG","alt":"石獅子"},{"url":"/img/akibajinja/other/IMG_132.JPG","alt":"石子路"},{"url":"/img/akibajinja/other/IMG_134.JPG","alt":"手水舎"},{"url":"/img/akibajinja/other/IMG_135.JPG","alt":"石子路"},{"url":"/img/akibajinja/other/IMG_137.JPG","alt":"石子路"},{"url":"/img/akibajinja/other/IMG_139.JPG","alt":"樹上葫蘆"},{"url":"/img/akibajinja/other/IMG_140.JPG","alt":"神札所"},{"url":"/img/akibajinja/other/IMG_141.JPG","alt":"神社建築"},{"url":"/img/akibajinja/other/IMG_142.JPG","alt":"手水舎內的感應式水龍頭"},{"url":"/img/akibajinja/other/IMG_143.JPG","alt":"秋葉神社"}]</div>      <div class="gallery-items">      </div>    </div><h1 id="✨特別感謝">✨特別感謝</h1><p>ianwang 相機提供</p>]]></content>
     
@@ -419,6 +442,8 @@
     <summary type="html">造訪秋葉神社時的紀錄以及與石頭門的淵源</summary>
     
     
+    
+    <category term="旅遊" scheme="https://gallen881.github.io/categories/%E6%97%85%E9%81%8A/"/>
     
     
     <category term="命運石之門" scheme="https://gallen881.github.io/tags/%E5%91%BD%E9%81%8B%E7%9F%B3%E4%B9%8B%E9%96%80/"/>
@@ -468,25 +493,6 @@
     <category term="黑麥汁" scheme="https://gallen881.github.io/tags/%E9%BB%91%E9%BA%A5%E6%B1%81/"/>
     
     <category term="RGB" scheme="https://gallen881.github.io/tags/RGB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>重乳奶茶的價錢問題</title>
-    <link href="https://gallen881.github.io/posts/milk_tea_unbox/"/>
-    <id>https://gallen881.github.io/posts/milk_tea_unbox/</id>
-    <published>2024-03-08T12:22:03.000Z</published>
-    <updated>2024-03-31T05:46:49.072Z</updated>
-    
-    <content type="html"><![CDATA[<p>開箱奶茶！！<br><img src="/img/milk_tea_unbox/20240305_145215.jpg" alt="奶茶"></p><p>這個重乳奶茶前陣子好像十分流行，我自己也很喜歡喝(*/ω＼*)。如上圖，可以知道他有兩種包裝，不過這兩種包裝的價錢卻不一樣呢！</p><h1 id="大包裝奶茶">大包裝奶茶</h1><p><img src="/img/milk_tea_unbox/20240305_145538.jpg" alt="大包裝奶茶"></p><p>由上圖可得知大包裝奶茶共有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>400</mn><mi>m</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">400ml</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">400</span><span class="mord mathnormal">m</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span></span></span></span> 且要 35 元。<br><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>35</mn><mo>÷</mo><mn>400</mn><mo>=</mo><mn>0.0875</mn></mrow><annotation encoding="application/x-tex">35\div400=0.0875</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">35</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">÷</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">400</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.0875</span></span></span></span><br>則每一毫升奶茶要價 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.0875</mn></mrow><annotation encoding="application/x-tex">0.0875</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.0875</span></span></span></span> 元</p><h1 id="小包裝奶茶">小包裝奶茶</h1><p><img src="/img/milk_tea_unbox/20240305_145507.jpg" alt="小包裝奶茶"></p><p>由上圖可得知大包裝奶茶共有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>330</mn><mi>m</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">330ml</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">330</span><span class="mord mathnormal">m</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span></span></span></span> 且要 25 元。<br><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>25</mn><mo>÷</mo><mn>330</mn><mo>≒</mo><mn>0.0758</mn></mrow><annotation encoding="application/x-tex">25\div330\fallingdotseq0.0758</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">25</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">÷</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7264em;vertical-align:-0.082em;"></span><span class="mord">330</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel amsrm">≒</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.0758</span></span></span></span><br>則每一毫升奶茶要價約 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.0758</mn></mrow><annotation encoding="application/x-tex">0.0758</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.0758</span></span></span></span> 元</p><h1 id="結論">結論</h1><p>由以上可知，購買小包裝的奶茶較便宜！！ヾ(^▽^*)))<s>而且還附吸管。</s></p>]]></content>
-    
-    
-    <summary type="html">比較兩種奶茶包裝的價錢，兼開箱</summary>
-    
-    
-    
-    
-    <category term="冷知識" scheme="https://gallen881.github.io/tags/%E5%86%B7%E7%9F%A5%E8%AD%98/"/>
     
   </entry>
   
