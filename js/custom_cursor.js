@@ -59,3 +59,12 @@ requestAnimationFrame(function loop() {
   cursorBorder.style.transform = `translate(${cursorBorderPos.x}px, ${cursorBorderPos.y}px)`;
   requestAnimationFrame(loop);
 });
+
+// function change_cursor() {
+//   cursor.disabled = true;
+//   cursorBorder.disabled = true;
+//   let all = document.getElementsByTagName("*");
+//   for (let i = 0; i < all.length; i++) {
+//     all[i].style.cursor = "auto";
+//   }
+// }
