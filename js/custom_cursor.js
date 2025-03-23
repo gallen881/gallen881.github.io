@@ -1,7 +1,18 @@
+function getElementsWithTextNoLinksOrButtons() {
+  return [...document.querySelectorAll("*")].filter(el => 
+      el.textContent.trim() !== "" &&
+      !el.closest("a") &&
+      !el.closest("button") &&
+      !el.querySelector("a") &&
+      !el.querySelector("button") &&
+      el.nodeType === Node.ELEMENT_NODE
+  );
+}
+
 const cursor = document.querySelector("#cursor");
 const cursorBorder = document.querySelector("#cursor-border");
-const links = document.querySelectorAll("a");
-const texts = document.querySelectorAll("p");
+const linksAndButtons = document.querySelectorAll("a, button");
+const texts = getElementsWithTextNoLinksOrButtons();
 const cursorPos = { x: 0, y: 0 };
 const cursorBorderPos = { x: 0, y: 0 };
 
@@ -40,12 +51,12 @@ texts.forEach((text) => {
   });
 });
 
-links.forEach((link) => {
-  link.addEventListener("mouseover", (e) => {
+linksAndButtons.forEach((linkAndButton) => {
+  linkAndButton.addEventListener("mouseover", (e) => {
     cursor.style.backgroundColor = "#daaf61";
     cursorBorder.style.setProperty("--size", "50px");
   });
-  link.addEventListener("mouseout", (e) => {
+  linkAndButton.addEventListener("mouseout", (e) => {
     cursor.style.backgroundColor = "#95bcd6";
     cursorBorder.style.setProperty("--size", "28px");
   });

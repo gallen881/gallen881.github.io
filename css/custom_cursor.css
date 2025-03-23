@@ -13,7 +13,6 @@
   width: var(--width);
   height: var(--height);
   background-color: #95bcd6;
-  /* mix-blend-mode: difference; */
   transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
     height 0.15s ease-out, background-color 0.15s ease-out;
   border-radius: 50%;
