@@ -6,7 +6,7 @@
   <link href="https://gallen881.github.io/atom.xml" rel="self"/>
   
   <link href="https://gallen881.github.io/"/>
-  <updated>2025-03-27T16:19:18.326Z</updated>
+  <updated>2025-05-07T13:13:16.705Z</updated>
   <id>https://gallen881.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>老舊路由器起死回生：TP-Link TL-WR941ND 刷入 OpenWRT</title>
+    <link href="https://gallen881.github.io/posts/TL-WR941ND_openwrt/"/>
+    <id>https://gallen881.github.io/posts/TL-WR941ND_openwrt/</id>
+    <published>2025-05-07T12:00:09.000Z</published>
+    <updated>2025-05-07T13:13:16.705Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言">前言</h1><p>因為家中的格局比較狹長，同時主路由和 AP 在家中角落，導致另一邊有時訊號不好。剛好我有一台舊的 TP-Link 路由器，拿來做 Wi-Fi 中繼十分剛好！！我偏向如果原生能用就不刷第三方韌體，但不巧的是我手上這臺 TL-WR941ND 不支援 Wi-Fi 中繼模式，於是我起了刷入 OpenWRT 的念頭。</p><h1 id="TL-WR941ND">TL-WR941ND</h1><h2 id="外觀">外觀</h2><div class="gallery-container" data-type="data" data-button="" data-limit="10" data-first="10">    <div class="gallery-items">[{"url":"/img/TL-WR941ND_openwrt/20250420_201145.jpg","alt":"TL-WR941ND 外觀","title":""},{"url":"/img/TL-WR941ND_openwrt/20250420_201156.jpg","alt":"TL-WR941ND 外觀","title":""},{"url":"/img/TL-WR941ND_openwrt/20250420_201206.jpg","alt":"TL-WR941ND 外觀","title":""}]</div>  </div><h2 id="規格">規格</h2><p>從上面的外觀可以看到，這是 100 年買的，也就是 15 年前左右，規格自然就差強人意。這裡只寫簡單的規格，詳細可以到 <a href="https://openwrt.org/toh/tp-link/tl-wr941nd">TL-WR941ND 的 OpenWRT Wiki</a> 看</p><ul><li>Version: v3</li><li>CPU: Atheros AR9132</li><li>WLAN 2.4GHz: b/g/n (up to 300Mbps)</li><li>RJ45 * 5 (1 WAN 4 LAN): 100Mbps</li></ul><p>這樣的規格十分奇怪，介紹都標<strong>無線</strong>可以跑到 300Mbps。但其實細看規格會發現，RJ45 最高只有 100Mbps。等於如果拿來上網會速度會受限於 WAN 口只能跑 100Mbps，只有<strong>無線內網</strong>傳輸可以跑到 300Mbps……</p><p>但其實換個想法，只用無線的話或許很不錯，例如 Wi-Fi 中繼。</p><h1 id="刷入-OpenWRT">刷入 OpenWRT</h1><p>開刷！</p><ol><li><p>下載 firmware</p><p>可以到 OpenWRT 的 Wiki 下載：<a href="https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-wr941nd_v3">https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-wr941nd_v3</a></p><p>下載點：<a href="https://downloads.openwrt.org/releases/18.06.9/targets/ar71xx/tiny/openwrt-18.06.9-ar71xx-tiny-tl-wr941nd-v3-squashfs-factory.bin">https://downloads.openwrt.org/releases/18.06.9/targets/ar71xx/tiny/openwrt-18.06.9-ar71xx-tiny-tl-wr941nd-v3-squashfs-factory.bin</a></p></li><li><p>進入 TL-WR941ND 設定頁面</p><p>可以先長按 Reset 還原預設設定，然後用網路線一端插 LAN 另一端接電腦後瀏覽器打 192.168.1.1 進入。帳號密碼預設都是 admin。</p><p>進入後會看到以下畫面：</p><p><img src="/img/TL-WR941ND_openwrt/18-4-2025_20651_192.168.1.1.jpeg" alt="TL-WR941ND 設定頁面"></p></li><li><p>上傳 firmware</p><p>在右邊的選單選<code>系統工具</code> -&gt; <code>韌體升級</code>，再點<code>選擇檔案</code>上傳剛剛下載的檔案後點擊<code>韌體升級</code>就會看見進度條開始跑。</p><p><img src="/img/TL-WR941ND_openwrt/18-4-2025_20718_192.168.1.1.jpeg" alt="TL-WR941ND 韌體升級"></p></li><li><p>安裝完成</p><p>等他跑完再刷新 192.168.1.1 就可以看見 OpenWRT 的 UI 了！</p><p><img src="/img/TL-WR941ND_openwrt/2025-04-18_201146.png" alt="OpenWRT 登入介面"></p><p>剛開始沒有密碼，直接點登入就可以進入。也可以先設定密碼。</p><p><img src="/img/TL-WR941ND_openwrt/home.png" alt="OpenWRT 介面"></p></li></ol><h1 id="設定-OpenWRT-Wi-Fi-中繼">設定 OpenWRT Wi-Fi 中繼</h1><p>如果不是我的這個型號但是也想做 Wi-Fi 中繼也可以參考這邊的步驟，因為都大同小異。</p><ol><li><p>連接到要延伸的 Wi-Fi</p><p>在上方找到 <code>Network</code> 後選擇 <code>Wireless</code>，會看到以下畫面。</p><p><img src="/img/TL-WR941ND_openwrt/wireless.png" alt="無線管理介面"></p><p>點擊 <code>Scan</code> 後找到要連接的 Wi-Fi，點 <code>Join Network</code>。</p><p>填入密碼後按 <code>Submit</code>。</p><p><img src="/img/TL-WR941ND_openwrt/JoinNetwork.png" alt="按 Submit"></p><p>接著會跳到最後的設定畫面，基本上這邊設定都不用調，所以可以直接按 <code>Save &amp; Apply</code>。</p><p>等待幾秒後 OpenWRT 就設定了，不過要回到 <code>Network</code> -&gt; <code>Wireless</code> 開啟連線才接上 Wi-Fi。</p><p><img src="/img/TL-WR941ND_openwrt/wireless2.png" alt="按 Enable"></p><p>到這邊後這台路由就可以上網了！！好耶</p><p>不過要特別注意 OpenWRT 內的網斷不能和上游網段重複，如果重複的話要到 <code>Network</code> -&gt; <code>Interfaces</code> -&gt; <code>lan</code> -&gt; <code>General Setup</code> 修改。</p></li><li><p>建立可連線的 Wi-Fi</p><p>原本 OpenWRT 裡就有先內建一個 OpenWrt 的 Wi-Fi，可以修改裡面的設定，也可以建立新的。這裡我選擇建立新的 Wi-Fi。</p><p>在上方找到 <code>Network</code> 後選擇 <code>Wireless</code>，按下網卡旁邊的 <code>Add</code> 來建立。</p><p><img src="/img/TL-WR941ND_openwrt/wireless3.png" alt="按 Add"></p><p>接著會看到以下畫面：</p><p><img src="/img/TL-WR941ND_openwrt/wifi_setting.png" alt="Wi-Fi 設定"></p><p>在下面的 <strong>Interface Configuration</strong> 下 <code>General Setup</code> 內 <code>ESSID</code> 是 Wi-Fi 名稱，可以調整成自己要的。接著 <code>Network</code> 選擇 <code>lan</code>。</p><p><code>General Setup</code> 旁邊的 <code>Wireless Security</code> 可以設定 Wi-Fi 密碼，<code>Encryption</code> 下拉選擇使用的加密方法，我使用 <code>WPA2-PSK</code>。接著在 <code>key</code> 設定密碼。</p><p>這樣設定就好了，按下 <code>Save &amp; Apply</code> 後就可以用自己設定的名稱和密碼連線到 OpenWRT 上網了。</p></li></ol><h1 id="速度測試">速度測試</h1><p>家中的網速大約是下載 100 Mbps、上傳 40 Mbps。透過 OpenWRT Wi-Fi 中繼後下載和上傳都只有 40Mbps，沒有到達理論的速度。不過這樣的速度一般上網也足夠了。</p>]]></content>
+    
+    
+    <summary type="html">將家中的老舊 TP-Link 路由器刷 OpenWRT 後用於 Wi-Fi 中繼</summary>
+    
+    
+    
+    <category term="教學" scheme="https://gallen881.github.io/categories/%E6%95%99%E5%AD%B8/"/>
+    
+    
+    <category term="OpenWRT" scheme="https://gallen881.github.io/tags/OpenWRT/"/>
+    
+    <category term="TP-Link" scheme="https://gallen881.github.io/tags/TP-Link/"/>
+    
+  </entry>
   
   <entry>
     <title>114 年資工系、不分系特殊選才紀錄</title>
@@ -474,29 +497,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>探究純水中加入不同量的有色液體對 RGB 顏色的影響</title>
-    <link href="https://gallen881.github.io/posts/rye_juice_rgb/"/>
-    <id>https://gallen881.github.io/posts/rye_juice_rgb/</id>
-    <published>2024-04-18T00:55:01.000Z</published>
-    <updated>2024-07-14T01:34:52.886Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="假設">假設</h1><p>水中加入有色液體的量與白光穿透顏色呈比例關係。</p><h1 id="變因">變因</h1><ul><li>操作變因：加入液體的量</li><li>應變變因：白光穿透厚的顏色</li></ul><h1 id="實驗器具、材料">實驗器具、材料</h1><ul><li>透明水箱</li><li>50ml 燒杯</li><li>10ml 量筒</li><li>攪拌棒</li><li>鋁罐裝黑麥汁</li><li>LED 白光手電筒</li><li>手機(相機)</li></ul><h1 id="實驗步驟">實驗步驟</h1><ol><li>量取水 100 毫升，並倒入透明水箱。</li><li>以量筒取 10 毫升黑麥汁兩次，並倒入透明水箱且攪拌均勻。<br><img src="/img/rye_juice_rgb/20240320_110259.jpg" alt="10ml 黑麥汁"></li><li>調整相機參數<table><thead><tr><th>ISO</th><th>S</th><th>f/</th><th>焦距</th><th>EV</th><th>WB</th></tr></thead><tbody><tr><td>640</td><td>1/5000</td><td>1.78</td><td>4.05mm</td><td>+0.0</td><td>5000K</td></tr></tbody></table></li><li>以手電筒白光照射於水箱一側，手機鏡頭至於另一側。<br><img src="/img/rye_juice_rgb/20240320_114446.jpg" alt="設備擺設"></li><li>拍照紀錄</li><li>重複步驟 2 至 5 兩次</li><li>清理水箱</li><li>重複步驟 1 至 7 兩次</li></ol><h1 id="實驗結果">實驗結果</h1><p>純水：</p><blockquote><p>R：193<br>G：228<br>B：251</p></blockquote><h2 id="變化折線圖">變化折線圖</h2><p><img src="/img/rye_juice_rgb/1st.png" alt="第一次加入黑麥汁後水顏色變化折線圖"><br><img src="/img/rye_juice_rgb/2nd.png" alt="第二次加入黑麥汁後水顏色變化折線圖"><br><img src="/img/rye_juice_rgb/3rd.png" alt="第三次加入黑麥汁後水顏色變化折線圖"><br><img src="/img/rye_juice_rgb/average.png" alt="加入黑麥汁後水顏色平均變化折線圖"></p><h2 id="原始圖檔">原始圖檔</h2><div class="gallery-container" data-type="data" data-button="" data-limit="10" data-first="10">    <div class="gallery-items">[{"url":"/img/rye_juice_rgb/images/water_only.jpg","alt":"純水原始照片","title":""},{"url":"/img/rye_juice_rgb/images/1st_20ml.jpg","alt":"第一次實驗加入 20 毫升黑麥汁原始照片","title":""},{"url":"/img/rye_juice_rgb/images/1st_40ml.jpg","alt":"第一次實驗加入 40 毫升黑麥汁原始照片","title":""},{"url":"/img/rye_juice_rgb/images/1st_60ml.jpg","alt":"第一次實驗加入 60 毫升黑麥汁原始照片","title":""},{"url":"/img/rye_juice_rgb/images/2nd_20ml.jpg","alt":"第二次實驗加入 20 毫升黑麥汁原始照片","title":""},{"url":"/img/rye_juice_rgb/images/2nd_40ml.jpg","alt":"第二次實驗加入 40 毫升黑麥汁原始照片","title":""},{"url":"/img/rye_juice_rgb/images/2nd_60ml.jpg","alt":"第二次實驗加入 60 毫升黑麥汁原始照片","title":""},{"url":"/img/rye_juice_rgb/images/3rd_20ml.jpg","alt":"第三次實驗加入 20 毫升黑麥汁原始照片","title":""},{"url":"/img/rye_juice_rgb/images/3rd_40ml.jpg","alt":"第三次實驗加入 40 毫升黑麥汁原始照片","title":""},{"url":"/img/rye_juice_rgb/images/3rd_60ml.jpg","alt":"第三次實驗加入 60 毫升黑麥汁原始照片","title":""}]</div>  </div><h2 id="色階圖">色階圖</h2><p><img src="/img/rye_juice_rgb/figures/water_only.png" alt="純水色階圖"></p><div class="gallery-container" data-type="data" data-button="" data-limit="10" data-first="10">    <div class="gallery-items">[{"url":"/img/rye_juice_rgb/figures/1st_20ml.png","alt":"第一次實驗加入 20 毫升黑麥汁色階圖","title":""},{"url":"/img/rye_juice_rgb/figures/1st_40ml.png","alt":"第一次實驗加入 40 毫升黑麥汁色階圖","title":""},{"url":"/img/rye_juice_rgb/figures/1st_60ml.png","alt":"第一次實驗加入 60 毫升黑麥汁色階圖","title":""},{"url":"/img/rye_juice_rgb/figures/2nd_20ml.png","alt":"第二次實驗加入 20 毫升黑麥汁色階圖","title":""},{"url":"/img/rye_juice_rgb/figures/2nd_40ml.png","alt":"第二次實驗加入 40 毫升黑麥汁色階圖","title":""},{"url":"/img/rye_juice_rgb/figures/2nd_60ml.png","alt":"第二次實驗加入 60 毫升黑麥汁色階圖","title":""},{"url":"/img/rye_juice_rgb/figures/3rd_20ml.png","alt":"第三次實驗加入 20 毫升黑麥汁色階圖","title":""},{"url":"/img/rye_juice_rgb/figures/3rd_40ml.png","alt":"第三次實驗加入 40 毫升黑麥汁色階圖","title":""},{"url":"/img/rye_juice_rgb/figures/3rd_60ml.png","alt":"第三次實驗加入 60 毫升黑麥汁色階圖","title":""}]</div>  </div><h1 id="結果討論">結果討論</h1><ol><li><p>純水的 RGB 數值落差大</p><p>目前認為的主要原因有兩個：</p><ol><li>LED 光譜<br>上網查詢發現 LED 白光光譜不是均勻的，其中藍色特別強。推測實驗使用之手電筒也是如此。<a href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99">[1]</a><br><img src="/img/rye_juice_rgb/led.png" alt="LED 光譜"></li><li>瑞利散射<br>當入射光的波長比碰到的微粒還要大很多時，就會產生瑞利散射。散射強度與波長的四次方成反比，也就是說波長越短，越容易散射<a href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99">[2]</a>。推測白光通過透明水箱時，波長較短的藍光因水箱壁中的微小雜質而產生散射，導致水箱整體看起來偏藍。</li></ol></li><li><p>加入黑麥汁後 R 數值上升<br>推測是水中多了雜質後，影響了散射而產生的結果。</p></li><li><p>黑麥汁的量與 RGB 數值的關係<br>從實驗結果來看無法看出其中具有明顯的比例關係，可能的原因有以下幾點：</p><ol><li>水箱的散射干擾<br>需更換為更透明乾淨的水箱進行實驗。</li><li>LED 白光光譜不均勻<br>須改用光譜較平均的光源進行實驗。</li><li>實驗數據較少<br>需重複實驗更多次以了解整體走向。</li><li>假設錯誤</li></ol></li></ol><h1 id="結論">結論</h1><p>本次實驗的數據不足以驗證假設，須重新設計實驗或更改假設。</p><h1 id="參考資料">參考資料</h1><p>[1]台表检测。（2018）。常见白色led灯光谱范围介绍。取自 <a href="http://www.tsmtlab.com/news.detail.php?id=112">http://www.tsmtlab.com/news.detail.php?id=112</a><br>[2]張瑞棋。（2015）。天空為什麼是藍色的？瑞利誕辰｜科學史上的今天：11/12。取自 <a href="https://pansci.asia/archives/129071">https://pansci.asia/archives/129071</a></p>]]></content>
-    
-    
-    <summary type="html">加入不同量的黑麥汁觀察顏色變化</summary>
-    
-    
-    
-    <category term="探究與實作" scheme="https://gallen881.github.io/categories/%E6%8E%A2%E7%A9%B6%E8%88%87%E5%AF%A6%E4%BD%9C/"/>
-    
-    
-    <category term="黑麥汁" scheme="https://gallen881.github.io/tags/%E9%BB%91%E9%BA%A5%E6%B1%81/"/>
-    
-    <category term="RGB" scheme="https://gallen881.github.io/tags/RGB/"/>
     
   </entry>
   

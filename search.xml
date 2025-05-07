@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>老舊路由器起死回生：TP-Link TL-WR941ND 刷入 OpenWRT</title>
+      <link href="/posts/TL-WR941ND_openwrt/"/>
+      <url>/posts/TL-WR941ND_openwrt/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言">前言</h1><p>因為家中的格局比較狹長，同時主路由和 AP 在家中角落，導致另一邊有時訊號不好。剛好我有一台舊的 TP-Link 路由器，拿來做 Wi-Fi 中繼十分剛好！！我偏向如果原生能用就不刷第三方韌體，但不巧的是我手上這臺 TL-WR941ND 不支援 Wi-Fi 中繼模式，於是我起了刷入 OpenWRT 的念頭。</p><h1 id="TL-WR941ND">TL-WR941ND</h1><h2 id="外觀">外觀</h2><div class="gallery-container" data-type="data" data-button="" data-limit="10" data-first="10">    <div class="gallery-items">[{"url":"/img/TL-WR941ND_openwrt/20250420_201145.jpg","alt":"TL-WR941ND 外觀","title":""},{"url":"/img/TL-WR941ND_openwrt/20250420_201156.jpg","alt":"TL-WR941ND 外觀","title":""},{"url":"/img/TL-WR941ND_openwrt/20250420_201206.jpg","alt":"TL-WR941ND 外觀","title":""}]</div>  </div><h2 id="規格">規格</h2><p>從上面的外觀可以看到，這是 100 年買的，也就是 15 年前左右，規格自然就差強人意。這裡只寫簡單的規格，詳細可以到 <a href="https://openwrt.org/toh/tp-link/tl-wr941nd">TL-WR941ND 的 OpenWRT Wiki</a> 看</p><ul><li>Version: v3</li><li>CPU: Atheros AR9132</li><li>WLAN 2.4GHz: b/g/n (up to 300Mbps)</li><li>RJ45 * 5 (1 WAN 4 LAN): 100Mbps</li></ul><p>這樣的規格十分奇怪，介紹都標<strong>無線</strong>可以跑到 300Mbps。但其實細看規格會發現，RJ45 最高只有 100Mbps。等於如果拿來上網會速度會受限於 WAN 口只能跑 100Mbps，只有<strong>無線內網</strong>傳輸可以跑到 300Mbps……</p><p>但其實換個想法，只用無線的話或許很不錯，例如 Wi-Fi 中繼。</p><h1 id="刷入-OpenWRT">刷入 OpenWRT</h1><p>開刷！</p><ol><li><p>下載 firmware</p><p>可以到 OpenWRT 的 Wiki 下載：<a href="https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-wr941nd_v3">https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-wr941nd_v3</a></p><p>下載點：<a href="https://downloads.openwrt.org/releases/18.06.9/targets/ar71xx/tiny/openwrt-18.06.9-ar71xx-tiny-tl-wr941nd-v3-squashfs-factory.bin">https://downloads.openwrt.org/releases/18.06.9/targets/ar71xx/tiny/openwrt-18.06.9-ar71xx-tiny-tl-wr941nd-v3-squashfs-factory.bin</a></p></li><li><p>進入 TL-WR941ND 設定頁面</p><p>可以先長按 Reset 還原預設設定，然後用網路線一端插 LAN 另一端接電腦後瀏覽器打 192.168.1.1 進入。帳號密碼預設都是 admin。</p><p>進入後會看到以下畫面：</p><p><img src="/img/TL-WR941ND_openwrt/18-4-2025_20651_192.168.1.1.jpeg" alt="TL-WR941ND 設定頁面"></p></li><li><p>上傳 firmware</p><p>在右邊的選單選<code>系統工具</code> -&gt; <code>韌體升級</code>，再點<code>選擇檔案</code>上傳剛剛下載的檔案後點擊<code>韌體升級</code>就會看見進度條開始跑。</p><p><img src="/img/TL-WR941ND_openwrt/18-4-2025_20718_192.168.1.1.jpeg" alt="TL-WR941ND 韌體升級"></p></li><li><p>安裝完成</p><p>等他跑完再刷新 192.168.1.1 就可以看見 OpenWRT 的 UI 了！</p><p><img src="/img/TL-WR941ND_openwrt/2025-04-18_201146.png" alt="OpenWRT 登入介面"></p><p>剛開始沒有密碼，直接點登入就可以進入。也可以先設定密碼。</p><p><img src="/img/TL-WR941ND_openwrt/home.png" alt="OpenWRT 介面"></p></li></ol><h1 id="設定-OpenWRT-Wi-Fi-中繼">設定 OpenWRT Wi-Fi 中繼</h1><p>如果不是我的這個型號但是也想做 Wi-Fi 中繼也可以參考這邊的步驟，因為都大同小異。</p><ol><li><p>連接到要延伸的 Wi-Fi</p><p>在上方找到 <code>Network</code> 後選擇 <code>Wireless</code>，會看到以下畫面。</p><p><img src="/img/TL-WR941ND_openwrt/wireless.png" alt="無線管理介面"></p><p>點擊 <code>Scan</code> 後找到要連接的 Wi-Fi，點 <code>Join Network</code>。</p><p>填入密碼後按 <code>Submit</code>。</p><p><img src="/img/TL-WR941ND_openwrt/JoinNetwork.png" alt="按 Submit"></p><p>接著會跳到最後的設定畫面，基本上這邊設定都不用調，所以可以直接按 <code>Save &amp; Apply</code>。</p><p>等待幾秒後 OpenWRT 就設定了，不過要回到 <code>Network</code> -&gt; <code>Wireless</code> 開啟連線才接上 Wi-Fi。</p><p><img src="/img/TL-WR941ND_openwrt/wireless2.png" alt="按 Enable"></p><p>到這邊後這台路由就可以上網了！！好耶</p><p>不過要特別注意 OpenWRT 內的網斷不能和上游網段重複，如果重複的話要到 <code>Network</code> -&gt; <code>Interfaces</code> -&gt; <code>lan</code> -&gt; <code>General Setup</code> 修改。</p></li><li><p>建立可連線的 Wi-Fi</p><p>原本 OpenWRT 裡就有先內建一個 OpenWrt 的 Wi-Fi，可以修改裡面的設定，也可以建立新的。這裡我選擇建立新的 Wi-Fi。</p><p>在上方找到 <code>Network</code> 後選擇 <code>Wireless</code>，按下網卡旁邊的 <code>Add</code> 來建立。</p><p><img src="/img/TL-WR941ND_openwrt/wireless3.png" alt="按 Add"></p><p>接著會看到以下畫面：</p><p><img src="/img/TL-WR941ND_openwrt/wifi_setting.png" alt="Wi-Fi 設定"></p><p>在下面的 <strong>Interface Configuration</strong> 下 <code>General Setup</code> 內 <code>ESSID</code> 是 Wi-Fi 名稱，可以調整成自己要的。接著 <code>Network</code> 選擇 <code>lan</code>。</p><p><code>General Setup</code> 旁邊的 <code>Wireless Security</code> 可以設定 Wi-Fi 密碼，<code>Encryption</code> 下拉選擇使用的加密方法，我使用 <code>WPA2-PSK</code>。接著在 <code>key</code> 設定密碼。</p><p>這樣設定就好了，按下 <code>Save &amp; Apply</code> 後就可以用自己設定的名稱和密碼連線到 OpenWRT 上網了。</p></li></ol><h1 id="速度測試">速度測試</h1><p>家中的網速大約是下載 100 Mbps、上傳 40 Mbps。透過 OpenWRT Wi-Fi 中繼後下載和上傳都只有 40Mbps，沒有到達理論的速度。不過這樣的速度一般上網也足夠了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教學 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> OpenWRT </tag>
+            
+            <tag> TP-Link </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>114 年資工系、不分系特殊選才紀錄</title>
       <link href="/posts/ss_114/"/>
       <url>/posts/ss_114/</url>
