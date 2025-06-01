@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://gallen881.github.io/master-index/index.html</loc>
+    
+    <lastmod>2025-06-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://gallen881.github.io/posts/sparrow/</loc>
     
     <lastmod>2025-06-01</lastmod>
@@ -387,20 +396,6 @@
   </url>
   
   <url>
-    <loc>https://gallen881.github.io/tags/OpenWRT/</loc>
-    <lastmod>2025-06-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://gallen881.github.io/tags/TP-Link/</loc>
-    <lastmod>2025-06-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://gallen881.github.io/tags/GitHub/</loc>
     <lastmod>2025-06-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -450,13 +445,6 @@
   </url>
   
   <url>
-    <loc>https://gallen881.github.io/tags/%E9%81%8E%E6%B0%A7%E5%8C%96%E6%B0%AB%E9%85%B6/</loc>
-    <lastmod>2025-06-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://gallen881.github.io/tags/%E6%97%BA%E5%AE%8F%E7%A7%91%E5%AD%B8%E7%8D%8E/</loc>
     <lastmod>2025-06-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -479,6 +467,27 @@
   
   <url>
     <loc>https://gallen881.github.io/tags/Discord-Bot/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://gallen881.github.io/tags/OpenWRT/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://gallen881.github.io/tags/TP-Link/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://gallen881.github.io/tags/%E9%81%8E%E6%B0%A7%E5%8C%96%E6%B0%AB%E9%85%B6/</loc>
     <lastmod>2025-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -562,13 +571,6 @@
   </url>
   
   <url>
-    <loc>https://gallen881.github.io/tags/%E5%8E%9F%E7%A5%9E/</loc>
-    <lastmod>2025-06-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://gallen881.github.io/tags/%E5%86%B7%E7%9F%A5%E8%AD%98/</loc>
     <lastmod>2025-06-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -576,14 +578,7 @@
   </url>
   
   <url>
-    <loc>https://gallen881.github.io/tags/%E7%B9%A9%E6%B3%A2/</loc>
-    <lastmod>2025-06-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://gallen881.github.io/tags/%E9%A7%90%E6%B3%A2/</loc>
+    <loc>https://gallen881.github.io/tags/%E5%8E%9F%E7%A5%9E/</loc>
     <lastmod>2025-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -632,14 +627,14 @@
   </url>
   
   <url>
-    <loc>https://gallen881.github.io/tags/%E6%BA%AB%E6%B3%89/</loc>
+    <loc>https://gallen881.github.io/tags/%E7%B9%A9%E6%B3%A2/</loc>
     <lastmod>2025-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://gallen881.github.io/tags/%E8%87%BA%E6%9D%B1/</loc>
+    <loc>https://gallen881.github.io/tags/%E9%A7%90%E6%B3%A2/</loc>
     <lastmod>2025-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -653,7 +648,14 @@
   </url>
   
   <url>
-    <loc>https://gallen881.github.io/tags/SSHP/</loc>
+    <loc>https://gallen881.github.io/tags/%E6%BA%AB%E6%B3%89/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://gallen881.github.io/tags/%E8%87%BA%E6%9D%B1/</loc>
     <lastmod>2025-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -688,6 +690,41 @@
   </url>
   
   <url>
+    <loc>https://gallen881.github.io/tags/SSHP/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://gallen881.github.io/tags/%E9%BA%BB%E9%9B%80/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://gallen881.github.io/tags/TrueNAS/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://gallen881.github.io/tags/Windows-10/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://gallen881.github.io/tags/Windows-11/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://gallen881.github.io/tags/%E7%89%B9%E6%AE%8A%E9%81%B8%E6%89%8D/</loc>
     <lastmod>2025-06-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -716,48 +753,6 @@
   </url>
   
   <url>
-    <loc>https://gallen881.github.io/tags/%E9%BA%BB%E9%9B%80/</loc>
-    <lastmod>2025-06-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://gallen881.github.io/tags/TrueNAS/</loc>
-    <lastmod>2025-06-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://gallen881.github.io/tags/Vim/</loc>
-    <lastmod>2025-06-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://gallen881.github.io/tags/Windows-10/</loc>
-    <lastmod>2025-06-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://gallen881.github.io/tags/Windows-11/</loc>
-    <lastmod>2025-06-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://gallen881.github.io/tags/Docs/</loc>
-    <lastmod>2025-06-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://gallen881.github.io/tags/Online-Judge/</loc>
     <lastmod>2025-06-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -773,6 +768,20 @@
   
   <url>
     <loc>https://gallen881.github.io/tags/Python/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://gallen881.github.io/tags/Vim/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://gallen881.github.io/tags/Docs/</loc>
     <lastmod>2025-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
