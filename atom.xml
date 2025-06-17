@@ -6,7 +6,7 @@
   <link href="https://gallen881.github.io/atom.xml" rel="self"/>
   
   <link href="https://gallen881.github.io/"/>
-  <updated>2025-06-01T14:27:02.070Z</updated>
+  <updated>2025-06-17T04:45:29.427Z</updated>
   <id>https://gallen881.github.io/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>城市動物觀察：麻雀挖土</title>
+    <title>城市生物觀察：螞蟻鑽洞</title>
+    <link href="https://gallen881.github.io/posts/ant/"/>
+    <id>https://gallen881.github.io/posts/ant/</id>
+    <published>2025-06-17T02:49:07.000Z</published>
+    <updated>2025-06-17T04:45:29.427Z</updated>
+    
+    <content type="html"><![CDATA[<p>螞蟻狹義上來說不算動物，因此我為了這一篇把上一篇<a href="/posts/sparrow/">城市動物觀察：麻雀挖土</a>標題改成<strong>城市生物觀察</strong>了。</p><p>最近天氣開始變熱，我的桌上也開始會出現一兩隻螞蟻。我原先也沒有太在意，因為我的房間沒有甚麼能吃的，如果有也都有完整的包裝，也沒有保麗龍、牙膏或肥皂（家裡這些東西有被螞蟻攻擊過）。但今天早上我偶然發現我的糖果外面很多螞蟻聚集，沒想到他們竟然在糖果包裝外面開一個洞，然後快樂享用大餐！</p><p><img src="/img/ant/ant1.png" alt="螞蟻鑽洞"></p><div class="container_"><video controls class="object_" src="/img/ant/ant.mp4" title="螞蟻鑽洞"></video></div><br><p>不過幸好他沒有再<a href="/posts/insects_in_monitor/">跑進我的螢幕</a>裡。</p>]]></content>
+    
+    
+    <summary type="html">夏天了，我的房間逐漸被螞蟻入侵</summary>
+    
+    
+    
+    
+    <category term="螞蟻" scheme="https://gallen881.github.io/tags/%E8%9E%9E%E8%9F%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>城市生物觀察：麻雀挖土</title>
     <link href="https://gallen881.github.io/posts/sparrow/"/>
     <id>https://gallen881.github.io/posts/sparrow/</id>
     <published>2025-06-01T13:45:46.000Z</published>
-    <updated>2025-06-01T14:27:02.070Z</updated>
+    <updated>2025-06-17T02:55:07.400Z</updated>
     
     <content type="html"><![CDATA[<p>昨天經過泰安休息區，帶著前幾周買的 18-300mm 鏡頭想拍拍照，因此在旁邊的遊樂場閒晃。上次到泰安休息區是四月份，那時候開滿花很漂亮，但是這次去花都謝了。正打算回去時眼角餘光正好瞄見一隻麻雀，如果是正常的麻雀不會吸引我的注意，但是那隻麻雀有點不同。他看起來就像是被土埋住一樣，站在身形完美契合的小凹洞中。接著他開始揮動他的翅膀，將土撥到旁邊。我心想他就是我今天的獵物了，馬上把鏡頭對準他。拍到一半他又飛起來飛到另一邊快速揮動翅膀挖土。</p><p>我覺得他玩得很開心。還是那其實不是在玩，如果你是麻雀專家可以留言跟我說。</p><div class="gallery-container" data-type="data" data-button="" data-limit="10" data-first="10">    <div class="gallery-items">[{"url":"/img/sparrow/IMG_9871.JPG","alt":"麻雀","title":""},{"url":"/img/sparrow/IMG_9874.JPG","alt":"麻雀","title":""},{"url":"/img/sparrow/IMG_9875.JPG","alt":"麻雀","title":""},{"url":"/img/sparrow/IMG_9876.JPG","alt":"麻雀","title":""},{"url":"/img/sparrow/IMG_9878.JPG","alt":"麻雀","title":""},{"url":"/img/sparrow/IMG_9879.JPG","alt":"麻雀","title":""}]</div>  </div><p>順便附上四月拍的花：</p><div class="gallery-container" data-type="data" data-button="" data-limit="10" data-first="10">    <div class="gallery-items">[{"url":"/img/sparrow/IMG_9450.JPG","alt":"花","title":""},{"url":"/img/sparrow/IMG_9462.JPG","alt":"花","title":""}]</div>  </div>]]></content>
     
@@ -474,33 +493,6 @@
     
     
     <category term="Jellyfin" scheme="https://gallen881.github.io/tags/Jellyfin/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>命運石之門聖地巡禮——秋葉神社</title>
-    <link href="https://gallen881.github.io/posts/akibajinja/"/>
-    <id>https://gallen881.github.io/posts/akibajinja/</id>
-    <published>2024-05-03T15:21:57.000Z</published>
-    <updated>2025-02-05T11:15:31.777Z</updated>
-    
-    <content type="html"><![CDATA[<p><em>すべてはシュタインズゲートの選択だ。</em></p><h1 id="聖地巡禮">聖地巡禮</h1><h2 id="石頭門">石頭門</h2><p>命運石之門中的柳林神社其神社本身的原型為秋葉神社。<br><img src="https://imgur.com/cwPdr68.jpg" alt="命運石之門中的柳林神社本體"><br><img src="/img/akibajinja/IMG_133.JPG" alt="位於上野的秋葉神社"></p><p>若有實地走訪可能會發現秋葉神社的入口和柳林神社不一樣，其實柳林神社入口的原型是位於秋葉原的柳森神社。[1]</p><p>實際上秋葉神社的入口<br><img src="/img/akibajinja/IMG_124.JPG" alt="秋葉神社入口鳥居"> <img src="/img/akibajinja/IMG_123.JPG" alt="秋葉神社入口旗子"></p><h2 id="地理">地理</h2><p>秋葉神社，位於<a href="https://maps.google.com/?cid=2760654605758643743">東京都台東區松が谷三丁目10番7號</a>。</p><h2 id="歷史">歷史</h2><p>明治初年常有火光之災，因此在現在的秋葉原建造了這座寺廟，作為東京市民祈求防火的場所。[2]</p><p>原名為鎮火社。同時也是秋葉原的地名由來。[3]</p><p>叫做秋葉神社卻不在秋葉原？明治 21 年(1888)時，日本鉄道為了從現在的上野駅延長到秋葉原駅，鎮火社遷移到現址。到昭和 5 年(1930)時改名為秋葉神社。[3]<br><img src="/img/akibajinja/IMG_136.JPG" alt="秋葉神社遷址百年紀念碑"></p><h2 id="參考資料">參考資料</h2><p>[1]cominlin。(2020)。[聖地] 命運石之門無印&amp;zero&amp;劇場版 聖地巡禮。取自 <a href="https://disp.cc/b/ACG/cR45">https://disp.cc/b/ACG/cR45</a><br>[2]東京都神社庁。(n.d.)。秋葉神社。取自 <a href="http://www.tokyo-jinjacho.or.jp/taito/3051/">http://www.tokyo-jinjacho.or.jp/taito/3051/</a><br>[3]ウィキペディア。(2023)。秋葉神社 (台東区)。取自 <a href="https://ja.wikipedia.org/wiki/%E7%A7%8B%E8%91%89%E7%A5%9E%E7%A4%BE_(%E5%8F%B0%E6%9D%B1%E5%8C%BA)">https://ja.wikipedia.org/wiki/秋葉神社_(台東区)</a></p><h1 id="抽籤">抽籤</h1><p>100 圓就能抽籤，抽到了大吉！！<br><img src="/img/akibajinja/20240501_162724.jpg" alt="籤"><br><img src="/img/akibajinja/20240501_162736.jpg" alt="籤"><br>徵求懂日文的朋友幫忙翻譯。</p><h1 id="其他照片">其他照片</h1><div class="gallery-container" data-type="data" data-button="" data-limit="10" data-first="10">    <div class="gallery-items">[{"url":"/img/akibajinja/other/IMG_125.JPG","alt":"倉庫？","title":""},{"url":"/img/akibajinja/other/IMG_126.JPG","alt":"手水舎","title":""},{"url":"/img/akibajinja/other/IMG_131.JPG","alt":"石獅子","title":""},{"url":"/img/akibajinja/other/IMG_132.JPG","alt":"石子路","title":""},{"url":"/img/akibajinja/other/IMG_134.JPG","alt":"手水舎","title":""},{"url":"/img/akibajinja/other/IMG_135.JPG","alt":"石子路","title":""},{"url":"/img/akibajinja/other/IMG_137.JPG","alt":"石子路","title":""},{"url":"/img/akibajinja/other/IMG_139.JPG","alt":"樹上葫蘆","title":""},{"url":"/img/akibajinja/other/IMG_140.JPG","alt":"神札所","title":""},{"url":"/img/akibajinja/other/IMG_141.JPG","alt":"神社建築","title":""},{"url":"/img/akibajinja/other/IMG_142.JPG","alt":"手水舎內的感應式水龍頭","title":""},{"url":"/img/akibajinja/other/IMG_143.JPG","alt":"秋葉神社","title":""}]</div>  </div><h1 id="✨特別感謝">✨特別感謝</h1><p>ianwang 相機提供</p>]]></content>
-    
-    
-    <summary type="html">造訪秋葉神社時的紀錄以及與石頭門的淵源</summary>
-    
-    
-    
-    <category term="旅遊" scheme="https://gallen881.github.io/categories/%E6%97%85%E9%81%8A/"/>
-    
-    
-    <category term="命運石之門" scheme="https://gallen881.github.io/tags/%E5%91%BD%E9%81%8B%E7%9F%B3%E4%B9%8B%E9%96%80/"/>
-    
-    <category term="神社" scheme="https://gallen881.github.io/tags/%E7%A5%9E%E7%A4%BE/"/>
-    
-    <category term="日本" scheme="https://gallen881.github.io/tags/%E6%97%A5%E6%9C%AC/"/>
-    
-    <category term="旅遊" scheme="https://gallen881.github.io/tags/%E6%97%85%E9%81%8A/"/>
     
   </entry>
   
